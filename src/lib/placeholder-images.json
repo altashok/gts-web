@@ -1,0 +1,76 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "Children learning Tamil language in a classroom setting",
+      "imageUrl": "https://images.unsplash.com/photo-1608986596619-eb50cc56831f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xhc3Nyb29tJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzcwOTY0OTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "classroom learning"
+    },
+    {
+      "id": "hero-2",
+      "description": "Traditional Tamil cultural dance performance by students",
+      "imageUrl": "https://images.unsplash.com/photo-1768701224286-45099a74a057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjdWx0dXJhbCUyMHBlcmZvcm1hbmNlfGVufDB8fHx8MTc3MDk5MDM3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cultural performance"
+    },
+    {
+      "id": "hero-3",
+      "description": "Graduation ceremony for Tamil school students",
+      "imageUrl": "https://images.unsplash.com/photo-1607013407627-6ee814329547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzcwOTc4MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graduation ceremony"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Students writing Tamil script",
+      "imageUrl": "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdHVkeSUyMGdyb3VwfGVufDB8fHx8MTc3MTAwNDU0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "study group"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Cultural artifacts on display",
+      "imageUrl": "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBhcnR8ZW58MHx8fHwxNzcxMDcwNzU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian art"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Classroom library",
+      "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxraWRzJTIwbGlicmFyeXxlbnwwfHx8fDE3NzEwMDQ0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids library"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Student art project",
+      "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxraWRzJTIwcGFpbnRpbmd8ZW58MHx8fHwxNzcxMDcwNzU4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kids painting"
+    },
+    {
+      "id": "team-member-1",
+      "description": "School Principal smiling",
+      "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmZW1hbGUlMjB0ZWFjaGVyfGVufDB8fHx8MTc3MTEyMDU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female teacher"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Academic Director portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzcxMTIwNTY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Senior Teacher portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmZW1hbGUlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcxMTIwNTY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "female professional"
+    },
+    {
+      "id": "founder-image",
+      "description": "Mrs. Uma Ashok, Founder of Global Tamil School in London",
+      "imageUrl": "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3VuZGVyJTIwTG9uZG9ufGVufDB8fHx8MTc3MTExMDU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "founder London"
+    },
+    {
+      "id": "school-logo",
+      "description": "Official Global Tamil School Crest Logo",
+      "imageUrl": "/logo.png",
+      "imageHint": "school crest"
+    }
+  ]
+}
