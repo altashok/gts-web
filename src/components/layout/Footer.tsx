@@ -86,6 +86,17 @@ export default function Footer() {
             </ul>
           </div>
 
+          <div>
+            <h4 className="font-bold text-lg mb-6 border-b border-muted w-fit pb-1">{t('footer.importantLinks')}</h4>
+            <ul className="space-y-3">
+              <li><Link href="https://tamilarivu.org/" className="text-sm hover:text-primary transition-colors">{t('footer.tamilarivu')}</Link></li>
+              <li><Link href="http://tamiltextbooks.com/book/St01-I-TM-1#" className="text-sm hover:text-primary transition-colors">{t('footer.tntextbooks')}</Link></li>
+              <li><Link href="https://www.cambridgeinternational.org/" className="text-sm hover:text-primary transition-colors">{t('footer.cambridge')}</Link></li>
+              <li><Link href="https://qualifications.pearson.com/" className="text-sm hover:text-primary transition-colors">{t('footer.edexcel')}</Link></li>
+              <li><Link href="https://system.bteb.org.uk/" className="text-sm hover:text-primary transition-colors">{t('footer.bteb')}</Link></li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h4 className="font-bold text-lg mb-6 border-b border-muted w-fit pb-1">{t('footer.contactUs')}</h4>
@@ -114,7 +125,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter/CTA */}
-          <div>
+          {/* <div>
             <h4 className="font-bold text-lg mb-6 border-b border-muted w-fit pb-1">{t('footer.newsletter')}</h4>
             <p className="text-sm text-muted-foreground mb-4">{t('footer.newsletterDesc')}</p>
             <div className="flex">
@@ -125,11 +136,11 @@ export default function Footer() {
               />
               <button className="bg-primary text-primary-foreground px-4 py-2 rounded-r-md font-bold text-sm">{t('footer.newsletterJoin')}</button>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-muted/20 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} {t('footer.brand')} - Global Tamil School. {t('footer.rights')}</p>
+          <p>© {new Date().getFullYear()} {t('footer.brand')}. {t('footer.rights')}</p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-primary">{t('footer.privacy')}</Link>
             <Link href="/terms" className="hover:text-primary">{t('footer.terms')}</Link>

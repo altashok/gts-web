@@ -2,21 +2,57 @@
   "placeholderImages": [
     {
       "id": "hero-1",
-      "description": "Children learning Tamil language in a classroom setting",
-      "imageUrl": "https://images.unsplash.com/photo-1608986596619-eb50cc56831f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xhc3Nyb29tJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzcwOTY0OTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "classroom learning"
+      "description": "Global Tamil School Students Banner",
+      "imageUrl": "/carousel/banner1.png",
+      "imageHint": "students banner"
     },
     {
       "id": "hero-2",
-      "description": "Traditional Tamil cultural dance performance by students",
-      "imageUrl": "https://images.unsplash.com/photo-1768701224286-45099a74a057?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjdWx0dXJhbCUyMHBlcmZvcm1hbmNlfGVufDB8fHx8MTc3MDk5MDM3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cultural performance"
+      "description": "Tamil Cultural Activities and Events",
+      "imageUrl": "/carousel/banner2.png",
+      "imageHint": "cultural events"
     },
     {
       "id": "hero-3",
-      "description": "Graduation ceremony for Tamil school students",
-      "imageUrl": "https://images.unsplash.com/photo-1607013407627-6ee814329547?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxncmFkdWF0aW9uJTIwY2VyZW1vbnl8ZW58MHx8fHwxNzcwOTc4MDg2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "graduation ceremony"
+      "description": "Academic Excellence and Learning",
+      "imageUrl": "/carousel/5.png",
+      "imageHint": "academic learning"
+    },
+    {
+      "id": "hero-4",
+      "description": "Preserving Our Tamil Heritage",
+      "imageUrl": "/carousel/6.png",
+      "imageHint": "tamil heritage"
+    },
+    {
+      "id": "hero-5",
+      "description": "Our Vibrant School Community",
+      "imageUrl": "/carousel/stallnrt.png",
+      "imageHint": "school community"
+    },
+    {
+      "id": "hero-6",
+      "description": "Global Tamil School Class of 2022",
+      "imageUrl": "/carousel/uk-2022.jpg",
+      "imageHint": "class 2022"
+    },
+    {
+      "id": "hero-7",
+      "description": "Global Tamil School Class of 2023",
+      "imageUrl": "/carousel/uk-2023.jpg",
+      "imageHint": "class 2023"
+    },
+    {
+      "id": "hero-8",
+      "description": "Global Tamil School Class of 2024",
+      "imageUrl": "/carousel/uk-2024.png",
+      "imageHint": "class 2024"
+    },
+    {
+      "id": "hero-9",
+      "description": "Global Tamil School Class of 2025",
+      "imageUrl": "/carousel/uk-2025.png",
+      "imageHint": "class 2025"
     },
     {
       "id": "gallery-1",
@@ -63,7 +99,7 @@
     {
       "id": "founder-image",
       "description": "Mrs. Uma Ashok, Founder of Global Tamil School in London",
-      "imageUrl": "https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmb3VuZGVyJTIwTG9uZG9ufGVufDB8fHx8MTc3MTExMDU2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/people/UmaAshokPortrait.png",
       "imageHint": "founder London"
     },
     {

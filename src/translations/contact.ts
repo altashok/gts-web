@@ -1,0 +1,37 @@
+
+export const contactTranslations = {
+  ta: {
+    'contact.title': 'எங்களைத் தொடர்பு கொள்ள',
+    'contact.subtitle': 'உங்கள் கேள்விகள் மற்றும் கருத்துக்களை வரவேற்கிறோம்.',
+    'contact.info.title': 'தொடர்பு விவரங்கள்',
+    'contact.info.desc': 'எங்களுடன் பேச விரும்பினால் கீழ்க்கண்ட முறைகளில் தொடர்பு கொள்ளலாம்.',
+    'contact.info.location': 'முகவரி',
+    'contact.info.call': 'அழைக்கவும் / WhatsApp',
+    'contact.info.email': 'மின்னஞ்சல்',
+    'contact.info.hours': 'நேரம்',
+    'contact.info.hours.days': 'திங்கள் - வெள்ளி: 9:00 AM - 6:00 PM',
+    'contact.form.name': 'பெயர்',
+    'contact.form.email': 'மின்னஞ்சல்',
+    'contact.form.subject': 'பொருள்',
+    'contact.form.message': 'செய்தி',
+    'contact.form.placeholder.message': 'உங்கள் செய்தியை இங்கே உள்ளிடவும்...',
+    'contact.form.submit': 'செய்தியை அனுப்பு',
+  },
+  en: {
+    'contact.title': 'Contact Us',
+    'contact.subtitle': 'We welcome your questions and feedback.',
+    'contact.info.title': 'Contact Information',
+    'contact.info.desc': 'Get in touch with us through any of the following channels.',
+    'contact.info.location': 'Address',
+    'contact.info.call': 'Call / WhatsApp',
+    'contact.info.email': 'Email',
+    'contact.info.hours': 'Office Hours',
+    'contact.info.hours.days': 'Mon - Fri: 9:00 AM - 6:00 PM',
+    'contact.form.name': 'Your Name',
+    'contact.form.email': 'Your Email',
+    'contact.form.subject': 'Subject',
+    'contact.form.message': 'Message',
+    'contact.form.placeholder.message': 'Type your message here...',
+    'contact.form.submit': 'Send Message',
+  }
+};

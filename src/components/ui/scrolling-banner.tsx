@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -10,7 +9,7 @@ export default function ScrollingBanner() {
 
   return (
     <div className="bg-primary text-primary-foreground py-2 overflow-hidden whitespace-nowrap border-b border-black/10">
-      <div className="flex animate-marquee">
+      <div className="flex animate-marquee-mobile md:animate-marquee">
         <span className="text-sm font-black px-4">{text}</span>
         <span className="text-sm font-black px-4">{text}</span>
         <span className="text-sm font-black px-4">{text}</span>

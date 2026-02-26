@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -28,7 +27,7 @@ export default function HeroCarousel() {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const autoplayPlugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })
   );
 
   useEffect(() => {
@@ -64,62 +63,87 @@ export default function HeroCarousel() {
         className="w-full"
       >
         <CarouselContent>
-          {heroImages.map((image) => (
-            <CarouselItem key={image.id}>
-              <div className="relative h-[500px] md:h-[750px] w-full">
-                <Image
-                  src={image.imageUrl}
-                  alt={image.description}
-                  fill
-                  className="object-cover brightness-[0.65]"
-                  priority
-                  data-ai-hint={image.imageHint}
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="max-w-4xl px-4 text-center text-white">
-                    <div className="inline-block px-6 py-2 bg-primary text-primary-foreground font-black rounded-full text-[10px] md:text-xs uppercase tracking-[0.3em] mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                      {t('hero.welcome')}
-                    </div>
-                    <h1 className="font-headline text-2xl md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                      {t('hero.title')}<span className="text-primary drop-shadow-[0_0_15px_rgba(255,191,0,0.4)]">{t('hero.titleAccent')}</span>
-                    </h1>
-                    <p className="text-sm md:text-xl font-bold mb-10 max-w-2xl mx-auto drop-shadow-lg opacity-90 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
-                      {t('hero.description')}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-                      <Button asChild size="lg" className="bg-primary text-primary-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(255,191,0,0.5)] hover:shadow-primary/40 hover:scale-105 transition-all w-full sm:w-auto">
-                        <Link href="/enroll">{t('hero.enroll')}</Link>
-                      </Button>
-                      <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-md text-white border-2 border-white hover:bg-white hover:text-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl transition-all w-full sm:w-auto">
-                        <Link href="/about">{t('hero.learnMore')}</Link>
-                      </Button>
+          {heroImages.map((image) => {
+            // Unique keys for each slide
+            const welcomeKey = `hero.welcome.${image.id}`;
+            const titleKey = `hero.title.${image.id}`;
+            const descKey = `hero.desc.${image.id}`;
+            const enrollKey = `hero.enroll.${image.id}`;
+            const learnMoreKey = `hero.learnMore.${image.id}`;
+            
+            // Translations
+            const welcomeText = t(welcomeKey);
+            const slideTitle = t(titleKey);
+            const slideDesc = t(descKey);
+            const enrollText = t(enrollKey);
+            const learnMoreText = t(learnMoreKey);
+            
+            // Checks
+            const hasWelcomeSpecific = welcomeText !== welcomeKey;
+            const hasTitleSpecific = slideTitle !== titleKey;
+            const hasDescSpecific = slideDesc !== descKey;
+            const hasEnrollSpecific = enrollText !== enrollKey;
+            const hasLearnMoreSpecific = learnMoreText !== learnMoreKey;
+
+            return (
+              <CarouselItem key={image.id}>
+                <div className="relative h-[500px] md:h-[750px] w-full">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    className="object-cover brightness-[0.65]"
+                    priority
+                    data-ai-hint={image.imageHint}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="max-w-4xl px-4 text-center text-white">
+                      {/* Optional Welcome Tag */}
+                      <div className="inline-block px-6 py-2 bg-primary text-primary-foreground font-black rounded-full text-[10px] md:text-xs uppercase tracking-[0.3em] mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                        {hasWelcomeSpecific ? welcomeText : t('hero.welcome')}
+                      </div>
+
+                      {/* Title */}
+                      <h1 className="font-headline text-2xl md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                        {hasTitleSpecific ? (
+                          slideTitle
+                        ) : (
+                          <>
+                            {t('hero.title')}<span className="text-primary drop-shadow-[0_0_15px_rgba(255,191,0,0.4)]">{t('hero.titleAccent')}</span>
+                          </>
+                        )}
+                      </h1>
+
+                      {/* Description */}
+                      <p className="text-sm md:text-xl font-bold mb-10 max-w-2xl mx-auto drop-shadow-lg opacity-90 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                        {hasDescSpecific ? slideDesc : t('hero.description')}
+                      </p>
+
+                      {/* Optional Buttons Container */}
+                      <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
+                        {/* Optional Enroll Button */}
+                        <Button asChild size="lg" className="bg-primary text-primary-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(255,191,0,0.5)] hover:shadow-primary/40 hover:scale-105 transition-all w-full sm:w-auto">
+                          <Link href="/enroll">{hasEnrollSpecific ? enrollText : t('hero.enroll')}</Link>
+                        </Button>
+
+                        {/* Optional Learn More Button */}
+                        <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-md text-white border-2 border-white hover:bg-white hover:text-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl transition-all w-full sm:w-auto">
+                          <Link href="/about">{hasLearnMoreSpecific ? learnMoreText : t('hero.learnMore')}</Link>
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </CarouselItem>
-          ))}
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
         
-        {/* Navigation Arrows */}
         <div className="hidden md:block">
           <CarouselPrevious className="left-12 h-14 w-14 bg-white/10 border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all" />
           <CarouselNext className="right-12 h-14 w-14 bg-white/10 border-white/20 text-white hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all" />
         </div>
 
-        {/* Play/Pause Toggle */}
-        <div className="absolute bottom-12 right-6 md:right-12 z-20">
-          <Button 
-            variant="outline" 
-            size="icon" 
-            onClick={toggleAutoplay}
-            className="rounded-full bg-white/10 border-white/20 text-white hover:bg-primary hover:text-primary-foreground transition-all h-10 w-10 md:h-12 md:w-12"
-          >
-            {isPlaying ? <Pause className="h-4 w-4 md:h-6 md:w-6" /> : <Play className="h-4 w-4 md:h-6 md:w-6" />}
-          </Button>
-        </div>
-
-        {/* Dots / Pips */}
         <div className="absolute bottom-12 left-0 right-0 flex justify-center items-center gap-3 z-20">
           {Array.from({ length: count }).map((_, i) => (
             <button
@@ -134,6 +158,15 @@ export default function HeroCarousel() {
               aria-label={`Go to slide ${i + 1}`}
             />
           ))}
+          
+          <Button 
+            variant="outline" 
+            size="icon" 
+            onClick={toggleAutoplay}
+            className="ml-4 rounded-full bg-white/10 border-white/20 text-white hover:bg-primary hover:text-primary-foreground transition-all h-8 w-8 md:h-10 md:w-10"
+          >
+            {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+          </Button>
         </div>
       </Carousel>
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-background to-transparent z-10"></div>
