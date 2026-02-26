@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Book, Globe, Users, Award, GraduationCap, Calendar, CheckCircle2 } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollingBanner from '@/components/ui/scrolling-banner';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
@@ -38,7 +37,32 @@ export default function Home() {
     { label: t('stats.courses'), value: "30+" },
   ];
 
-  const galleryImages = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
+  const galleryImages = [
+    {
+      id: 'gallery-4',
+      imageUrl: '/gallery/Teaching_materials.jpg',
+      description: 'Teaching materials and resources',
+      imageHint: 'teaching materials',
+    },
+    {
+      id: 'gallery-1',
+      imageUrl: '/gallery/StudentsWork1.jpg',
+      description: 'Students work display',
+      imageHint: 'students artwork',
+    },
+    {
+      id: 'gallery-2',
+      imageUrl: '/gallery/StudentsWork2.jpg',
+      description: 'Classroom student activities',
+      imageHint: 'students activity',
+    },
+    {
+      id: 'gallery-3',
+      imageUrl: '/gallery/Students_writing.jpg',
+      description: 'Students writing session',
+      imageHint: 'students writing',
+    },
+  ];
 
   return (
     <div className="space-y-0 pb-24 overflow-x-hidden">

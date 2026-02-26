@@ -10,6 +10,9 @@ import { LanguageProvider } from '@/context/LanguageContext';
 export const metadata: Metadata = {
   title: 'Global Tamil School | Excellence in Tamil Education',
   description: 'Preserving and promoting Tamil language and culture through education and excellence. Serving the global Tamil community from London.',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({

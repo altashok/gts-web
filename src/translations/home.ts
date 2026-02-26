@@ -9,66 +9,55 @@ export const homeTranslations = {
     'hero.learnMore': 'மேலும் அறிய',
 
     // Slide Specifics - Hero 1 (General/Global)
-    'hero.welcome.hero-1': 'உலகளாவிய தமிழ்ப் பள்ளி',
-    'hero.title.hero-1': 'தமிழ் மொழியின் உலகளாவிய மையம்',
-    'hero.desc.hero-1': 'இலண்டனைத் தலைமையிடமாகக் கொண்டு உலகெங்கிலும் உள்ள மாணவர்களுக்குத் தரமான தமிழ்க் கல்வியை வழங்குகிறோம்.',
-    'hero.enroll.hero-1': 'இப்போதே சேருங்கள்',
-    'hero.learnMore.hero-1': 'பாடத்திட்டங்கள்',
+    'hero.welcome.hero-1': 'உலகளாவிய தமிழ்ப் பள்ளிக்கு உங்களை வரவேற்கிறோம்',
+    'hero.title.hero-1': 'உலகின் முதல் மெய்நிகர் தமிழ்ப் பள்ளி',
+    'hero.desc.hero-1': ' ',
 
     // Slide Specifics - Hero 2 (Culture)
-    'hero.welcome.hero-2': 'கலை & பண்பாடு',
-    'hero.title.hero-2': 'நமது பாரம்பரியத்தைக் கொண்டாடுவோம்',
-    'hero.desc.hero-2': 'மொழித் திறனுடன் கலை, இசை மற்றும் கலாச்சார விழுமியங்களை அடுத்த தலைமுறைக்குக் கொண்டு செல்கிறோம்.',
-    'hero.enroll.hero-2': 'கலை வகுப்புகள்',
-    'hero.learnMore.hero-2': 'நிகழ்வுகள்',
+    'hero.welcome.hero-2': 'உலகளாவிய எங்கள் சேவை',
+    'hero.title.hero-2': 'தமிழ் மொழியால் இணைந்திருப்போம்',
+    'hero.desc.hero-2': ' ',
+    'hero.enroll.hero-2': 'மாணவர் சேர்க்கை',
+    'hero.learnMore.hero-2': 'மேலும் அறிய',
 
     // Slide Specifics - Hero 3 (Academic)
-    'hero.welcome.hero-3': 'கல்விச் சிறப்பு',
-    'hero.title.hero-3': 'உயர்தரக் கற்றல் அனுபவம்',
-    'hero.desc.hero-3': 'சர்வதேசத் தரத்திலான பாடத்திட்டம் மற்றும் அனுபவம் வாய்ந்த ஆசிரியர்களின் வழிகாட்டுதல்.',
-    'hero.enroll.hero-3': 'பதிவு செய்ய',
-    'hero.learnMore.hero-3': 'கல்வித் தரம்',
+    'hero.welcome.hero-3': 'இணையவழிப் போட்டிகள்',
+    'hero.title.hero-3': 'உலகெங்கும் வாழ்ந்தாலும் தமிழுடன் இணைத்திருக்கும் எங்கள் மாணவர்கள்',
+    'hero.desc.hero-3': ' ',
 
     // Slide Specifics - Hero 4 (Heritage)
-    'hero.welcome.hero-4': 'நமது அடையாளம்',
-    'hero.title.hero-4': 'வேர்களைக் காப்போம்',
-    'hero.desc.hero-4': 'ஆயிரம் ஆண்டுகாலத் தமிழ் வரலாற்றையும் இலக்கியத்தையும் மாணவர்களுக்கு எளிமையாகக் கற்பிக்கிறோம்.',
-    'hero.enroll.hero-4': 'கற்கத் தொடங்கு',
-    'hero.learnMore.hero-4': 'வரலாறு',
+    'hero.welcome.hero-4': 'தமிழ் மொழி நமது அடையாளம்',
+    'hero.title.hero-4': 'உயிரினும் மேலான எம் தாய்மொழி',
+    'hero.desc.hero-4': '"சொல்லில் உயர்வு தமிழ்ச் சொல்லே அதைத் தொழுது படித்திடடி பாப்பா" - பாரதி',
 
     // Slide Specifics - Hero 5 (Community)
-    'hero.welcome.hero-5': 'தமிழ்ச் சமூகம்',
-    'hero.title.hero-5': 'ஒன்றிணைவோம் தமிழால்',
-    'hero.desc.hero-5': 'உலகெங்கும் வாழும் தமிழ் மாணவர்களை ஒன்றிணைக்கும் ஒரு உன்னதக் கல்வித் தளம்.',
-    'hero.enroll.hero-5': 'உறுப்பினர் ஆக',
-    'hero.learnMore.hero-5': 'சமூக நிகழ்வுகள்',
+    'hero.welcome.hero-5': 'அயலகத் தமிழர் நாள் 2025',
+    'hero.title.hero-5': 'பள்ளியின் காட்சி அரங்கம்',
+    'hero.desc.hero-5': ' ',
 
     // Slide Specifics - Hero 6 (Class of 2022)
-    'hero.welcome.hero-6': 'வெற்றிக் கதைகள்',
-    'hero.title.hero-6': '2022 சாதனையாளர்கள்',
-    'hero.desc.hero-6': 'எமது பள்ளியின் 2022-ஆம் ஆண்டு பட்டமளிப்பு விழாவின் சிறப்பான தருணங்கள்.',
-    'hero.enroll.hero-6': 'தொடர்பு கொள்ள',
-    'hero.learnMore.hero-6': '2022 தொகுப்பு',
+    'hero.welcome.hero-6': 'ஆண்டு விழா - 2022',
+    'hero.title.hero-6': 'ஐக்கிய இராச்சியம்',
+    'hero.desc.hero-6': 'இலண்டன் மாநகரில் நடைபெற்ற பட்டமளிப்பு விழா.',
+    'hero.learnMore.hero-6': 'மேலும் அறிய',
 
     // Slide Specifics - Hero 7 (Class of 2023)
-    'hero.welcome.hero-7': 'வளர்ந்து வரும் தலைமுறை',
-    'hero.title.hero-7': '2023 கல்விப் பயணம்',
-    'hero.desc.hero-7': 'மாணவர்களின் அயராத உழைப்பால் உருவான 2023-ஆம் ஆண்டின் கல்விச் சாதனைகள்.',
-    'hero.enroll.hero-7': 'பள்ளியில் இணைய',
-    'hero.learnMore.hero-7': '2023 சாதனைகள்',
+    'hero.welcome.hero-7': 'ஆண்டு விழா - 2023',
+    'hero.title.hero-7': 'ஐக்கிய இராச்சியம்',
+    'hero.desc.hero-7': 'கோலாகலமாக நடைபெற்ற பட்டமளிப்பு விழாவில் ஐக்கிய இராச்சியத்தைச் சேர்ந்த எங்கள் மாணவர்கள்.',
+    'hero.learnMore.hero-7': 'மேலும் அறிய',
 
     // Slide Specifics - Hero 8 (Class of 2024)
-    'hero.welcome.hero-8': 'நவீனக் கல்வி',
-    'hero.title.hero-8': '2024 பட்டதாரிகள்',
-    'hero.desc.hero-8': 'தொழில்நுட்பத்தின் உதவியுடன் தமிழைச் சிறப்பாகக் கற்றுத் தேர்ந்த 2024-ஆம் ஆண்டு மாணவர்கள்.',
-    'hero.enroll.hero-8': 'சேர்க்கை 2024',
-    'hero.learnMore.hero-8': 'மின்-கற்றல்',
+    'hero.welcome.hero-8': 'ஆண்டு விழா - 2024',
+    'hero.title.hero-8': 'ஐக்கிய இராச்சியம்',
+    'hero.desc.hero-8': 'வெகு சிறப்பாக நடைபெற்ற விழாவில் கலந்துகொண்ட விருந்தினர்கள், மாணவர்கள் மற்றும் கலைநிகழ்ச்சிகள்.',
+    'hero.learnMore.hero-8': 'மேலும் அறிய',
 
     // Slide Specifics - Hero 9 (Class of 2025)
-    'hero.welcome.hero-9': 'எதிர்காலத் தலைவர்கள்',
-    'hero.title.hero-9': '2025-ஐ நோக்கி...',
-    'hero.desc.hero-9': 'அடுத்த தலைமுறைத் தமிழ் மாணவர்களை உருவாக்குவதில் நாங்கள் என்றும் பெருமை கொள்கிறோம்.',
-    'hero.enroll.hero-9': 'இப்போதே பதிவு செய்',
+    'hero.welcome.hero-9': 'கேம்பிரிட்ஜ் தேர்வுகள் - 2025',
+    'hero.title.hero-9': 'பட்டமளிப்பு விழா',
+    'hero.desc.hero-9': 'கேம்பிரிட்ஜ் தமிழ்த் தேர்வுகளின் 2025 ஆம் ஆண்டு தேர்வுபெற்ற எங்கள் மாணவர்கள்.',
+    'hero.enroll.hero-9': 'மாணவர் சேர்க்கை',
     'hero.learnMore.hero-9': 'எதிர்காலத் திட்டம்',
 
     'welcome.tag': 'Worlds First Virtual Tamil School',
@@ -91,7 +80,7 @@ export const homeTranslations = {
     'gallery.tag': 'நிகழ்வுகள்',
     'gallery.title': 'கற்றல் அனுபவம்',
     'gallery.desc': 'எமது கற்றல் பயணத்தைச் சிறப்பாக்கும் தருணங்கள்.',
-    'act.title': 'சிறப்புச் செயல்பாடுகள்',
+    'act.title': 'எங்கள் செயல்பாடுகள்',
     'act.desc': 'பாடங்கள் மட்டுமின்றி மாணவர்களின் பன்முகத் திறன்களை வளர்க்கிறோம்.',
     'act.art': 'கலைகள்',
     'act.artDesc': 'ஓவியம் மற்றும் கைவினைத் திறன்களை வளர்த்தல்.',
@@ -113,70 +102,59 @@ export const homeTranslations = {
     'hero.enroll': 'Enroll Today',
     'hero.learnMore': 'Learn More',
 
-    // Slide Specifics - Hero 1
-    'hero.welcome.hero-1': 'Global Tamil School',
-    'hero.title.hero-1': 'A Global Center for Tamil Language',
-    'hero.desc.hero-1': 'Headquartered in London, providing high-quality Tamil education to students worldwide.',
-    'hero.enroll.hero-1': 'Enroll Now',
-    'hero.learnMore.hero-1': 'Explore Programs',
+    // Slide Specifics - Hero 1 (General/Global)
+    'hero.welcome.hero-1': 'Welcome to Global Tamil School',
+    'hero.title.hero-1': 'The World\'s First Online Tamil School',
+    'hero.desc.hero-1': ' ',
 
-    // Slide Specifics - Hero 2
-    'hero.welcome.hero-2': 'Arts & Culture',
-    'hero.title.hero-2': 'Celebrating Our Rich Heritage',
-    'hero.desc.hero-2': 'Bringing traditional arts, music, and cultural values to the next generation alongside language skills.',
-    'hero.enroll.hero-2': 'Join Activities',
-    'hero.learnMore.hero-2': 'Our Traditions',
+    // Slide Specifics - Hero 2 (Culture)
+    'hero.welcome.hero-2': 'Our Worldwide Services',
+    'hero.title.hero-2': 'Let us unite with Tamil',
+    'hero.desc.hero-2': ' ',
+    'hero.enroll.hero-2': 'Admissions',
+    'hero.learnMore.hero-2': 'Know More',
 
-    // Slide Specifics - Hero 3
-    'hero.welcome.hero-3': 'Academic Excellence',
-    'hero.title.hero-3': 'Premium Learning Experience',
-    'hero.desc.hero-3': 'International standard curriculum guided by highly experienced and passionate educators.',
-    'hero.enroll.hero-3': 'Apply Today',
-    'hero.learnMore.hero-3': 'Curriculum Details',
+    // Slide Specifics - Hero 3 (Academic)
+    'hero.welcome.hero-3': 'Online Competitions',
+    'hero.title.hero-3': 'Our students living all over the world',
+    'hero.desc.hero-3': ' ',
 
-    // Slide Specifics - Hero 4
-    'hero.welcome.hero-4': 'Our Identity',
-    'hero.title.hero-4': 'Preserving Our Roots',
-    'hero.desc.hero-4': 'Teaching millennia of Tamil history and literature in a way that resonates with modern students.',
-    'hero.enroll.hero-4': 'Start Learning',
-    'hero.learnMore.hero-4': 'Tamil History',
+    // Slide Specifics - Hero 4 (Heritage)
+    'hero.welcome.hero-4': 'Tamil Is Our Identity',
+    'hero.title.hero-4': 'Long Live Tamil',
+    'hero.desc.hero-4': '"சொல்லில் உயர்வு தமிழ்ச் சொல்லே அதைத் தொழுது படித்திடடி பாப்பா" - பாரதி',
 
-    // Slide Specifics - Hero 5
-    'hero.welcome.hero-5': 'Tamil Community',
-    'hero.title.hero-5': 'United by Language',
-    'hero.desc.hero-5': 'An elite educational platform connecting Tamil learners from every corner of the globe.',
-    'hero.enroll.hero-5': 'Become a Member',
-    'hero.learnMore.hero-5': 'Community Events',
+    // Slide Specifics - Hero 5 (Community)
+    'hero.welcome.hero-5': 'Non-Resident Tamils Day 2025',
+    'hero.title.hero-5': 'A Stall by Global Tamil School',
+    'hero.desc.hero-5': ' ',
 
-    // Slide Specifics - Hero 6
-    'hero.welcome.hero-6': 'Success Stories',
-    'hero.title.hero-6': 'Class of 2022 Achievers',
-    'hero.desc.hero-6': 'Celebrating the milestones and graduation of our brilliant students from the 2022 session.',
-    'hero.enroll.hero-6': 'Contact Us',
-    'hero.learnMore.hero-6': '2022 Highlights',
+    // Slide Specifics - Hero 6 (Class of 2022)
+    'hero.welcome.hero-6': 'Annual Day - 2022',
+    'hero.title.hero-6': 'United Kingdom',
+    'hero.desc.hero-6': 'Awarding ceremony organized at the City of London',
+    'hero.learnMore.hero-6': 'Know More',
 
-    // Slide Specifics - Hero 7
-    'hero.welcome.hero-7': 'Rising Generation',
-    'hero.title.hero-7': 'Class of 2023 Journey',
-    'hero.desc.hero-7': 'Reflecting on the hard work and outstanding academic results achieved throughout 2023.',
-    'hero.enroll.hero-7': 'Join the School',
-    'hero.learnMore.hero-7': '2023 Achievements',
+    // Slide Specifics - Hero 7 (Class of 2023)
+    'hero.welcome.hero-7': 'Annual Day - 2023',
+    'hero.title.hero-7': 'United Kingdom',
+    'hero.desc.hero-7': 'Global Tamil School students at the grand celebration of awarding ceremony',
+    'hero.learnMore.hero-7': 'Know More',
 
-    // Slide Specifics - Hero 8
-    'hero.welcome.hero-8': 'Modern Education',
-    'hero.title.hero-8': 'Class of 2024 Graduates',
-    'hero.desc.hero-8': 'Empowering students with digital tools to master Tamil in a modern virtual environment.',
-    'hero.enroll.hero-8': 'Admissions 2024',
-    'hero.learnMore.hero-8': 'Digital Learning',
+    // Slide Specifics - Hero 8 (Class of 2024)
+    'hero.welcome.hero-8': 'Annual Day - 2024',
+    'hero.title.hero-8': 'United Kingdom',
+    'hero.desc.hero-8': 'Students & Guests from the grand celebration at London. And the cultural programs by our students',
+    'hero.learnMore.hero-8': 'Know More',
 
-    // Slide Specifics - Hero 9
-    'hero.welcome.hero-9': 'Future Leaders',
-    'hero.title.hero-9': 'Inspiring the Class of 2025',
-    'hero.desc.hero-9': 'Taking pride in nurturing the next generation of Tamil leaders and scholars.',
-    'hero.enroll.hero-9': 'Register Interest',
-    'hero.learnMore.hero-9': 'Academic Path',
+    // Slide Specifics - Hero 9 (Class of 2025)
+    'hero.welcome.hero-9': 'Cambridge Tamil Exams - 2025',
+    'hero.title.hero-9': 'Awarding Ceremony',
+    'hero.desc.hero-9': 'Our students graduated from Cambridge Tamil Language in 2025 exams series',
+    'hero.enroll.hero-9': 'Admissions',
+    'hero.learnMore.hero-9': 'Know More',
 
-    'welcome.tag': 'Worlds First Virtual Tamil School',
+    'welcome.tag': 'Worlds First Online Tamil School',
     'welcome.title': 'Welcome to Global Tamil School',
     'welcome.description': 'At Global Tamil School, we believe language is the gateway to culture. Our mission is to provide world-class education in Tamil while preserving our rich heritage for the next generation.',
     'welcome.feat1': 'Standardized Global Curriculum',

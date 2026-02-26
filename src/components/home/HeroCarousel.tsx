@@ -77,13 +77,14 @@ export default function HeroCarousel() {
             const slideDesc = t(descKey);
             const enrollText = t(enrollKey);
             const learnMoreText = t(learnMoreKey);
+            const hasText = (text: string, key: string) => text !== key && text.trim().length > 0;
             
             // Checks
             const hasWelcomeSpecific = welcomeText !== welcomeKey;
             const hasTitleSpecific = slideTitle !== titleKey;
             const hasDescSpecific = slideDesc !== descKey;
-            const hasEnrollSpecific = enrollText !== enrollKey;
-            const hasLearnMoreSpecific = learnMoreText !== learnMoreKey;
+            const hasEnrollSpecific = hasText(enrollText, enrollKey);
+            const hasLearnMoreSpecific = hasText(learnMoreText, learnMoreKey);
 
             return (
               <CarouselItem key={image.id}>
@@ -120,17 +121,23 @@ export default function HeroCarousel() {
                       </p>
 
                       {/* Optional Buttons Container */}
-                      <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
-                        {/* Optional Enroll Button */}
-                        <Button asChild size="lg" className="bg-primary text-primary-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(255,191,0,0.5)] hover:shadow-primary/40 hover:scale-105 transition-all w-full sm:w-auto">
-                          <Link href="/enroll">{hasEnrollSpecific ? enrollText : t('hero.enroll')}</Link>
-                        </Button>
+                      {(hasEnrollSpecific || hasLearnMoreSpecific) && (
+                        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-500">
+                          {/* Optional Enroll Button */}
+                          {hasEnrollSpecific && (
+                            <Button asChild size="lg" className="bg-primary text-primary-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl shadow-[0_10px_40px_-10px_rgba(255,191,0,0.5)] hover:shadow-primary/40 hover:scale-105 transition-all w-full sm:w-auto">
+                              <Link href="/enroll">{enrollText}</Link>
+                            </Button>
+                          )}
 
-                        {/* Optional Learn More Button */}
-                        <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-md text-white border-2 border-white hover:bg-white hover:text-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl transition-all w-full sm:w-auto">
-                          <Link href="/about">{hasLearnMoreSpecific ? learnMoreText : t('hero.learnMore')}</Link>
-                        </Button>
-                      </div>
+                          {/* Optional Learn More Button */}
+                          {hasLearnMoreSpecific && (
+                            <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-md text-white border-2 border-white hover:bg-white hover:text-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl transition-all w-full sm:w-auto">
+                              <Link href="/about">{learnMoreText}</Link>
+                            </Button>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -27,11 +27,11 @@ export default function AboutPage() {
   ];
 
   const reviews = [
-    { name: t('reviews.1.name'), text: t('reviews.1.text') },
-    { name: t('reviews.2.name'), text: t('reviews.2.text') },
-    { name: t('reviews.3.name'), text: t('reviews.3.text') },
-    { name: t('reviews.4.name'), text: t('reviews.4.text') },
-    { name: t('reviews.5.name'), text: t('reviews.5.text') }
+    { name: t('reviews.1.name'), text: t('reviews.1.text'), rating: Number(t('reviews.1.rating')) || 5 },
+    { name: t('reviews.2.name'), text: t('reviews.2.text'), rating: Number(t('reviews.2.rating')) || 5 },
+    { name: t('reviews.3.name'), text: t('reviews.3.text'), rating: Number(t('reviews.3.rating')) || 5 },
+    { name: t('reviews.4.name'), text: t('reviews.4.text'), rating: Number(t('reviews.4.rating')) || 5 },
+    { name: t('reviews.5.name'), text: t('reviews.5.text'), rating: Number(t('reviews.5.rating')) || 5 }
   ];
 
   const founderImage = PlaceHolderImages.find(img => img.id === 'founder-image')?.imageUrl || "https://picsum.photos/seed/founder/800/1000";
