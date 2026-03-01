@@ -2,28 +2,67 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, MapPin } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { teamTranslations } from "@/translations/team";
 
+function BioWithTooltip({ bio }: { bio: string }) {
+  const bioRef = useRef<HTMLParagraphElement>(null);
+  const [isTruncated, setIsTruncated] = useState(false);
+
+  useEffect(() => {
+    const element = bioRef.current;
+    if (!element) return;
+
+    const checkTruncation = () => {
+      setIsTruncated(element.scrollHeight > element.clientHeight + 1);
+    };
+
+    checkTruncation();
+
+    let observer: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined") {
+      observer = new ResizeObserver(checkTruncation);
+      observer.observe(element);
+    }
+
+    window.addEventListener("resize", checkTruncation);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", checkTruncation);
+    };
+  }, [bio]);
+
+  return (
+    <p
+      ref={bioRef}
+      className="text-muted-foreground text-xs leading-relaxed line-clamp-3 italic"
+      title={isTruncated ? bio : undefined}
+    >
+      "{bio}"
+    </p>
+  );
+}
+
 export default function TeamPage() {
   const { t, language } = useLanguage();
 
   const currentTeam = (teamTranslations[language]['team.people'] as any) || {
-    leadership: [],
-    faculty: [],
-    arts: [],
-    admin: [],
+    group1: [],
+    group2: [],
+    group3: [],
+    group4: [],
   };
 
   const groups = [
-    { title: t('team.groups.leadership'), members: currentTeam.leadership, grid: "lg:grid-cols-4" },
-    { title: t('team.groups.faculty'), members: currentTeam.faculty, grid: "lg:grid-cols-4" },
-    { title: t('team.groups.arts'), members: currentTeam.arts, grid: "lg:grid-cols-4" },
-    { title: t('team.groups.admin'), members: currentTeam.admin, grid: "lg:grid-cols-4" },
+    { title: t('team.groups.group1'), members: currentTeam.group1, grid: "lg:grid-cols-4" },
+    { title: t('team.groups.group2'), members: currentTeam.group2, grid: "lg:grid-cols-4" },
+    { title: t('team.groups.group3'), members: currentTeam.group3, grid: "lg:grid-cols-4" },
+    { title: t('team.groups.group4'), members: currentTeam.group4, grid: "lg:grid-cols-4" },
   ];
 
   const headerImage = PlaceHolderImages.find(img => img.id === 'hero-2')?.imageUrl || "/people/Placeholder.jpg";
@@ -58,7 +97,7 @@ export default function TeamPage() {
                 <h2 className="font-headline text-3xl md:text-4xl font-black text-foreground">{group.title}</h2>
                 <div className="h-1 flex-grow bg-primary/20 rounded-full hidden md:block"></div>
                 <div className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-black uppercase tracking-widest">
-                  {group.members.length} {t('stats.teachers')}
+                  {group.members.length} {t('team.groups.label')}
                 </div>
               </div>
             </ScrollReveal>
@@ -88,11 +127,17 @@ export default function TeamPage() {
                       <CardContent className="p-6 text-center space-y-3">
                         <div>
                           <h3 className="font-headline text-xl font-bold text-foreground leading-tight break-words">{member.name}</h3>
-                          <p className="text-primary font-bold text-[10px] uppercase tracking-widest mt-1 line-clamp-1">{member.role}</p>
+                          <p className="inline-block bg-primary/15 text-foreground font-bold text-[10px] uppercase tracking-widest mt-2 px-3 py-1 rounded-full line-clamp-1">
+                            {member.role}
+                          </p>
+                          {member.location && (
+                            <p className="mt-2 flex w-full items-center justify-center gap-1.5 text-xs font-semibold text-muted-foreground">
+                              <MapPin size={12} className="text-primary" aria-hidden="true" />
+                              <span className="text-foreground">{member.location}</span>
+                            </p>
+                          )}
                         </div>
-                        <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 italic">
-                          "{member.bio}"
-                        </p>
+                        <BioWithTooltip bio={member.bio} />
                         <div className="flex justify-center space-x-3 pt-2">
                           <button className="bg-primary/5 p-2 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-muted-foreground">
                             <Linkedin size={14} />
@@ -136,4 +181,3 @@ export default function TeamPage() {
     </div>
   );
 }
-

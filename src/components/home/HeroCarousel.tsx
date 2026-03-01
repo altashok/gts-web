@@ -106,13 +106,15 @@ export default function HeroCarousel() {
 
                       {/* Title */}
                       <h1 className="font-headline text-2xl md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-                        {hasTitleSpecific ? (
-                          slideTitle
-                        ) : (
-                          <>
-                            {t('hero.title')}<span className="text-primary drop-shadow-[0_0_15px_rgba(255,191,0,0.4)]">{t('hero.titleAccent')}</span>
-                          </>
-                        )}
+                        <span className="inline-block rounded-2xl bg-black/45 px-4 py-3 md:px-6 md:py-4 backdrop-blur-[1px]">
+                          {hasTitleSpecific ? (
+                            slideTitle
+                          ) : (
+                            <>
+                              {t('hero.title')}<span className="text-primary drop-shadow-[0_0_15px_rgba(255,191,0,0.4)]">{t('hero.titleAccent')}</span>
+                            </>
+                          )}
+                        </span>
                       </h1>
 
                       {/* Description */}
