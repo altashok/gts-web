@@ -57,7 +57,7 @@ export async function submitEnrollment(values: any, recaptchaToken: string) {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'globaltamilschool@gmail.com',
+        user: 'web@globaltamilschool.co.uk',
         // This requires an App Password from Google Accounts
         pass: process.env.EMAIL_APP_PASSWORD 
       }
@@ -69,7 +69,7 @@ export async function submitEnrollment(values: any, recaptchaToken: string) {
 
     if (process.env.EMAIL_APP_PASSWORD) {
       await transporter.sendMail({
-        from: '"Global Tamil School Web" <globaltamilschool@gmail.com>',
+        from: '"Global Tamil School Web" <web@globaltamilschool.co.uk>',
         to: "globaltamilschool@gmail.com",
         subject: `New Enrollment: ${values.studentName}`,
         text: emailBody,
