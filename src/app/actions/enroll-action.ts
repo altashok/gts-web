@@ -1,4 +1,4 @@
-
+﻿
 'use server';
 
 import nodemailer from 'nodemailer';
@@ -11,24 +11,23 @@ export async function submitEnrollment(values: any, recaptchaToken: string) {
   try {
     // 1. Verify reCAPTCHA token server-side
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
-    if (!recaptchaSecret) {
-      console.error("RECAPTCHA_SECRET_KEY is not configured.");
-      return { success: false, error: "Security configuration error. Please try again later." };
-    }
+    if (recaptchaSecret) {
+      const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          secret: recaptchaSecret,
+          response: recaptchaToken,
+        }),
+      });
+      const recaptchaData = await recaptchaRes.json();
 
-    const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        secret: recaptchaSecret,
-        response: recaptchaToken,
-      }),
-    });
-    const recaptchaData = await recaptchaRes.json();
-    
-    if (!recaptchaData.success || recaptchaData.score < 0.4) {
-      console.error("reCAPTCHA verification failed:", recaptchaData['error-codes']);
-      return { success: false, error: "Security check failed. Please try again." };
+      if (!recaptchaData.success || recaptchaData.score < 0.4) {
+        console.error("reCAPTCHA verification failed:", recaptchaData['error-codes']);
+        return { success: false, error: "Security check failed. Please try again." };
+      }
+    } else {
+      console.warn("RECAPTCHA_SECRET_KEY is not configured. Skipping reCAPTCHA verification.");
     }
 
     // 2. Prepare the Email content
@@ -87,3 +86,4 @@ export async function submitEnrollment(values: any, recaptchaToken: string) {
     return { success: false, error: "An internal error occurred while processing your enrollment." };
   }
 }
+

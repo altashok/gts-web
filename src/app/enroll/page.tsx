@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -44,7 +44,7 @@ const formSchema = z.object({
 
 type ExecuteRecaptcha = ((action?: string) => Promise<string>) | undefined;
 
-function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRecaptcha }) {
+function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRecaptcha: ExecuteRecaptcha; recaptchaEnabled: boolean }) {
   const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -63,7 +63,7 @@ function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteReca
   });
 
   const onSubmit = useCallback(async (values: z.infer<typeof formSchema>) => {
-    if (!executeRecaptcha) {
+    if (recaptchaEnabled && !executeRecaptcha) {
       toast({
         variant: "destructive",
         title: "Security Error",
@@ -75,10 +75,8 @@ function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteReca
     setIsSubmitting(true);
 
     try {
-      // Using 'LOGIN' action as per enterprise requirement
-      const token = await executeRecaptcha("LOGIN");
-      
-      if (!token) {
+      const token = recaptchaEnabled ? await executeRecaptcha?.("LOGIN") : "";
+      if (recaptchaEnabled && !token) {
         throw new Error("Failed to generate security token.");
       }
 
@@ -107,7 +105,7 @@ function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteReca
     } finally {
       setIsSubmitting(false);
     }
-  }, [executeRecaptcha, form, toast]);
+  }, [executeRecaptcha, form, recaptchaEnabled, toast]);
 
   return (
     <div className="pb-24">
@@ -283,14 +281,14 @@ function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteReca
                     <Button 
                       type="submit" 
                       className="w-full bg-primary text-primary-foreground font-black py-6 text-lg hover:shadow-lg transition-shadow"
-                      disabled={isSubmitting || !executeRecaptcha}
+                      disabled={isSubmitting || (recaptchaEnabled && !executeRecaptcha)}
                     >
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                           Processing...
                         </>
-                      ) : !executeRecaptcha ? (
+                      ) : recaptchaEnabled && !executeRecaptcha ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                           Initializing Security...
@@ -320,14 +318,14 @@ function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteReca
 
 function EnrollPageContentWithRecaptcha() {
   const { executeRecaptcha } = useGoogleReCaptcha();
-  return <EnrollPageContent executeRecaptcha={executeRecaptcha} />;
+  return <EnrollPageContent executeRecaptcha={executeRecaptcha} recaptchaEnabled={true} />;
 }
 
 export default function EnrollPage() {
   const hasRecaptchaKey = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
 
   if (!hasRecaptchaKey) {
-    return <EnrollPageContent executeRecaptcha={undefined} />;
+    return <EnrollPageContent executeRecaptcha={undefined} recaptchaEnabled={false} />;
   }
 
   return (
@@ -336,3 +334,4 @@ export default function EnrollPage() {
     </ReCaptchaProvider>
   );
 }
+

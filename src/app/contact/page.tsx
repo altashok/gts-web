@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -40,7 +40,7 @@ const contactSchema = z.object({
 
 type ExecuteRecaptcha = ((action?: string) => Promise<string>) | undefined;
 
-function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRecaptcha }) {
+function ContactPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRecaptcha: ExecuteRecaptcha; recaptchaEnabled: boolean }) {
   const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,7 +57,7 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
   });
 
   const onSubmit = useCallback(async (values: z.infer<typeof contactSchema>) => {
-    if (!executeRecaptcha) {
+    if (recaptchaEnabled && !executeRecaptcha) {
       toast({
         variant: "destructive",
         title: "Security Error",
@@ -69,10 +69,8 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
     setIsSubmitting(true);
 
     try {
-      // Using 'LOGIN' action as per enterprise requirement
-      const token = await executeRecaptcha("LOGIN");
-      
-      if (!token) {
+      const token = recaptchaEnabled ? await executeRecaptcha?.("LOGIN") : "";
+      if (recaptchaEnabled && !token) {
         throw new Error("Failed to generate security token.");
       }
 
@@ -101,7 +99,7 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
     } finally {
       setIsSubmitting(false);
     }
-  }, [executeRecaptcha, form, toast]);
+  }, [executeRecaptcha, form, recaptchaEnabled, toast]);
 
   return (
     <div className="pb-24">
@@ -242,14 +240,14 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
                     <Button 
                       type="submit" 
                       className="w-full bg-primary text-primary-foreground font-black py-6 text-lg hover:shadow-lg transition-shadow"
-                      disabled={isSubmitting || !executeRecaptcha}
+                      disabled={isSubmitting || (recaptchaEnabled && !executeRecaptcha)}
                     >
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                           Sending...
                         </>
-                      ) : !executeRecaptcha ? (
+                      ) : recaptchaEnabled && !executeRecaptcha ? (
                         <>
                           <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                           Initializing Security...
@@ -304,14 +302,14 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
 
 function ContactPageContentWithRecaptcha() {
   const { executeRecaptcha } = useGoogleReCaptcha();
-  return <ContactPageContent executeRecaptcha={executeRecaptcha} />;
+  return <ContactPageContent executeRecaptcha={executeRecaptcha} recaptchaEnabled={true} />;
 }
 
 export default function ContactPage() {
   const hasRecaptchaKey = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
 
   if (!hasRecaptchaKey) {
-    return <ContactPageContent executeRecaptcha={undefined} />;
+    return <ContactPageContent executeRecaptcha={undefined} recaptchaEnabled={false} />;
   }
 
   return (
@@ -320,3 +318,4 @@ export default function ContactPage() {
     </ReCaptchaProvider>
   );
 }
+
