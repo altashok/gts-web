@@ -70,7 +70,7 @@ export default function TeamPage() {
   return (
     <div className="pb-24">
       {/* Header Banner */}
-      <section className="relative h-[160px] md:h-[220px] flex items-center justify-center overflow-hidden mb-12">
+      <section className="relative h-[220px] md:h-[260px] flex items-center justify-center overflow-hidden mb-12">
         <Image 
           src={headerImage}
           alt="Team Banner"
@@ -79,13 +79,13 @@ export default function TeamPage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <ScrollReveal animation="fade-in">
-            <h1 className="font-headline text-2xl md:text-4xl font-black mb-2 drop-shadow-lg">{t('team.title')}</h1>
-            <p className="text-sm md:text-base text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-4">
+          <div className="inline-block rounded-2xl bg-black/45 px-4 py-3 md:px-6 md:py-4 backdrop-blur-[1px]">
+            <h1 className="font-headline text-xl sm:text-2xl md:text-4xl font-black mb-2 drop-shadow-lg">{t('team.title')}</h1>
+            <p className="text-xs sm:text-sm md:text-base text-white/95 max-w-2xl mx-auto font-medium drop-shadow-md">
               {t('team.subtitle')}
             </p>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
 

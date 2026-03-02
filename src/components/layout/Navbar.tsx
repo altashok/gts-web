@@ -46,15 +46,15 @@ export default function Navbar() {
                 </div>
                 <div className={cn(
                   "transition-all ml-1 sm:ml-2",
-                  "hidden sm:block min-w-[120px] sm:min-w-[150px] md:min-w-[220px]"
+                  "block min-w-[88px] sm:min-w-[150px] md:min-w-[220px]"
                 )}>
                   <span className={cn(
                     "font-headline font-black block leading-none text-foreground tracking-tight uppercase transition-all",
-                    language === 'ta' ? "text-base sm:text-xl md:text-2xl" : "text-lg sm:text-2xl md:text-3xl"
+                    language === 'ta' ? "text-xs sm:text-xl md:text-2xl" : "text-sm sm:text-2xl md:text-3xl"
                   )}>
                     {t('nav.brand')}
                   </span>
-                  <span className="text-[8px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.1em] mt-0.5 sm:mt-1 block">
+                  <span className="block text-[7px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.08em] mt-0.5 sm:mt-1 leading-tight max-w-[130px] sm:max-w-none whitespace-normal break-words">
                     {t('nav.tagline')}
                   </span>
                 </div>

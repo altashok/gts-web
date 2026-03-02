@@ -14,21 +14,21 @@ export default function AffiliationsPage() {
     {
       name: t('affil.partner1.name'),
       role: t('affil.partner1.role'),
-      image: "https://picsum.photos/seed/affil-logo1/400/400",
+      image: "/logo/bteb-logo.png",
       hint: "educational foundation logo",
       desc: t('affil.partner1.desc')
     },
     {
       name: t('affil.partner2.name'),
       role: t('affil.partner2.role'),
-      image: "https://picsum.photos/seed/affil-logo2/400/400",
+      image: "/logo/tvu.png",
       hint: "cultural council logo",
       desc: t('affil.partner2.desc')
     },
     {
       name: t('affil.partner3.name'),
       role: t('affil.partner3.role'),
-      image: "https://picsum.photos/seed/affil-logo3/400/400",
+      image: "/logo/tala-logo.jpg",
       hint: "language academy logo",
       desc: t('affil.partner3.desc')
     }

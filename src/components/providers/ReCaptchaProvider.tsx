@@ -9,9 +9,16 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
  * Configured with the Enterprise script and specific site key.
  */
 export function ReCaptchaProvider({ children }: { children: React.ReactNode }) {
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  if (!siteKey) {
+    console.warn("NEXT_PUBLIC_RECAPTCHA_SITE_KEY is not configured. reCAPTCHA is disabled.");
+    return <>{children}</>;
+  }
+
   return (
     <GoogleReCaptchaProvider 
-      reCaptchaKey="6LdxOW4sAAAAAJwOjSMVJAFBGaxv3wCtIOuh-qgK"
+      reCaptchaKey={siteKey}
       useEnterprise={true}
       scriptProps={{
         async: true,

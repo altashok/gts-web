@@ -10,10 +10,20 @@ import nodemailer from 'nodemailer';
 export async function submitContactForm(values: any, recaptchaToken: string) {
   try {
     // 1. Verify reCAPTCHA token server-side
-    const recaptchaSecret = "6LduvkIsAAAAAHeSk1vUUMiaoixkbG9vq8sIfSIU";
-    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecret}&response=${recaptchaToken}`;
-    
-    const recaptchaRes = await fetch(verifyUrl, { method: 'POST' });
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+    if (!recaptchaSecret) {
+      console.error("RECAPTCHA_SECRET_KEY is not configured.");
+      return { success: false, error: "Security configuration error. Please try again later." };
+    }
+
+    const recaptchaRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: recaptchaSecret,
+        response: recaptchaToken,
+      }),
+    });
     const recaptchaData = await recaptchaRes.json();
     
     if (!recaptchaData.success || recaptchaData.score < 0.4) {

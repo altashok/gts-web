@@ -42,10 +42,11 @@ const formSchema = z.object({
   notes: z.string().optional(),
 });
 
-function EnrollPageContent() {
+type ExecuteRecaptcha = ((action?: string) => Promise<string>) | undefined;
+
+function EnrollPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRecaptcha }) {
   const { t } = useLanguage();
   const { toast } = useToast();
-  const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -317,10 +318,21 @@ function EnrollPageContent() {
   );
 }
 
+function EnrollPageContentWithRecaptcha() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  return <EnrollPageContent executeRecaptcha={executeRecaptcha} />;
+}
+
 export default function EnrollPage() {
+  const hasRecaptchaKey = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+
+  if (!hasRecaptchaKey) {
+    return <EnrollPageContent executeRecaptcha={undefined} />;
+  }
+
   return (
     <ReCaptchaProvider>
-      <EnrollPageContent />
+      <EnrollPageContentWithRecaptcha />
     </ReCaptchaProvider>
   );
 }

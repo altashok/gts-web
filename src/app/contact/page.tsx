@@ -31,10 +31,11 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
-function ContactPageContent() {
+type ExecuteRecaptcha = ((action?: string) => Promise<string>) | undefined;
+
+function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRecaptcha }) {
   const { t } = useLanguage();
   const { toast } = useToast();
-  const { executeRecaptcha } = useGoogleReCaptcha();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<z.infer<typeof contactSchema>>({
@@ -265,10 +266,21 @@ function ContactPageContent() {
   );
 }
 
+function ContactPageContentWithRecaptcha() {
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  return <ContactPageContent executeRecaptcha={executeRecaptcha} />;
+}
+
 export default function ContactPage() {
+  const hasRecaptchaKey = Boolean(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+
+  if (!hasRecaptchaKey) {
+    return <ContactPageContent executeRecaptcha={undefined} />;
+  }
+
   return (
     <ReCaptchaProvider>
-      <ContactPageContent />
+      <ContactPageContentWithRecaptcha />
     </ReCaptchaProvider>
   );
 }
