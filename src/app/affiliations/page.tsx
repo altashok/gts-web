@@ -16,21 +16,24 @@ export default function AffiliationsPage() {
       role: t('affil.partner1.role'),
       image: "/logo/bteb-logo.png",
       hint: "educational foundation logo",
-      desc: t('affil.partner1.desc')
+      desc: t('affil.partner1.desc'),
+      url: "https://www.bteb.org.uk/"
     },
     {
       name: t('affil.partner2.name'),
       role: t('affil.partner2.role'),
       image: "/logo/tvu.png",
       hint: "cultural council logo",
-      desc: t('affil.partner2.desc')
+      desc: t('affil.partner2.desc'),
+      url: "https://www.tamilvu.org/"
     },
     {
       name: t('affil.partner3.name'),
       role: t('affil.partner3.role'),
       image: "/logo/tala-logo.jpg",
       hint: "language academy logo",
-      desc: t('affil.partner3.desc')
+      desc: t('affil.partner3.desc'),
+      url: "/"
     }
   ];
 
@@ -58,25 +61,27 @@ export default function AffiliationsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {partners.map((p, i) => (
             <ScrollReveal key={i} delay={i * 200} animation="fade-up">
-              <div className="bg-card border-2 border-primary/10 rounded-3xl p-8 hover:border-primary transition-colors flex flex-col h-full shadow-sm hover:shadow-xl group text-center items-center">
-                <div className="relative h-32 w-32 mb-8 bg-white p-4 rounded-2xl shadow-sm border border-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Image 
-                    src={p.image} 
-                    alt={p.name} 
-                    fill 
-                    className="object-contain p-4"
-                    data-ai-hint={p.hint}
-                  />
+              <a href={p.url} target="_blank" rel="noopener noreferrer" className="block h-full">
+                <div className="bg-card border-2 border-primary/10 rounded-3xl p-8 hover:border-primary transition-colors flex flex-col h-full shadow-sm hover:shadow-xl group text-center items-center">
+                  <div className="relative h-32 w-32 mb-8 bg-white p-4 rounded-2xl shadow-sm border border-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Image 
+                      src={p.image} 
+                      alt={p.name} 
+                      fill 
+                      className="object-contain p-4"
+                      data-ai-hint={p.hint}
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
+                  <p className="text-primary font-bold text-xs uppercase tracking-widest mb-4">{p.role}</p>
+                  <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
+                    {p.desc}
+                  </p>
+                  <Button variant="outline" className="w-full group pointer-events-none">
+                    {t('affil.visit')} <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </Button>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
-                <p className="text-primary font-bold text-xs uppercase tracking-widest mb-4">{p.role}</p>
-                <p className="text-muted-foreground mb-8 flex-grow leading-relaxed">
-                  {p.desc}
-                </p>
-                <Button variant="outline" className="w-full group">
-                  {t('affil.visit')} <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </Button>
-              </div>
+              </a>
             </ScrollReveal>
           ))}
         </div>

@@ -9,16 +9,28 @@ import { Youtube } from 'lucide-react';
 export default function YouTubeGallery() {
   const { t } = useLanguage();
   
-  // Example video IDs from Global Tamil School context or generic educational ones
+  // Recent uploads from youtube.com/globaltamilschool
   const videoIds = [
-    "dQw4w9WgXcQ", // Replace with real IDs as needed
-    "V-qZ_y_8-pM",
-    "fC6YVB_5q8c",
-    "4A3fUj-H3mE",
-    "XqZsoesa55w",
-    "3tmd-ClpJKA",
-    "_GuOjXYl5ew",
-    "6L3ID8uT-64"
+    "kIUHG4JrhN0",
+    "vphbXExDQLs",
+    "dSrWyKPbpC4",
+    "VvqKC6KPHw8",
+    "l7wgt8yxj_U",
+    "RelOYj_qVh8",
+    "PL920zcQf2Q",
+    "q7pAGeQjZoY",
+    "9VtPAEsy5yI",
+    "AEMOnhmgFFE",
+    "6JXFDEumZfI",
+    "UykYVxQmwFA",
+    "-14wD0VsGzE",
+    "0ol5ENtQOpw",
+    "uexsWoEjC6c",
+    "me4izHAxZ50",
+    "w8IJ_dnoeaM",
+    "FyKe1IYbDmk",
+    "qekDsaEzjWA",
+    "T98Tv-M_LgY"
   ];
 
   return (
@@ -33,23 +45,25 @@ export default function YouTubeGallery() {
           <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('activities.youtube.subtitle')}</p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {videoIds.map((id, index) => (
-            <ScrollReveal key={index} delay={index * 100} animation="scale-in">
-              <div className="aspect-video w-full rounded-[1.5rem] overflow-hidden shadow-lg border border-primary/10 bg-muted group hover:shadow-2xl transition-all duration-300">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${id}`}
-                  title={`YouTube video player ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </ScrollReveal>
-          ))}
+        <div className="h-[24rem] overflow-y-auto pr-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {videoIds.map((id, index) => (
+              <ScrollReveal key={index} delay={index * 60} animation="scale-in">
+                <div className="h-44 w-full rounded-[1.5rem] overflow-hidden shadow-lg border border-primary/10 bg-muted group hover:shadow-2xl transition-all duration-300">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${id}`}
+                    title={`YouTube video player ${index + 1}`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -226,9 +226,11 @@ export default function AboutPage() {
                             <Star key={j} className="h-5 w-5 fill-primary text-primary" />
                           ))}
                         </div>
-                        <p className="text-muted-foreground mb-8 flex-grow leading-relaxed italic text-sm">
-                          "{rev.text}"
-                        </p>
+                        <div className="mb-8 flex-grow max-h-36 overflow-y-auto pr-2">
+                          <p className="text-muted-foreground leading-relaxed italic text-sm">
+                            "{rev.text}"
+                          </p>
+                        </div>
                         <div className="flex items-center space-x-4 border-t pt-6 mt-auto">
                           <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-sm shrink-0">
                             {rev.name.charAt(0)}
