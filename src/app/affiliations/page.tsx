@@ -1,11 +1,17 @@
-
+﻿
 "use client";
 
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, BookOpen, FileText, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function AffiliationsPage() {
   const { t } = useLanguage();
@@ -35,6 +41,27 @@ export default function AffiliationsPage() {
       desc: t('affil.partner3.desc'),
       url: "/"
     }
+  ];
+
+    const syllabi = [
+    {
+      title: t('affil.syllabus.1.title'),
+      desc: t('affil.syllabus.1.desc'),
+      levels: t('affil.syllabus.1.levels'),
+      icon: BookOpen,
+    },
+    {
+      title: t('affil.syllabus.2.title'),
+      desc: t('affil.syllabus.2.desc'),
+      levels: t('affil.syllabus.2.levels'),
+      icon: FileText,
+    },
+    {
+      title: t('affil.syllabus.3.title'),
+      desc: t('affil.syllabus.3.desc'),
+      levels: t('affil.syllabus.3.levels'),
+      icon: GraduationCap,
+    },
   ];
 
   return (
@@ -86,6 +113,40 @@ export default function AffiliationsPage() {
           ))}
         </div>
 
+        {/* Syllabus Information Section */}
+        <section className="mt-24">
+                    <ScrollReveal animation="fade-up" className="text-center mb-12 space-y-4">
+            <h2 className="font-headline text-3xl md:text-4xl font-black">{t('affil.syllabus.title')}</h2>
+            <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+            <p className="text-muted-foreground max-w-3xl mx-auto font-medium">{t('affil.syllabus.subtitle')}</p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={120}>
+            <Accordion type="single" collapsible className="space-y-4">
+              {syllabi.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`syllabus-${index}`}
+                  className="rounded-2xl border-2 border-primary/10 bg-card px-6 shadow-sm"
+                >
+                  <AccordionTrigger className="py-5 hover:no-underline">
+                    <div className="flex items-center gap-4 text-left">
+                      <div className="bg-primary/10 p-2.5 rounded-lg shrink-0">
+                        <item.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <span className="text-lg font-black text-foreground">{item.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-5">
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">{item.desc}</p>
+                    <p className="text-xs font-bold uppercase tracking-widest text-primary">{item.levels}</p>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </ScrollReveal>
+        </section>
+
         {/* Accreditation Section */}
         <section className="mt-32 border-t pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -120,3 +181,5 @@ export default function AffiliationsPage() {
     </div>
   );
 }
+
+

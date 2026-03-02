@@ -19,10 +19,17 @@ import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
 import { submitContactForm } from "@/app/actions/contact-action";
 import { ReCaptchaProvider } from "@/components/providers/ReCaptchaProvider";
+import { contactFaqItems } from "@/translations/contact";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -34,9 +41,10 @@ const contactSchema = z.object({
 type ExecuteRecaptcha = ((action?: string) => Promise<string>) | undefined;
 
 function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRecaptcha }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const faqItems = contactFaqItems[language];
 
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
@@ -261,6 +269,34 @@ function ContactPageContent({ executeRecaptcha }: { executeRecaptcha: ExecuteRec
             </ScrollReveal>
           </div>
         </div>
+
+        {/* FAQ Section */}
+        <section className="mt-24">
+          <ScrollReveal animation="fade-up" className="text-center space-y-4 mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-black">{t('contact.faq.title')}</h2>
+            <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
+            <p className="text-muted-foreground max-w-2xl mx-auto font-medium">
+              {t('contact.faq.subtitle')}
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={120}>
+            <div className="max-w-4xl mx-auto rounded-3xl border border-primary/10 bg-card p-6 md:p-8 shadow-sm">
+              <Accordion type="single" collapsible className="w-full">
+                {faqItems.map((item, index) => (
+                  <AccordionItem key={index} value={`faq-${index}`}>
+                    <AccordionTrigger className="text-left font-bold text-foreground hover:no-underline">
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </ScrollReveal>
+        </section>
       </div>
     </div>
   );

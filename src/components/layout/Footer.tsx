@@ -106,7 +106,7 @@ export default function Footer() {
                 <span className="text-sm">
                   12 Belmont Avenue<br />
                   New Malden<br />
-                  London KT3 6QD
+                  London KT3 6QD, UK
                 </span>
               </li>
               <li className="flex items-start space-x-3">
