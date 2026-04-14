@@ -25,16 +25,31 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: Prepare SSH key
+        shell: bash
+        env:
+          VPS_KEY: ${{ secrets.VPS_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${VPS_KEY:-}" ]; then
+            echo "Missing secret: VPS_KEY"
+            exit 1
+          fi
+
+          mkdir -p ~/.ssh
+          # Support both real newlines and literal '\n' sequences (common when pasting into secrets).
+          printf '%s' "$VPS_KEY" | sed 's/\r//g; s/\\\\n/\n/g' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+          # Validate that the key parses (does not print the private key).
+          ssh-keygen -y -f ~/.ssh/id_rsa >/dev/null
+
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ vars.VPS_HOST }}
           username: ${{ vars.VPS_USER }}
-          key: ${{ secrets.VPS_KEY }}
+          key_path: ~/.ssh/id_rsa
           port: ${{ vars.VPS_PORT }}
           script: |
-            cd C:\website-source\gts-web
-            git pull origin main
-            npm install
-            npm run build
-            pm2 restart all
+            powershell -NoProfile -Command "Set-Location 'C:\\website-source\\gts-web'; git pull origin main; npm install; npm run build; pm2 restart all"
