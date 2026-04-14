@@ -80,7 +80,7 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
         throw new Error("Failed to generate security token.");
       }
 
-      const result = await submitEnrollment(values, token);
+      const result = await submitEnrollment(values, token || "");
 
       if (result.success) {
         toast({
