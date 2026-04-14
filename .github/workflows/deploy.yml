@@ -62,10 +62,11 @@ jobs:
           fi
 
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ vars.VPS_HOST }}
           username: ${{ vars.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
           key: ${{ secrets.VPS_KEY }}
           port: ${{ vars.VPS_PORT }}
           script: |
