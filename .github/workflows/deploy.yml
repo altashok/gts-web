@@ -49,7 +49,7 @@ jobs:
         with:
           host: ${{ vars.VPS_HOST }}
           username: ${{ vars.VPS_USER }}
-          key_path: ~/.ssh/id_rsa
+          key: ${{ secrets.VPS_KEY }}
           port: ${{ vars.VPS_PORT }}
           script: |
             powershell -NoProfile -Command "Set-Location 'C:\\website-source\\gts-web'; git pull origin main; npm install; npm run build; pm2 restart all"
