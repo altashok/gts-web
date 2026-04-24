@@ -105,7 +105,7 @@ export default function HeroCarousel() {
                       </div>
 
                       {/* Title */}
-                      <h1 className="font-headline text-2xl md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                      <h1 className="font-headline text-[29px] md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                         <span className="inline-block rounded-2xl bg-black/45 px-4 py-3 md:px-6 md:py-4 backdrop-blur-[1px]">
                           {hasTitleSpecific ? (
                             slideTitle
@@ -118,7 +118,7 @@ export default function HeroCarousel() {
                       </h1>
 
                       {/* Description */}
-                      <p className="text-sm md:text-xl font-bold mb-10 max-w-2xl mx-auto drop-shadow-lg opacity-90 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                      <p className="text-[19px] md:text-xl font-bold mb-10 max-w-2xl mx-auto drop-shadow-lg opacity-90 leading-relaxed animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
                         {hasDescSpecific ? slideDesc : t('hero.description')}
                       </p>
 

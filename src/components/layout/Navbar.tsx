@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Navbar() {
+  const SHOP_DISABLED = true;
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
@@ -33,7 +34,7 @@ export default function Navbar() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="relative h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 shrink-0 flex items-center justify-center p-1">
+                <div className="relative h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 shrink-0 flex items-center justify-center p-1">
                   <Image 
                     src={logoImage} 
                     alt="Global Tamil School Logo" 
@@ -50,7 +51,7 @@ export default function Navbar() {
                 )}>
                   <span className={cn(
                     "font-headline font-black block leading-none text-foreground tracking-tight uppercase transition-all",
-                    language === 'ta' ? "text-xs sm:text-xl md:text-2xl" : "text-sm sm:text-2xl md:text-3xl"
+                    language === 'ta' ? "text-sm sm:text-xl md:text-2xl" : "text-base sm:text-2xl md:text-3xl"
                   )}>
                     {t('nav.brand')}
                   </span>
@@ -77,29 +78,44 @@ export default function Navbar() {
               ))}
               
               <div className="flex items-center border-l pl-2 lg:pl-3 space-x-1">
-                <Button 
-                  asChild
-                  variant="ghost" 
-                  size="sm" 
-                  className="p-2 text-muted-foreground hover:text-primary"
-                  title={t('nav.shop')}
-                >
-                  <Link href="/shop">
+                {SHOP_DISABLED ? (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    disabled
+                    className="p-2 text-muted-foreground opacity-50 cursor-not-allowed"
+                    title={`${t('nav.shop')} (temporarily disabled)`}
+                  >
                     <ShoppingBag className="h-5 w-5" />
-                  </Link>
-                </Button>
+                  </Button>
+                ) : (
+                  <Button 
+                    asChild
+                    variant="ghost" 
+                    size="sm" 
+                    className="p-2 text-muted-foreground hover:text-primary"
+                    title={t('nav.shop')}
+                  >
+                    <Link href="/shop">
+                      <ShoppingBag className="h-5 w-5" />
+                    </Link>
+                  </Button>
+                )}
 
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  onClick={() => setLanguage(language === 'ta' ? 'en' : 'ta')}
-                  className="font-bold flex items-center gap-1 px-2"
+                  onClick={(e) => {
+                    setLanguage(language === 'ta' ? 'en' : 'ta');
+                    e.currentTarget.blur();
+                  }}
+                  className="font-bold flex items-center gap-1 px-2 w-28"
                 >
                   <Globe className="h-3.5 w-3.5" />
                   <span className="text-[12px]">{language === 'ta' ? 'English' : 'தமிழ்'}</span>
                 </Button>
                 
-                <Button asChild className="bg-primary text-primary-foreground font-black hover:shadow-lg transition-all h-9 px-4 text-xs">
+                <Button asChild className="bg-primary text-primary-foreground font-black hover:shadow-lg transition-all h-9 px-4 text-xs w-32">
                   <a href="https://portal.globaltamilschool.co.uk" target="_blank" rel="noopener noreferrer">
                     {t('nav.login')}
                   </a>
@@ -108,22 +124,37 @@ export default function Navbar() {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center space-x-1 sm:space-x-2">
-              <Button 
-                asChild
-                variant="ghost" 
-                size="sm" 
-                className="p-1 sm:p-2 text-muted-foreground hover:text-primary"
-              >
-                <Link href="/shop">
+            <div className="md:hidden flex items-center space-x-3 sm:space-x-4">
+              {SHOP_DISABLED ? (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  disabled
+                  className="p-1 sm:p-2 text-muted-foreground opacity-50 cursor-not-allowed"
+                  title={`${t('nav.shop')} (temporarily disabled)`}
+                >
                   <ShoppingBag className="h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-              </Button>
+                </Button>
+              ) : (
+                <Button 
+                  asChild
+                  variant="ghost" 
+                  size="sm" 
+                  className="p-1 sm:p-2 text-muted-foreground hover:text-primary"
+                >
+                  <Link href="/shop">
+                    <ShoppingBag className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </Link>
+                </Button>
+              )}
                <Button 
                   variant="ghost" 
                   size="sm" 
-                  onClick={() => setLanguage(language === 'ta' ? 'en' : 'ta')}
-                  className="font-bold p-1 sm:p-2"
+                  onClick={(e) => {
+                    setLanguage(language === 'ta' ? 'en' : 'ta');
+                    e.currentTarget.blur();
+                  }}
+                  className="font-bold p-1 sm:p-2 hover:bg-transparent hover:text-foreground active:bg-transparent"
                 >
                   <Globe className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="ml-1 text-[10px] sm:text-xs">{language === 'ta' ? 'EN' : 'TA'}</span>

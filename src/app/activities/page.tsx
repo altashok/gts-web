@@ -46,8 +46,8 @@ export default function ActivitiesPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal animation="fade-in">
-            <h1 className="font-headline text-2xl md:text-4xl font-black text-primary-foreground mb-2">{t('activities.title')}</h1>
-            <p className="text-base text-primary-foreground/80 max-w-2xl mx-auto font-medium">{t('activities.subtitle')}</p>
+            <h1 className="font-headline text-[29px] md:text-4xl font-black text-primary-foreground mb-2">{t('activities.title')}</h1>
+            <p className="text-[21px] md:text-base text-primary-foreground/80 max-w-2xl mx-auto font-medium">{t('activities.subtitle')}</p>
           </ScrollReveal>
         </div>
       </section>

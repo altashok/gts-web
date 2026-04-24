@@ -115,8 +115,8 @@ function ContactPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRec
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <ScrollReveal animation="fade-in">
-            <h1 className="font-headline text-3xl md:text-5xl font-black text-primary-foreground mb-4">{t('contact.title')}</h1>
-            <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto font-medium">{t('contact.subtitle')}</p>
+            <h1 className="font-headline text-[35px] md:text-5xl font-black text-primary-foreground mb-4">{t('contact.title')}</h1>
+            <p className="text-[23px] md:text-lg text-primary-foreground/80 max-w-2xl mx-auto font-medium">{t('contact.subtitle')}</p>
           </ScrollReveal>
         </div>
       </section>

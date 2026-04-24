@@ -81,8 +81,8 @@ export default function TeamPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-4">
           <div className="inline-block rounded-2xl bg-black/45 px-4 py-3 md:px-6 md:py-4 backdrop-blur-[1px]">
-            <h1 className="font-headline text-xl sm:text-2xl md:text-4xl font-black mb-2 drop-shadow-lg">{t('team.title')}</h1>
-            <p className="text-xs sm:text-sm md:text-base text-white/95 max-w-2xl mx-auto font-medium drop-shadow-md">
+            <h1 className="font-headline text-[25px] sm:text-[29px] md:text-4xl font-black mb-2 drop-shadow-lg">{t('team.title')}</h1>
+            <p className="text-[17px] sm:text-[19px] md:text-base text-white/95 max-w-2xl mx-auto font-medium drop-shadow-md">
               {t('team.subtitle')}
             </p>
           </div>
