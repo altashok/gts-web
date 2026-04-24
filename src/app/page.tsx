@@ -8,6 +8,7 @@ import { Book, Globe, Users, Award, GraduationCap, Calendar, CheckCircle2 } from
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollingBanner from '@/components/ui/scrolling-banner';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
+import { CountUpText } from '@/components/ui/count-up';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -35,6 +36,7 @@ export default function Home() {
     { label: t('stats.years'), value: "5+" },
     { label: t('stats.teachers'), value: "50+" },
     { label: t('stats.courses'), value: "30+" },
+    { label: t('stats.countries'), value: "20+" },
   ];
 
   const galleryImages = [
@@ -142,11 +144,13 @@ export default function Home() {
             </svg>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
               {statistics.map((stat, idx) => (
                 <ScrollReveal key={idx} animation="scale-in" delay={idx * 150}>
                   <div className="space-y-2 p-8 rounded-3xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors group">
-                    <div className="text-5xl md:text-6xl font-black text-primary-foreground font-headline drop-shadow-md group-hover:scale-110 transition-transform duration-500">{stat.value}</div>
+                    <div className="text-5xl md:text-6xl font-black text-primary-foreground font-headline drop-shadow-md group-hover:scale-110 transition-transform duration-500">
+                      <CountUpText text={stat.value} durationMs={5000} delayMs={250} respectReducedMotion={false} />
+                    </div>
                     <div className="text-lg uppercase tracking-[0.3em] font-black text-primary-foreground/90">{stat.label}</div>
                   </div>
                 </ScrollReveal>
