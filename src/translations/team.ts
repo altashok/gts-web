@@ -8,8 +8,8 @@
     ],
     group2: [
       { name: "திருமதி. சங்கரேஸ்வரி நாகேந்திரா", role: "பள்ளி செயலாளர் & ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மூத்த மாணவர்களுக்கும் தமிழ் மொழியின் மீதான ஆர்வத்தை உண்டாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sankareswari.jpg' },
-      { name: "திருமதி. சந்தியா திரு", role: "செயலாளர் - சுகாட்டுலாந்து", location: "ஐக்கிய இராச்சியம்", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sandhiya.jpg' },
-      { name: "திருமதி. பிருந்தா அருண்", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய அரபு அமீரகம்", bio: "குழந்தைகளுக்கு முதல் தமிழ் கற்றல் அனுபவத்தை ஆர்வமூட்டும் வகையில் அளிப்பவர்.", photo: '/people/BrinthaArun.png' },
+      { name: "திருமதி. சந்தியா திரு", role: "செயலாளர் - சுகாட்டுலாந்து", location: "ஐக்கிய இராச்சியம்", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட தமிழ் ஆர்வலர்.", photo: '/people/Sandhiya.jpg' },
+      { name: "திருமதி. பிருந்தா அருண்", role: "செயலாளர் UAE - தமிழ் ஆசிரியர்", location: "ஐக்கிய அரபு அமீரகம்", bio: "குழந்தைகளுக்கு முதல் தமிழ் கற்றல் அனுபவத்தை ஆர்வமூட்டும் வகையில் அளிப்பவர்.", photo: '/people/BrinthaArun.png' },
       ],
     group3: [
       { name: "Christeta Rani", role: "மூத்த தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "இணையவழியில் மாணவர்களிடம் தமிழ் கற்கும் ஆர்வத்தை உருவாக்கும் தகுதியான ஆசிரியர். பாடத்திட்ட வடிவமைப்பு மற்றும் சர்வதேச கல்வி தரநிலைகளில் நிபுணர்.", photo: '/people/ChristetaRani.jpg' },
@@ -47,8 +47,8 @@
     ],
     group2: [
       { name: "Mrs. Sankareswari Nagendra", role: "Secretary & Teacher", location: "United Kingdom", bio: "மூத்த மாணவர்களுக்கும் தமிழ் மொழியின் மீதான ஆர்வத்தை உண்டாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sankareswari.jpg' },
-      { name: "Mrs. Sandhya Thiru", role: "Secretary - Scotland", location: "United Kingdom", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sandhiya.jpg' },
-      { name: "Mrs. Brintha Arun M.E.,", role: "UAE In-charge & Tamil Teacher", location: "United Arab Emirates", bio: "குழந்தைகளுக்கு முதல் தமிழ் கற்றல் அனுபவத்தை ஆர்வமூட்டும் வகையில் அளிப்பவர்.", photo: '/people/BrinthaArun.png' },
+      { name: "Mrs. Sandhya Thiru", role: "Secretary - Scotland", location: "United Kingdom", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட தமிழ் ஆர்வலர்.", photo: '/people/Sandhiya.jpg' },
+      { name: "Mrs. Brintha Arun M.E.,", role: "Secretary - UAE & Tamil Teacher", location: "United Arab Emirates", bio: "குழந்தைகளுக்கு முதல் தமிழ் கற்றல் அனுபவத்தை ஆர்வமூட்டும் வகையில் அளிப்பவர்.", photo: '/people/BrinthaArun.png' },
       ],
     group3: [
       { name: "Mrs. Christeta Sagaya Rani", role: "Senior Tamil Teacher", location: "India", bio: "இணையவழியில் மாணவர்களிடம் தமிழ் கற்கும் ஆர்வத்தை உருவாக்கும் தகுதியான ஆசிரியர். பாடத்திட்ட வடிவமைப்பு மற்றும் சர்வதேச கல்வி தரநிலைகளில் நிபுணர்.", photo: '/people/ChristetaRani.jpg' },
