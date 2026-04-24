@@ -40,6 +40,38 @@ export default function AffiliationsPage() {
       hint: "language academy logo",
       desc: t('affil.partner3.desc'),
       url: "/"
+    },
+    {
+      name: t('affil.partner4.name'),
+      role: t('affil.partner4.role'),
+      image: "/logo/wfka.png",
+      hint: "martial arts federation logo",
+      desc: t('affil.partner4.desc'),
+      url: "https://www.wfka.net/"
+    },
+    {
+      name: t('affil.partner5.name'),
+      role: t('affil.partner5.role'),
+      image: "/logo/gca.png",
+      hint: "arts center logo",
+      desc: t('affil.partner5.desc'),
+      url: "https://www.globalcenterofarts.in/"
+    },
+    {
+      name: t('affil.partner6.name'),
+      role: t('affil.partner6.role'),
+      image: "/logo/bitr.png",
+      hint: "radio station logo",
+      desc: t('affil.partner6.desc'),
+      url: "https://www.bitronline.com/"
+    },
+    {
+      name: t('affil.partner7.name'),
+      role: t('affil.partner7.role'),
+      image: "/logo/gifa-uk.png",
+      hint: "fine arts exam board logo",
+      desc: t('affil.partner7.desc'),
+      url: "https://griffininternational.org/"
     }
   ];
 

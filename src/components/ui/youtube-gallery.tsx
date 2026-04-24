@@ -45,7 +45,7 @@ export default function YouTubeGallery() {
           <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('activities.youtube.subtitle')}</p>
         </ScrollReveal>
 
-        <div className="h-[24rem] overflow-y-auto pr-2">
+        <div className="h-[24rem] md:h-[61rem] overflow-y-auto pr-2">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {videoIds.map((id, index) => (
               <ScrollReveal key={index} delay={index * 60} animation="scale-in">

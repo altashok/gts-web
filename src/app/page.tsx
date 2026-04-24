@@ -31,9 +31,9 @@ export default function Home() {
   ];
 
   const statistics = [
-    { label: t('stats.students'), value: "300+" },
+    { label: t('stats.students'), value: "500+" },
     { label: t('stats.years'), value: "5+" },
-    { label: t('stats.teachers'), value: "20+" },
+    { label: t('stats.teachers'), value: "50+" },
     { label: t('stats.courses'), value: "30+" },
   ];
 
