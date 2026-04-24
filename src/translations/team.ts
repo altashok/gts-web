@@ -4,7 +4,7 @@
       { name: "தெய்வத்திரு. சிவா பிள்ளை", role: "பள்ளி ஆலோசகர்", location: "ஐக்கிய இராச்சியம்", bio: "தமிழ் கற்றல் கற்பித்தல் வழிமுறைகளை நவீன முறையில் வழங்கிட பாடுபடும் கல்வியாளர்.", photo: '/people/SivaPillai.jpg' },
       { name: "உயர்திரு. பொன்னம்மாள் ஃப்ரெடரிக் ஜோசப்", role: "பள்ளி ஆலோசகர்", location: "ஐக்கிய இராச்சியம்", bio: "கல்வியாளர், முன்னாள் பொருளாளர் TamilStudiesUK, பிளிஸ் கல்லூரி இலண்டன்.", photo: '/people/Ponnammal.jpg' },
       { name: "முனைவர். ஜெபராஜ் தேவதாசன்", role: "பள்ளி ஆலோசகர்", location: "இந்தியா", bio: "ஆராய்ச்சியாளர், கல்வியாளர், கல்லூரி இயற்பியல் துறைத் தலைவர் (ஓய்வு).", photo: '/people/Jebaraj.jpg' },
-      { name: "திருமதி. உமாதேவி அசோக்குமார் M.Sc., M.Ed.,", role: "நிறுவனர் & இயக்குனர்", location: "ஐக்கிய இராச்சியம் / இந்தியா", bio: "கல்வியியல் மற்றும் பள்ளி நிர்வாகத்தில் 15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்டவர். மனோதத்துவ முறையில் மாணவர்களை கையாளக்கூடியவர்.", photo: '/people/UmaAshok.jpg' },
+      { name: "திருமதி. உமாதேவி அசோக்குமார் M.Sc., M.Ed.,", role: "நிறுவனர் & இயக்குனர்", location: "ஐக்கிய இராச்சியம் / இந்தியா", bio: "கல்வியியல் மற்றும் பள்ளி நிர்வாகத்தில் 15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்டவர். மனோதத்துவ முறையில் மாணவர்களை கையாளக்கூடியவர்.", photo: '/people/UmaAshok.jpeg' },
     ],
     group2: [
       { name: "திருமதி. சங்கரேஸ்வரி நாகேந்திரா", role: "பள்ளி செயலாளர் & ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மூத்த மாணவர்களுக்கும் தமிழ் மொழியின் மீதான ஆர்வத்தை உண்டாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sankareswari.jpg' },
@@ -26,7 +26,7 @@
       { name: "திருமதி. சிந்துரி கணேஷ்குமார்", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மாணவர்களின் பேச்சுத் தமிழ் தன்னம்பிக்கையை வளர்க்க உதவுபவர்.", photo: '/people/Sinduri.jpg' },
       { name: "திருமதி. மாணிக்க ஈஸ்வரி", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "மாணவர்களிடம் தமிழ் கற்கும் ஆர்வத்தை உருவாக்கும் தகுதியான ஆசிரியர்.", photo: '/people/Eswari.jpg' },
       { name: "திருமதி. வைஷ்ணவி சிவா", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட சிறந்த  ஆசிரியர்.", photo: '/people/Vaishnavi.jpg' },
-      { name: "திரு. சரவணவெங்கடேசன்", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "சங்க இலக்கியத்தின் ஆழத்தைக் காலத்திற்கேற்ற முறையில் மாணவர்களுக்கு அறிமுகப்படுத்துபவர்.", photo: '/people/SaravanaVenkatesan.jpeg' },
+      { name: "திரு. சரவணவெங்கடேசன்", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "சங்க இலக்கியத்தின் ஆழத்தைக் காலத்திற்கேற்ற முறையில் மாணவர்களுக்கு அறிமுகப்படுத்துபவர்.", photo: '/people/SaravanaVenkatesan.jpeg' },
     ],
     group4: [
       { name: "முனைவர். ஜெயவீரபாண்டியன்", role: "நடன ஆசிரியர்", location: "இந்தியா", bio: "நடன ஆசிரியர்", photo: '/people/Photo_Jay.png' },
@@ -43,7 +43,7 @@
       { name: "Mr. Siva Pillai (Late)", role: "School Advisor", location: "United Kingdom", bio: "தமிழ் கற்றல் கற்பித்தல் வழிமுறைகளை நவீன முறையில் வழங்கிட பாடுபடும் கல்வியாளர்.", photo: '/people/SivaPillai.jpg' },
       { name: "Mrs. Ponnammal Frederick Joseph", role: "School Advisor", location: "United Kingdom", bio: "கல்வியாளர், முன்னாள் பொருளாளர் TamilStudiesUK, பிளிஸ் கல்லூரி இலண்டன்.", photo: '/people/Ponnammal.jpg' },
       { name: "Dr. Jebaraj Devadasan", role: "School Advisor", location: "India", bio: "ஆராய்ச்சியாளர், கல்வியாளர், கல்லூரி இயற்பியல் துறைத் தலைவர் (ஓய்வு).", photo: '/people/Jebaraj.jpg' },
-      { name: "Mrs. Uma Devi Ashok Kumar M.Sc., M.Ed.,", role: "Founder & Director", location: "United Kingdom / India", bio: "கல்வியியல் மற்றும் பள்ளி நிர்வாகத்தில் 15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்டவர். மனோதத்துவ முறையில் மாணவர்களை கையாளக்கூடியவர்.", photo: '/people/UmaAshok.jpg' },
+      { name: "Mrs. Uma Devi Ashok Kumar M.Sc., M.Ed.,", role: "Founder & Director", location: "United Kingdom / India", bio: "கல்வியியல் மற்றும் பள்ளி நிர்வாகத்தில் 15 ஆண்டுகளுக்கும் மேலான அனுபவம் கொண்டவர். மனோதத்துவ முறையில் மாணவர்களை கையாளக்கூடியவர்.", photo: '/people/UmaAshok.jpeg' },
     ],
     group2: [
       { name: "Mrs. Sankareswari Nagendra", role: "Secretary & Teacher", location: "United Kingdom", bio: "மூத்த மாணவர்களுக்கும் தமிழ் மொழியின் மீதான ஆர்வத்தை உண்டாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sankareswari.jpg' },
@@ -65,7 +65,7 @@
       { name: "Mrs. Sinduri Ganeshkumar", role: "Tamil Teacher", location: "United Kingdom", bio: "மாணவர்களின் பேச்சுத் தமிழ் தன்னம்பிக்கையை வளர்க்க உதவுபவர்.", photo: '/people/Sinduri.jpg' },
       { name: "Mrs. Manicka Eashwari", role: "Tamil Teacher", location: "India", bio: "மாணவர்களிடம் தமிழ் கற்கும் ஆர்வத்தை உருவாக்கும் தகுதியான ஆசிரியர்.", photo: '/people/Eswari.jpg' },
       { name: "Mrs. Vaishnavi Siva", role: "Tamil Teacher", location: "India", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட சிறந்த  ஆசிரியர்.", photo: '/people/Vaishnavi.jpg' },
-      { name: "Mr. Saravanavenkatesan", role: "Tamil Teacher", location: "United Kingdom", bio: "சங்க இலக்கியத்தின் ஆழத்தைக் காலத்திற்கேற்ற முறையில் மாணவர்களுக்கு அறிமுகப்படுத்துபவர்.", photo: '/people/SaravanaVenkatesan.jpeg' },
+      { name: "Mr. Saravanavenkatesan", role: "Tamil Teacher", location: "India", bio: "சங்க இலக்கியத்தின் ஆழத்தைக் காலத்திற்கேற்ற முறையில் மாணவர்களுக்கு அறிமுகப்படுத்துபவர்.", photo: '/people/SaravanaVenkatesan.jpeg' },
     ],
     group4: [
       { name: "Dr. Jayaveerapandiyan", role: "Classical Dance Teacher", location: "India", bio: "நடன ஆசிரியர்", photo: '/people/Photo_Jay.png' },
