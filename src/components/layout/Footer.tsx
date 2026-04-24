@@ -54,7 +54,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
               <a 
-                href="https://www.youtube.com/globaltamilschool" 
+                href="https://www.youtube.com/@globaltamilschool" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-primary transition-colors p-2 bg-white/5 rounded-lg"
@@ -113,7 +113,7 @@ export default function Footer() {
                 <Phone className="h-5 w-5 text-primary shrink-0" />
                 <div className="text-sm flex flex-col">
                   <span>+44 74597 13276</span>
-                  <span>+44 7424 566744</span>
+                  <span>+44 74382 17913</span>
                   <span>+91 86829 01099</span>
                 </div>
               </li>

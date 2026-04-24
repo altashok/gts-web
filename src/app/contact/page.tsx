@@ -137,7 +137,7 @@ function ContactPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRec
               <div className="space-y-8 mt-12">
                 {[
                   { icon: MapPin, title: t('contact.info.location'), content: "12 Belmont Avenue, New Malden\nLondon KT3 6QD" },
-                  { icon: Phone, title: t('contact.info.call'), content: "+44 74597 13276 (UK/WhatsApp)\n+44 7424 566744 (UK)\n+91 86829 01099 (India)" },
+                  { icon: Phone, title: t('contact.info.call'), content: "+44 74597 13276 (UK/WhatsApp)\n+44 7438 217913 (UK)\n+91 86829 01099 (India)" },
                   { icon: Mail, title: t('contact.info.email'), content: "globaltamilschool@gmail.com" },
                   { icon: Clock, title: t('contact.info.hours'), content: t('contact.info.hours.days') }
                 ].map((item, idx) => (
