@@ -16,19 +16,22 @@ export default function ActivitiesPage() {
       title: t('activities.lang.title'),
       icon: Book,
       desc: t('activities.lang.desc'),
-      img: "https://picsum.photos/seed/act1/800/500"
+      img: "/gallery/Teaching_materials.jpg",
+      hint: "tamil language learning materials"
     },
     {
       title: t('activities.arts.title'),
       icon: Palette,
       desc: t('activities.arts.desc'),
-      img: "https://picsum.photos/seed/act2/800/500"
+      img: "/gallery/artcraft.jpg",
+      hint: "tamil student art work"
     },
     {
       title: t('activities.music.title'),
       icon: Music,
       desc: t('activities.music.desc'),
-      img: "https://picsum.photos/seed/act3/800/500"
+      img: "/gallery/dance.jpg",
+      hint: "tamil cultural music performance"
     }
   ];
 
@@ -79,7 +82,7 @@ export default function ActivitiesPage() {
                   alt={act.title} 
                   fill 
                   className="object-cover"
-                  data-ai-hint="student activity"
+                  data-ai-hint={act.hint}
                 />
               </div>
             </section>
