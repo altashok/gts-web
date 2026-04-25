@@ -29,7 +29,6 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
-import { submitEnrollment } from "@/app/actions/enroll-action";
 import { ReCaptchaProvider } from "@/components/providers/ReCaptchaProvider";
 
 const formSchema = z.object({
@@ -80,19 +79,27 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
         throw new Error("Failed to generate security token.");
       }
 
-      const result = await submitEnrollment(values, token || "");
+      const res = await fetch("/api/enroll", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ values, recaptchaToken: token || "" }),
+      });
+
+      const result = (await res.json()) as { success?: boolean; error?: string; emailSent?: boolean; emailError?: string };
 
       if (result.success) {
+        const studentName = values.studentName?.trim();
+        const emailSent = Boolean(result.emailSent);
         toast({
           title: "Enrollment Submitted!",
-          description: `We've received your inquiry for ${values.studentName}. A confirmation has been sent to our administration.`,
+          description: `We've received your inquiry${studentName ? ` for ${studentName}` : ""}.${emailSent ? " A confirmation has been sent to our administration." : " Our team will review it and contact you soon."}`,
         });
         form.reset();
       } else {
         toast({
           variant: "destructive",
           title: "Submission Error",
-          description: result.error || "Failed to process enrollment. Please try again.",
+          description: result.error || (res.ok ? "Failed to process enrollment. Please try again." : "Request failed. Please try again."),
         });
       }
     } catch (error) {

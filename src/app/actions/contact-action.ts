@@ -46,20 +46,31 @@ export async function submitContactForm(values: any, recaptchaToken: string) {
     `;
 
     // 3. Configure Nodemailer
+    const allowInsecureTls = process.env.EMAIL_ALLOW_INSECURE_TLS === "true";
+    const smtpHost = process.env.SMTP_HOST?.trim() || "smtp.gmail.com";
+    const smtpPort = Number(process.env.SMTP_PORT || 465);
+    const smtpSecure =
+      (process.env.SMTP_SECURE?.trim() ? process.env.SMTP_SECURE === "true" : undefined) ??
+      smtpPort === 465;
+    const emailUser = process.env.EMAIL_USER?.trim() || "web@globaltamilschool.co.uk";
+
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpSecure,
       auth: {
-        user: 'web@globaltamilschool.co.uk',
-        pass: process.env.EMAIL_APP_PASSWORD 
-      }
+        user: emailUser,
+        pass: process.env.EMAIL_APP_PASSWORD,
+      },
+      tls: allowInsecureTls ? { rejectUnauthorized: false } : undefined,
     });
 
     console.log("Attempting to send contact email from:", values.name);
 
     if (process.env.EMAIL_APP_PASSWORD) {
       await transporter.sendMail({
-        from: '"Global Tamil School Web" <web@globaltamilschool.co.uk>',
-        to: "globaltamilschool@gmail.com",
+        from: `"Global Tamil School Web" <${emailUser}>`,
+        to: process.env.CONTACT_TO_EMAIL?.trim() || "globaltamilschool@gmail.com",
         subject: `Contact Inquiry: ${values.subject}`,
         text: emailBody,
         replyTo: values.email
@@ -75,4 +86,3 @@ export async function submitContactForm(values: any, recaptchaToken: string) {
     return { success: false, error: "An internal error occurred while sending your message." };
   }
 }
-
