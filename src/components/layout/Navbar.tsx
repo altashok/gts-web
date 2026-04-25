@@ -51,11 +51,11 @@ export default function Navbar() {
                 )}>
                   <span className={cn(
                     "font-headline font-black block leading-none text-foreground tracking-tight uppercase transition-all",
-                    language === 'ta' ? "text-sm sm:text-xl md:text-2xl" : "text-base sm:text-2xl md:text-3xl"
+                    language === 'ta' ? "text-[15px] sm:text-xl md:text-2xl" : "text-lg sm:text-2xl md:text-3xl"
                   )}>
                     {t('nav.brand')}
                   </span>
-                  <span className="block text-[7px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.08em] mt-0.5 sm:mt-1 leading-tight max-w-[130px] sm:max-w-none whitespace-normal break-words">
+                  <span className="block text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.08em] mt-0.5 sm:mt-1 leading-tight max-w-[160px] sm:max-w-none whitespace-nowrap truncate">
                     {t('nav.tagline')}
                   </span>
                 </div>
@@ -147,14 +147,14 @@ export default function Navbar() {
                   </Link>
                 </Button>
               )}
-               <Button 
+                <Button 
                   variant="ghost" 
                   size="sm" 
                   onClick={(e) => {
                     setLanguage(language === 'ta' ? 'en' : 'ta');
                     e.currentTarget.blur();
                   }}
-                  className="font-bold p-1 sm:p-2 hover:bg-transparent hover:text-foreground active:bg-transparent"
+                  className="font-bold p-1 sm:p-2 bg-accent text-accent-foreground hover:bg-accent hover:text-accent-foreground"
                 >
                   <Globe className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="ml-1 text-[10px] sm:text-xs">{language === 'ta' ? 'EN' : 'TA'}</span>

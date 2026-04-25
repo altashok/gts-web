@@ -102,7 +102,7 @@ export default function TeamPage() {
               </div>
             </ScrollReveal>
 
-            <div className={`grid grid-cols-1 md:grid-cols-2 ${group.grid} gap-8`}>
+            <div className={`grid grid-cols-2 md:grid-cols-2 ${group.grid} gap-6 md:gap-8`}>
               {group.members.map((member: any, i: number) => {
                 const imageUrl = member.photo
                   ? member.photo
@@ -126,7 +126,7 @@ export default function TeamPage() {
                       </CardHeader>
                       <CardContent className="p-6 text-center space-y-3">
                         <div>
-                          <h3 className="font-headline text-xl font-bold text-foreground leading-tight break-words">{member.name}</h3>
+                          <h3 className="font-headline text-[15px] md:text-xl font-bold text-foreground leading-tight break-words">{member.name}</h3>
                           <p className="inline-block bg-primary/15 text-foreground font-bold text-[10px] uppercase tracking-widest mt-2 px-3 py-1 rounded-full line-clamp-1">
                             {member.role}
                           </p>
@@ -157,9 +157,23 @@ export default function TeamPage() {
 
         {/* Volunteers section */}
         <ScrollReveal animation="scale-in" className="mt-32">
-          <section className="relative rounded-[32px] overflow-hidden p-12 md:p-20 text-center shadow-2xl bg-foreground text-background">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+          <section className="relative rounded-[32px] overflow-hidden p-12 md:p-20 text-center shadow-2xl text-background border border-white/10 bg-gradient-to-br from-foreground via-foreground to-primary/25">
+            <div className="absolute inset-0 opacity-15 pointer-events-none">
+              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                  <pattern id="grid-team-cta" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                  </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grid-team-cta)" />
+              </svg>
+            </div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,191,0,0.22),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(99,102,241,0.20),transparent_55%),radial-gradient(circle_at_50%_100%,rgba(34,197,94,0.18),transparent_60%)] pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/logo.png')] bg-center bg-no-repeat bg-contain opacity-[0.04] mix-blend-soft-light pointer-events-none"></div>
+
+            <div className="absolute top-0 right-0 w-72 h-72 bg-primary/25 rounded-full blur-[110px] -mr-36 -mt-36"></div>
+            <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary/20 rounded-full blur-[110px] -ml-36 -mb-36"></div>
+            <div className="absolute top-1/2 left-1/2 w-[28rem] h-[28rem] -translate-x-1/2 -translate-y-1/2 bg-white/5 rounded-full blur-[140px]"></div>
             
             <div className="relative z-10 space-y-8 max-w-2xl mx-auto">
               <h2 className="font-headline text-3xl md:text-5xl font-bold">{t('team.volunteer.title')}</h2>
