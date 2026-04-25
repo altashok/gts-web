@@ -27,7 +27,6 @@ import {
 } from "@/components/ui/accordion";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
-import { submitContactForm } from "@/app/actions/contact-action";
 import { ReCaptchaProvider } from "@/components/providers/ReCaptchaProvider";
 import { contactFaqItems } from "@/translations/contact";
 
@@ -74,19 +73,28 @@ function ContactPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRec
         throw new Error("Failed to generate security token.");
       }
 
-      const result = await submitContactForm(values, token);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ values, recaptchaToken: token || "" }),
+      });
+
+      const result = (await res.json()) as { success?: boolean; error?: string; emailSent?: boolean; emailError?: string };
 
       if (result.success) {
+        const emailSent = Boolean(result.emailSent);
         toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. We've received your message and will get back to you shortly.",
+          title: emailSent ? "Message Sent!" : "Message Received!",
+          description: emailSent
+            ? "Thank you for reaching out. We've received your message and will get back to you shortly."
+            : `Thank you for reaching out. We've received your message and will get back to you shortly.${result.emailError ? ` (Email error: ${result.emailError})` : ""}`,
         });
         form.reset();
       } else {
         toast({
           variant: "destructive",
           title: "Submission Error",
-          description: result.error || "Failed to send message. Please try again.",
+          description: result.error || (res.ok ? "Failed to send message. Please try again." : "Request failed. Please try again."),
         });
       }
     } catch (error) {
@@ -318,4 +326,3 @@ export default function ContactPage() {
     </ReCaptchaProvider>
   );
 }
-

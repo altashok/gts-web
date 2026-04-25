@@ -71,7 +71,7 @@ export async function submitContactForm(values: any, recaptchaToken: string) {
       await transporter.sendMail({
         from: `"Global Tamil School Web" <${emailUser}>`,
         to: process.env.CONTACT_TO_EMAIL?.trim() || "globaltamilschool@gmail.com",
-        subject: `Contact Inquiry: ${values.subject}`,
+        subject: `CONTACT INQUIRY: ${values.subject}`,
         text: emailBody,
         replyTo: values.email
       });
