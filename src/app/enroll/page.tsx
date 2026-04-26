@@ -139,20 +139,24 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
           {/* Info Column */}
           <div className="lg:col-span-1 space-y-8">
             <ScrollReveal animation="slide-in-left">
-              <div className="bg-muted p-6 rounded-2xl space-y-4">
+              <div className="bg-gradient-to-br from-muted via-muted to-primary/10 p-7 rounded-3xl space-y-4 border border-primary/10 shadow-sm">
                 <div className="flex items-center space-x-3 text-secondary">
-                  <GraduationCap className="h-6 w-6" />
-                  <h3 className="font-bold">{t('enroll.nextSemester.title')}</h3>
+                  <div className="bg-secondary/15 p-3 rounded-2xl border border-secondary/20">
+                    <GraduationCap className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-black text-lg">{t('enroll.nextBatch.title')}</h3>
                 </div>
-                <p className="text-sm text-muted-foreground">{t('enroll.nextSemester.desc')}</p>
+                <p className="text-base text-muted-foreground leading-relaxed">{t('enroll.nextBatch.desc')}</p>
               </div>
 
-              <div className="bg-secondary/10 p-6 rounded-2xl space-y-4 border border-secondary/20 mt-8">
+              <div className="bg-gradient-to-br from-secondary/10 via-secondary/5 to-white p-7 rounded-3xl space-y-4 border border-secondary/20 mt-8 shadow-sm">
                 <div className="flex items-center space-x-3 text-secondary">
-                  <Info className="h-6 w-6" />
-                  <h3 className="font-bold">{t('enroll.requirements.title')}</h3>
+                  <div className="bg-secondary/15 p-3 rounded-2xl border border-secondary/20">
+                    <Info className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-black text-lg">{t('enroll.requirements.title')}</h3>
                 </div>
-                <ul className="text-xs text-muted-foreground space-y-2 list-disc pl-4">
+                <ul className="text-sm text-muted-foreground space-y-2 list-disc pl-5 leading-relaxed">
                   <li>{t('enroll.requirements.point1')}</li>
                   <li>{t('enroll.requirements.point2')}</li>
                   <li>{t('enroll.requirements.point3')}</li>
@@ -165,21 +169,22 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
           {/* Form Column */}
           <div className="lg:col-span-2">
             <ScrollReveal animation="slide-in-right">
-              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border relative overflow-hidden h-full">
-                <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
+              <div className="bg-gradient-to-br from-white via-white to-primary/5 p-8 md:p-12 rounded-3xl shadow-xl border border-primary/15 relative overflow-hidden h-full ring-1 ring-primary/10">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-amber-500 to-primary"></div>
+                <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 text-base md:text-lg">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
                         name="studentName"
                         render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('enroll.form.studentName')}</FormLabel>
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.studentName')}</FormLabel>
                             <FormControl>
-                              <Input placeholder="John Doe" {...field} />
+                              <Input placeholder="John Doe" className="h-12 md:h-12 md:text-base focus-visible:ring-primary" {...field} />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage className="text-sm md:text-base" />
                           </FormItem>
                         )}
                       />
@@ -187,12 +192,12 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                         control={form.control}
                         name="age"
                         render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('enroll.form.age')}</FormLabel>
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.age')}</FormLabel>
                             <FormControl>
-                              <Input placeholder="8" type="number" {...field} />
+                              <Input placeholder="8" type="number" className="h-12 md:h-12 md:text-base focus-visible:ring-primary" {...field} />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage className="text-sm md:text-base" />
                           </FormItem>
                         )}
                       />
@@ -202,12 +207,12 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                       control={form.control}
                       name="parentName"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{t('enroll.form.parentName')}</FormLabel>
+                        <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                          <FormLabel className="text-base font-black">{t('enroll.form.parentName')}</FormLabel>
                           <FormControl>
-                            <Input placeholder="Jane Doe" {...field} />
+                            <Input placeholder="Jane Doe" className="h-12 md:h-12 md:text-base focus-visible:ring-primary" {...field} />
                           </FormControl>
-                          <FormMessage />
+                          <FormMessage className="text-sm md:text-base" />
                         </FormItem>
                       )}
                     />
@@ -217,12 +222,12 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                         control={form.control}
                         name="email"
                         render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('enroll.form.email')}</FormLabel>
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.email')}</FormLabel>
                             <FormControl>
-                              <Input placeholder="email@example.com" {...field} />
+                              <Input placeholder="email@example.com" className="h-12 md:h-12 md:text-base focus-visible:ring-primary" {...field} />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage className="text-sm md:text-base" />
                           </FormItem>
                         )}
                       />
@@ -230,12 +235,12 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                         control={form.control}
                         name="phone"
                         render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>{t('enroll.form.phone')}</FormLabel>
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.phone')}</FormLabel>
                             <FormControl>
-                              <Input placeholder="+44 XXXXXXXXXX" {...field} />
+                              <Input placeholder="+44 XXXXXXXXXX" className="h-12 md:h-12 md:text-base focus-visible:ring-primary" {...field} />
                             </FormControl>
-                            <FormMessage />
+                            <FormMessage className="text-sm md:text-base" />
                           </FormItem>
                         )}
                       />
@@ -245,24 +250,24 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                       control={form.control}
                       name="level"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{t('enroll.form.level')}</FormLabel>
+                        <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                          <FormLabel className="text-base font-black">{t('enroll.form.level')}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value}>
                             <FormControl>
-                              <SelectTrigger>
+                              <SelectTrigger className="h-12 text-base focus:ring-primary">
                                 <SelectValue placeholder="Select a level" />
                               </SelectTrigger>
                             </FormControl>
-                            <SelectContent>
-                              <SelectItem value="beginner">{t('enroll.form.level.beginner')}</SelectItem>
-                              <SelectItem value="intermediate">{t('enroll.form.level.intermediate')}</SelectItem>
-                              <SelectItem value="advanced">{t('enroll.form.level.advanced')}</SelectItem>
+                            <SelectContent className="text-base">
+                              <SelectItem className="text-base" value="beginner">{t('enroll.form.level.beginner')}</SelectItem>
+                              <SelectItem className="text-base" value="intermediate">{t('enroll.form.level.intermediate')}</SelectItem>
+                              <SelectItem className="text-base" value="advanced">{t('enroll.form.level.advanced')}</SelectItem>
                             </SelectContent>
                           </Select>
-                          <FormDescription>
+                          <FormDescription className="text-sm md:text-base">
                             {t('enroll.form.level.desc')}
                           </FormDescription>
-                          <FormMessage />
+                          <FormMessage className="text-sm md:text-base" />
                         </FormItem>
                       )}
                     />
@@ -271,23 +276,23 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                       control={form.control}
                       name="notes"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>{t('enroll.form.notes')}</FormLabel>
+                        <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                          <FormLabel className="text-base font-black">{t('enroll.form.notes')}</FormLabel>
                           <FormControl>
                             <Textarea 
                               placeholder="..." 
-                              className="min-h-[100px]"
+                              className="min-h-[120px] md:text-base focus-visible:ring-primary"
                               {...field} 
                             />
                           </FormControl>
-                          <FormMessage />
+                          <FormMessage className="text-sm md:text-base" />
                         </FormItem>
                       )}
                     />
 
                     <Button 
                       type="submit" 
-                      className="w-full bg-primary text-primary-foreground font-black py-6 text-lg hover:shadow-lg transition-shadow"
+                      className="w-full bg-primary text-primary-foreground font-black py-6 text-xl hover:shadow-xl hover:shadow-primary/20 transition-shadow"
                       disabled={isSubmitting || (recaptchaEnabled && !executeRecaptcha)}
                     >
                       {isSubmitting ? (
@@ -304,10 +309,10 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                         t('enroll.form.submit')
                       )}
                     </Button>
-                    <p className="text-center text-xs text-muted-foreground italic mt-4">
+                    <p className="text-center text-sm text-muted-foreground italic mt-4">
                       {t('enroll.form.disclaimer')}
                     </p>
-                    <p className="text-[10px] text-center text-muted-foreground mt-2">
+                    <p className="text-xs text-center text-muted-foreground mt-2">
                       This site is protected by reCAPTCHA Enterprise and the Google{' '}
                       <a href="https://policies.google.com/privacy" className="underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{' '}
                       <a href="https://policies.google.com/terms" className="underline" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.

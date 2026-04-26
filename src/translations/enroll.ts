@@ -3,8 +3,8 @@ export const enrollTranslations = {
   ta: {
     'enroll.title': 'மாணவர் சேர்க்கை',
     'enroll.subtitle': 'இன்றே பதிவு செய்யுங்கள், உங்கள் குழந்தையின் தமிழ்ப் பயணத்தைத் தொடங்குங்கள்.',
-    'enroll.nextSemester.title': 'அடுத்த பருவம்',
-    'enroll.nextSemester.desc': 'புதிய வகுப்புகள் விரைவில் தொடங்க உள்ளன. இடங்கள் குறைவாகவே உள்ளன.',
+    'enroll.nextBatch.title': 'அடுத்த பருவம்',
+    'enroll.nextBatch.desc': 'வருடம் முழுவதும் மாணவர் சேர்க்கை நடைபெறுகிறது. அடுத்த புதிய வகுப்புகளில் இணைய எங்களைத் தொடர்பு கொள்ளவும்.',
     'enroll.requirements.title': 'தேவைகள்',
     'enroll.requirements.point1': 'வயது 4 மற்றும் அதற்கு மேல்.',
     'enroll.requirements.point2': 'இணைய வசதி கொண்ட கணினி/டேப்லெட்.',
@@ -27,8 +27,8 @@ export const enrollTranslations = {
   en: {
     'enroll.title': 'Enrollment',
     'enroll.subtitle': 'Register today and start your child’s Tamil language journey.',
-    'enroll.nextSemester.title': 'Next Semester',
-    'enroll.nextSemester.desc': 'New classes are starting soon. Limited seats available.',
+    'enroll.nextBatch.title': 'Next Batche',
+    'enroll.nextBatch.desc': 'We enroll students throughout the year based on the age group and level. New classes / batches may start soon. Please talk to us for more information.',
     'enroll.requirements.title': 'Requirements',
     'enroll.requirements.point1': 'Ages 4 and above.',
     'enroll.requirements.point2': 'Stable internet and a device.',

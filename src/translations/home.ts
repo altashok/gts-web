@@ -22,7 +22,7 @@ export const homeTranslations = {
 
     // Slide Specifics - Hero 3 (Academic)
     'hero.welcome.hero-3': 'இணையவழிப் போட்டிகள்',
-    'hero.title.hero-3': 'உலகெங்கும் வாழ்ந்தாலும் தமிழுடன் இணைத்திருக்கும் எங்கள் மாணவர்கள்',
+    'hero.title.hero-3': 'உலகெங்கும் வாழ்ந்தாலும் தமிழால் இணைத்திருக்கும் எங்கள் மாணவர்கள்',
     'hero.desc.hero-3': ' ',
 
     // Slide Specifics - Hero 4 (Heritage)
