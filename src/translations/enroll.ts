@@ -21,7 +21,7 @@ export const enrollTranslations = {
     'enroll.form.level.advanced': 'மேம்பட்ட நிலை',
     'enroll.form.level.desc': 'உங்களுக்குத் தெரியாவிட்டால் ஆரம்ப நிலையைத் தேர்ந்தெடுக்கவும்.',
     'enroll.form.notes': 'கூடுதல் விவரங்கள்',
-    'enroll.form.submit': 'இப்போதே பதிவு செய்',
+    'enroll.form.submit': 'இப்போதே பதிவு செய்யவும்',
     'enroll.form.disclaimer': 'உங்கள் விவரங்கள் பாதுகாப்பாக வைக்கப்படும்.',
   },
   en: {

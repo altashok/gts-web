@@ -46,7 +46,7 @@ const taFaq: FaqItem[] = [
 const enFaq: FaqItem[] = [
   {
     q: 'When does admission open?',
-    a: 'Admissions are opened in multiple phases during the year. Please contact us for current intake dates.',
+    a: 'Admissions are opened in multiple phases during the year. Please contact us for current intake dates and availability.',
   },
   {
     q: 'Are classes online or in-person?',
@@ -58,7 +58,7 @@ const enFaq: FaqItem[] = [
   },
   {
     q: 'Do you offer certificate examinations?',
-    a: 'Yes. We provide Tamil language certificate examinations at multiple levels through our affiliated boards.',
+    a: 'Yes. We provide Tamil language certificate examinations at multiple levels through our affiliated boards and organizations.',
   },
   {
     q: 'How are your online Tamil classes conducted?',

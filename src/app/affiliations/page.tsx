@@ -72,6 +72,14 @@ export default function AffiliationsPage() {
       hint: "fine arts exam board logo",
       desc: t('affil.partner7.desc'),
       url: "https://griffininternational.org/"
+    },
+    {
+      name: t('affil.partner8.name'),
+      role: t('affil.partner8.role'),
+      image: "/logo/lts.png",
+      hint: "Thiruvalluvar sangam logo",
+      desc: t('affil.partner8.desc'),
+      url: "/"
     }
   ];
 
