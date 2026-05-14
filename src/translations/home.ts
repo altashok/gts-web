@@ -100,6 +100,9 @@ export const homeTranslations = {
     'cta.desc': 'நடப்பு கல்வியாண்டிற்கான சேர்க்கை மாணவர்களின் வயது மற்றும் நேரமண்டலத்தின் அடிப்படையில் தேவைக்கேற்ற முறையில் வழங்குகிறோம். தங்களின் கற்றல் தேவைகளுக்கு எங்களை அணுகவும்.',
     'cta.enroll': 'எங்களுடன் இணைய',
     'cta.enquire': 'விசாரணை',
+    'banner2.messages': [
+      '2025-2026 கல்வியாண்டுக்கான BTEB இணையவழி தகுதித் தேர்வுகள் 27-ஜூன்-2026 அன்று நடைபெறும்',
+    ],
   },
   en: {
     'hero.welcome': 'Welcome to Global Tamil School',
@@ -195,5 +198,8 @@ export const homeTranslations = {
     'cta.desc': 'We provide classes based on student age and timezones from time to time. For all types of learnings, please join our exciting courses.',
     'cta.enroll': 'Join Now',
     'cta.enquire': 'Enquire',
+    'banner2.messages': [
+      'BTEB Online Tamil Language Exams for 2025-2026 academic year will be held on 27-June-2026',
+    ]
   }
 };

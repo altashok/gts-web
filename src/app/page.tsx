@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Book, Globe, Users, Award, GraduationCap, Calendar, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollingBanner from '@/components/ui/scrolling-banner';
+import BlinkingBanner from '@/components/ui/blinking-banner';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { CountUpText } from '@/components/ui/count-up';
 
@@ -70,6 +71,9 @@ export default function Home() {
     <div className="space-y-0 pb-24 overflow-x-hidden">
       {/* Scrolling Information Banner */}
       <ScrollingBanner />
+
+      {/* Blinking Announcement Banner */}
+      <BlinkingBanner />
 
       {/* Hero Section */}
       <HeroCarousel />
