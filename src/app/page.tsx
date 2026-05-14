@@ -1,6 +1,7 @@
 "use client";
 
 import HeroCarousel from '@/components/home/HeroCarousel';
+import VideoSplash from '@/components/home/VideoSplash';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -68,6 +69,8 @@ export default function Home() {
 
   return (
     <div className="space-y-0 pb-24 overflow-x-hidden">
+      <VideoSplash />
+
       {/* Scrolling Information Banner */}
       <ScrollingBanner />
 
