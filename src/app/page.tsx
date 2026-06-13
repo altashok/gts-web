@@ -8,6 +8,7 @@ import { Book, Globe, Users, Award, GraduationCap, Calendar, CheckCircle2 } from
 import { useLanguage } from '@/context/LanguageContext';
 import ScrollingBanner from '@/components/ui/scrolling-banner';
 import BlinkingBanner from '@/components/ui/blinking-banner';
+import PortraitPosterCarousel from '@/components/home/PortraitPosterCarousel';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { CountUpText } from '@/components/ui/count-up';
 
@@ -195,6 +196,8 @@ export default function Home() {
           </div>
         </section>
 
+        <PortraitPosterCarousel />
+
         {/* Engaging Activities Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center space-y-4 mb-16">
@@ -222,6 +225,7 @@ export default function Home() {
                           src={item.img}
                           alt={item.hint}
                           fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-cover transition-transform duration-1000 hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -276,7 +280,7 @@ export default function Home() {
                 </ScrollReveal>
                 
                 <ScrollReveal animation="fade-up" delay={400}>
-                  <p className="text-lg md:text-2xl text-primary-foreground/90 font-medium leading-relaxed">
+                  <p className="text-lg md:text-2md text-primary-foreground/90 font-medium leading-relaxed">
                     {t('cta.desc')}
                   </p>
                 </ScrollReveal>
