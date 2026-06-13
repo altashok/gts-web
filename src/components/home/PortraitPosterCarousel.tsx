@@ -32,7 +32,7 @@ export default function PortraitPosterCarousel() {
   const { t } = useLanguage();
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-primary max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <ScrollReveal className="text-center space-y-4 mb-8">
         <div className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary font-black text-xs uppercase tracking-widest mb-2">
           {t('posterSection.tag')}
@@ -48,7 +48,7 @@ export default function PortraitPosterCarousel() {
 
       <div className="overflow-hidden rounded-[2rem] border border-primary/10 bg-white/5 shadow-xl">
         <div
-          className="flex gap-2 py-0 px-6 min-w-max animate-marquee will-change-transform"
+          className="flex gap-2 py-6 px-6 min-w-max animate-marquee will-change-transform"
           style={{ touchAction: 'none', pointerEvents: 'none' }}
         >
           {postersImages.concat(postersImages).map((image, idx) => (

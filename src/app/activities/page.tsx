@@ -16,7 +16,7 @@ export default function ActivitiesPage() {
       title: t('activities.lang.title'),
       icon: Book,
       desc: t('activities.lang.desc'),
-      img: "/gallery/Teaching_materials.jpg",
+      img: "/gallery/MonitorWorksheet.png",
       hint: "tamil language learning materials"
     },
     {

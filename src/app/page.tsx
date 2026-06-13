@@ -43,26 +43,32 @@ export default function Home() {
 
   const galleryImages = [
     {
-      id: 'gallery-4',
-      imageUrl: '/gallery/Teaching_materials.jpg',
+      id: 'gallery-1',
+      imageUrl: '/gallery/MonitorWorksheet.png',
       description: 'Teaching materials and resources',
       imageHint: 'teaching materials',
     },
     {
-      id: 'gallery-1',
+      id: 'gallery-2',
       imageUrl: '/gallery/StudentsWork1.jpg',
       description: 'Students work display',
       imageHint: 'students artwork',
     },
     {
-      id: 'gallery-2',
-      imageUrl: '/gallery/StudentsWork2.jpg',
-      description: 'Classroom student activities',
-      imageHint: 'students activity',
+      id: 'gallery-3',
+      imageUrl: '/gallery/Books.png',
+      description: 'Books and learning materials',
+      imageHint: 'books and materials',
     },
     {
-      id: 'gallery-3',
+      id: 'gallery-4',
       imageUrl: '/gallery/Students_writing.jpg',
+      description: 'Students writing session',
+      imageHint: 'students writing',
+    },
+    {
+      id: 'gallery-5',
+      imageUrl: '/gallery/PractiseBook.jpg',
       description: 'Students writing session',
       imageHint: 'students writing',
     },
@@ -211,7 +217,7 @@ export default function Home() {
             const cards = translations.map((item, idx) => ({
               ...item,
               icon: [Award, GraduationCap, Calendar][idx],
-              img: ['/gallery/artcraft.jpg', '/gallery/dance.jpg', '/gallery/Kalari.png'][idx],
+              img: ['/gallery/artcraft.jpg', '/gallery/Dance.jpg', '/gallery/Kalari.png'][idx],
               hint: ['art activities', 'music and dance activities', 'cultural festival activities'][idx],
             }));
 
@@ -253,7 +259,7 @@ export default function Home() {
         {/* Enrollment CTA - Ultra Attractive Version */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <ScrollReveal animation="scale-in">
-            <div className="bg-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-[0_20px_60px_-15px_rgba(255,191,0,0.4)] group">
+            <div className="bg-primary rounded-[3rem] p-12 md:p-12 text-center relative overflow-hidden shadow-[0_20px_60px_-15px_rgba(255,191,0,0.4)] group">
               {/* Animated Background Blobs */}
               <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 rounded-full blur-[100px] -mr-32 -mt-32 group-hover:scale-150 transition-transform duration-1000 ease-in-out"></div>
               <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full blur-[100px] -ml-32 -mb-32 group-hover:scale-150 transition-transform duration-1000 ease-in-out"></div>

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 const baseUrl = 'https://globaltamilschool.co.uk';
 
-const staticPages: Array<MetadataRoute.Sitemap> = [
+const staticPages: MetadataRoute.Sitemap = [
   {
     url: `${baseUrl}/`,
     lastModified: new Date(),

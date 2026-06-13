@@ -214,7 +214,7 @@ export const homeTranslations = {
       },
       {
         title: 'Stage programs & celebrations',
-        desc: 'Traditional music and dance training.',
+        desc: 'Students are encouraged to develop their talents and confidence through a variety of stage programs offered as extracurricular activities.',
         readMore: 'Read More',
       },
       {
