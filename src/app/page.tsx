@@ -205,23 +205,33 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: t('act.art'), icon: Award, desc: t('act.artDesc') },
-              { title: t('act.music'), icon: GraduationCap, desc: t('act.musicDesc') },
-              { title: t('act.fest'), icon: Calendar, desc: t('act.festDesc') }
+              { title: t('act.art'), icon: Award, desc: t('act.artDesc'), img: '/gallery/artcraft.jpg', hint: 'art activities' },
+              { title: t('act.music'), icon: GraduationCap, desc: t('act.musicDesc'), img: '/gallery/dance.jpg', hint: 'music and dance activities' },
+              { title: t('act.fest'), icon: Calendar, desc: t('act.festDesc'), img: '/gallery/StudentsWork1.jpg', hint: 'cultural festival activities' }
             ].map((item, i) => (
               <ScrollReveal key={i} animation="fade-up" delay={i * 200}>
-                <div className="bg-card border-2 border-primary/10 p-8 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:border-primary transition-all group relative h-full flex flex-col overflow-hidden hover:-translate-y-2">
-                  <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
-                    <item.icon className="h-28 w-28 text-primary" />
+                <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white">
+                  <div className="relative h-56 overflow-hidden">
+                    <Image
+                      src={item.img}
+                      alt={item.hint}
+                      fill
+                      className="object-cover transition-transform duration-1000 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute left-6 bottom-6 text-white space-y-2">
+                      <div className="inline-flex items-center justify-center rounded-full bg-primary/90 p-3 shadow-lg">
+                        <item.icon className="h-6 w-6 text-primary-foreground" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="bg-primary p-4 rounded-2xl w-fit mb-8 shadow-md group-hover:scale-110 group-hover:rotate-6 transition-transform">
-                    <item.icon className="h-8 w-8 text-primary-foreground" />
+                  <div className="p-8 flex flex-col h-full">
+                    <h3 className="text-2xl font-black mb-4 text-foreground">{item.title}</h3>
+                    <p className="text-muted-foreground mb-10 leading-relaxed flex-grow">{item.desc}</p>
+                    <Link href="/activities" className="text-primary font-black inline-flex items-center hover:text-primary/90 transition-colors mt-auto">
+                      {t('act.readMore')} <span className="ml-2">→</span>
+                    </Link>
                   </div>
-                  <h3 className="text-2xl font-black mb-4 text-foreground">{item.title}</h3>
-                  <p className="text-muted-foreground mb-10 leading-relaxed flex-grow">{item.desc}</p>
-                  <Link href="/activities" className="text-primary font-black inline-flex items-center group-hover:translate-x-2 transition-transform mt-auto">
-                    {t('act.readMore')} <span className="ml-2">→</span>
-                  </Link>
                 </div>
               </ScrollReveal>
             ))}
