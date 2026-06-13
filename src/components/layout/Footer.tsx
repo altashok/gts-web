@@ -19,16 +19,14 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-4">
-              <div className="relative h-16 w-16 bg-white rounded-2xl p-2 shadow-inner flex items-center justify-center">
-                <Image 
-                  src={logoImage} 
-                  alt="Global Tamil School Logo" 
-                  width={60}
-                  height={60}
-                  className="object-contain"
-                  data-ai-hint="school logo"
-                />
-              </div>
+              <Image 
+                src={logoImage} 
+                alt="Global Tamil School Logo" 
+                width={60}
+                height={60}
+                className="object-contain"
+                data-ai-hint="school logo"
+              />
               <h3 className="font-headline text-2xl font-bold text-primary">{t('footer.brand')}</h3>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -104,9 +102,8 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
                 <span className="text-sm">
-                  12 Belmont Avenue<br />
-                  New Malden<br />
-                  London KT3 6QD, UK
+                  London KT3 6QD<br />
+                  United Kingdom
                 </span>
               </li>
               <li className="flex items-start space-x-3">
