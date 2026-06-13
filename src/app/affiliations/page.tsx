@@ -102,6 +102,12 @@ export default function AffiliationsPage() {
       levels: t('affil.syllabus.3.levels'),
       icon: GraduationCap,
     },
+    {
+      title: t('affil.syllabus.4.title'),
+      desc: t('affil.syllabus.4.desc'),
+      levels: t('affil.syllabus.4.levels'),
+      icon: BookOpen,
+    },
   ];
 
   return (

@@ -1,6 +1,9 @@
 
 export const homeTranslations = {
   ta: {
+    'banner2.messages': [
+      '2025-2026 கல்வியாண்டுக்கான BTEB இணையவழி தகுதித் தேர்வுகள் 27-ஜூன்-2026 அன்று நடைபெறும்',
+    ],
     'hero.welcome': 'உலகளாவிய தமிழ்ப் பள்ளிக்கு உங்களை வரவேற்கிறோம்',
     'hero.title': 'தமிழ் மொழி காப்போம் ',
     'hero.titleAccent': 'கலாச்சாரத்தைப் போற்றுவோம்',
@@ -87,24 +90,34 @@ export const homeTranslations = {
     'gallery.tag': 'நிகழ்வுகள்',
     'gallery.title': 'கற்றல் அனுபவம்',
     'gallery.desc': 'எமது கற்றல் பயணத்தைச் சிறப்பாக்கும் தருணங்கள்.',
-    'act.title': 'எங்கள் செயல்பாடுகள்',
-    'act.desc': 'தமிழ்மொழி மட்டுமின்றி மாணவர்களின் பன்முகத் திறன்களை வளர்க்கிறோம்.',
-    'act.art': 'ஓவியம், இசை & நடன வகுப்புகள்',
-    'act.artDesc': 'தகுதியுள்ள ஆசிரியர்களிடமிருந்து, பாரம்பரிய இசை, பாரதநாட்டியம் மற்றும் சதுரங்க வகுப்புகளை வழங்குகிறோம்.',
-    'act.music': 'நேரடி மேடை நிகழ்ச்சிகள்',
-    'act.musicDesc': 'மேடை நிகழ்ச்சிகளின் மூலம் மாணவர்களின் பன்முகத்திறன்களை எடுத்துக்காட்டும் வாய்ப்பை வழங்குகிறோம்.',
-    'act.fest': 'தமிழ் வீரக்கலை வகுப்புகள்',
-    'act.festDesc': 'தமிழரின் வீரக்கலைகளான சிலம்பம், களரி அடிமுறை, வாள் சண்டை பயிற்சிகளை தகுந்த பாடத்திட்டத்தோடு வழங்குகிறோம் ',
-    'act.readMore': 'மேலும் அறிய',
-    'cta.title': 'இன்றே இணையுங்கள்',
-    'cta.desc': 'நடப்பு கல்வியாண்டிற்கான சேர்க்கை மாணவர்களின் வயது மற்றும் நேரமண்டலத்தின் அடிப்படையில் தேவைக்கேற்ற முறையில் வழங்குகிறோம். தங்களின் கற்றல் தேவைகளுக்கு எங்களை அணுகவும்.',
+    'activities.title': 'எங்கள் செயல்பாடுகள்',
+    'activities.desc': 'தமிழ்மொழி மட்டுமின்றி மாணவர்களின் பன்முகத் திறன்களை வளர்க்கிறோம்.',
+    'activities.items': [
+      {
+        title: 'ஓவியம், இசை & நடன வகுப்புகள்',
+        desc: 'தகுதியுள்ள ஆசிரியர்களிடமிருந்து, பாரம்பரிய இசை, பாரதநாட்டியம் மற்றும் சதுரங்க வகுப்புகளை வழங்குகிறோம்.',
+        readMore: 'மேலும் அறிய',
+      },
+      {
+        title: 'நேரடி மேடை நிகழ்ச்சிகள்',
+        desc: 'மேடை நிகழ்ச்சிகளின் மூலம் மாணவர்களின் பன்முகத்திறன்களை எடுத்துக்காட்டும் வாய்ப்பை வழங்குகிறோம்.',
+        readMore: 'மேலும் அறிய',
+      },
+      {
+        title: 'தமிழ் வீரக்கலை வகுப்புகள்',
+        desc: 'தமிழரின் வீரக்கலைகளான சிலம்பம், களரி அடிமுறை, வாள் சண்டை பயிற்சிகளை தகுந்த பாடத்திட்டத்தோடு வழங்குகிறோம்.',
+        readMore: 'மேலும் அறிய',
+      },
+    ],
+    'cta.title': 'மாணவர் சேர்க்கை',
+    'cta.desc': 'மாணவர்களின் வயது மற்றும் அவர்கள் வசிக்கும் நாடுகளின் நேர மண்டலங்களுக்கு ஏற்ப வகுப்புகள் நடத்தப்படுகின்றன. இதன் மூலம் உலகின் எந்த மூலையிலிருந்தும் எளிதாகவும் வசதியாகவும் கற்றுக்கொள்ளும் வாய்ப்பை பெறலாம். எங்களின் பல்வேறு சிறப்பான பாடநெறிகளில் இணைந்து, பயனுள்ள மற்றும் மகிழ்ச்சியான கல்விப் பயணத்தைத் தொடங்குங்கள். தகுதி வாய்ந்த ஆசிரியர்களின் வழிகாட்டுதலுடனும், தரநிலைப்படுத்தப்பட்ட மற்றும் சிறப்பாக வடிவமைக்கப்பட்ட கற்றல் வளங்களின் உதவியுடனும், மாணவர்கள் வெற்றியை நோக்கி உயர்தரமான கல்வியைப் பெறுகின்றனர்.',
     'cta.enroll': 'எங்களுடன் இணைய',
     'cta.enquire': 'விசாரணை',
-    'banner2.messages': [
-      '2025-2026 கல்வியாண்டுக்கான BTEB இணையவழி தகுதித் தேர்வுகள் 27-ஜூன்-2026 அன்று நடைபெறும்',
-    ],
   },
   en: {
+    'banner2.messages': [
+      'BTEB Online Tamil Language Exams for 2025-2026 academic year will be held on 27-June-2026',
+    ],
     'hero.welcome': 'Welcome to Global Tamil School',
     'hero.title': 'Preserving Tamil ',
     'hero.titleAccent': 'Embracing Culture',
@@ -185,21 +198,28 @@ export const homeTranslations = {
     'gallery.tag': 'Moments',
     'gallery.title': 'Learning Experience',
     'gallery.desc': 'Moments that make our learning journey special.',
-    'act.title': 'Engaging Activities',
-    'act.desc': 'Beyond Tamil Language, we nurture diverse talents.',
-    'act.art': 'Arts, Dance & Music Classes',
-    'act.artDesc': 'We offer classes for Professional Drawing, Carnatic Vocals, Barathanatyam & Chess classes from qualified teachers. ',
-    'act.music': 'Stage programs & celebrations',
-    'act.musicDesc': 'Traditional music and dance training.',
-    'act.fest': 'Martial Arts Classes',
-    'act.festDesc': 'We offer the Tamil maritial arts Silambam, Kalar Adimurai, and sword fighting training with a proper curriculum.',
-    'act.readMore': 'Read More',
-    'cta.title': 'Join Us Today',
-    'cta.desc': 'We provide classes based on student age and timezones from time to time. For all types of learnings, please join our exciting courses.',
+    'activities.title': 'Engaging Activities',
+    'activities.desc': 'Beyond Tamil Language, we nurture diverse talents.',
+    'activities.items': [
+      {
+        title: 'Arts, Dance & Music Classes',
+        desc: 'We offer classes for Professional Drawing, Carnatic Vocals, Barathanatyam & Chess classes from qualified teachers.',
+        readMore: 'Read More',
+      },
+      {
+        title: 'Stage programs & celebrations',
+        desc: 'Traditional music and dance training.',
+        readMore: 'Read More',
+      },
+      {
+        title: 'Martial Arts Classes',
+        desc: 'We offer the Tamil martial arts Silambam, Kalar Adimurai, and sword fighting training with a proper curriculum.',
+        readMore: 'Read More',
+      },
+    ],
+    'cta.title': 'For Student Admissions',
+    'cta.desc': 'We provide classes based on students\' age groups and time zones, making learning convenient and accessible from anywhere in the world. Join our exciting range of courses and embark on a rewarding learning journey. With the guidance of qualified teachers and well-structured, standardized teaching materials, students receive high-quality education designed for success.',
     'cta.enroll': 'Join Now',
     'cta.enquire': 'Enquire',
-    'banner2.messages': [
-      'BTEB Online Tamil Language Exams for 2025-2026 academic year will be held on 27-June-2026',
-    ]
   }
 };

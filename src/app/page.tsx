@@ -198,44 +198,52 @@ export default function Home() {
         {/* Engaging Activities Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center space-y-4 mb-16">
-            <h2 className="font-headline text-3xl md:text-5xl font-black">{t('act.title')}</h2>
+            <h2 className="font-headline text-3xl md:text-5xl font-black">{t('activities.title')}</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-4"></div>
-            <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('act.desc')}</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('activities.desc')}</p>
           </ScrollReveal>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: t('act.art'), icon: Award, desc: t('act.artDesc'), img: '/gallery/artcraft.jpg', hint: 'art activities' },
-              { title: t('act.music'), icon: GraduationCap, desc: t('act.musicDesc'), img: '/gallery/dance.jpg', hint: 'music and dance activities' },
-              { title: t('act.fest'), icon: Calendar, desc: t('act.festDesc'), img: '/gallery/StudentsWork1.jpg', hint: 'cultural festival activities' }
-            ].map((item, i) => (
-              <ScrollReveal key={i} animation="fade-up" delay={i * 200}>
-                <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white">
-                  <div className="relative h-56 overflow-hidden">
-                    <Image
-                      src={item.img}
-                      alt={item.hint}
-                      fill
-                      className="object-cover transition-transform duration-1000 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute left-6 bottom-6 text-white space-y-2">
-                      <div className="inline-flex items-center justify-center rounded-full bg-primary/90 p-3 shadow-lg">
-                        <item.icon className="h-6 w-6 text-primary-foreground" />
+          {(() => {
+            const translations = t('activities.items') as Array<{ title: string; desc: string; readMore: string }>;
+            const cards = translations.map((item, idx) => ({
+              ...item,
+              icon: [Award, GraduationCap, Calendar][idx],
+              img: ['/gallery/artcraft.jpg', '/gallery/dance.jpg', '/gallery/Kalari.png'][idx],
+              hint: ['art activities', 'music and dance activities', 'cultural festival activities'][idx],
+            }));
+
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {cards.map((item, i) => (
+                  <ScrollReveal key={i} animation="fade-up" delay={i * 200}>
+                    <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white">
+                      <div className="relative h-56 overflow-hidden">
+                        <Image
+                          src={item.img}
+                          alt={item.hint}
+                          fill
+                          className="object-cover transition-transform duration-1000 hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                        <div className="absolute left-6 bottom-6 text-white space-y-2">
+                          <div className="inline-flex items-center justify-center rounded-full bg-primary/90 p-3 shadow-lg">
+                            <item.icon className="h-6 w-6 text-primary-foreground" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-8 flex flex-col h-full">
+                        <h3 className="text-2xl font-black mb-4 text-foreground">{item.title}</h3>
+                        <p className="text-muted-foreground mb-10 leading-relaxed flex-grow">{item.desc}</p>
+                        <Link href="/activities" className="text-primary font-black inline-flex items-center hover:text-primary/90 transition-colors mt-auto">
+                          {item.readMore} <span className="ml-2">→</span>
+                        </Link>
                       </div>
                     </div>
-                  </div>
-                  <div className="p-8 flex flex-col h-full">
-                    <h3 className="text-2xl font-black mb-4 text-foreground">{item.title}</h3>
-                    <p className="text-muted-foreground mb-10 leading-relaxed flex-grow">{item.desc}</p>
-                    <Link href="/activities" className="text-primary font-black inline-flex items-center hover:text-primary/90 transition-colors mt-auto">
-                      {t('act.readMore')} <span className="ml-2">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            );
+          })()}
         </section>
 
         {/* Enrollment CTA - Ultra Attractive Version */}
@@ -261,7 +269,7 @@ export default function Home() {
 
               <div className="relative z-10 space-y-10 max-w-3xl mx-auto">
                 <ScrollReveal animation="fade-up" delay={200} className="space-y-4">
-                  <h2 className="font-headline text-4xl md:text-7xl font-black text-primary-foreground leading-tight drop-shadow-sm">
+                  <h2 className="font-headline text-4xl md:text-5xl font-black text-primary-foreground leading-tight drop-shadow-sm">
                     {t('cta.title')}
                   </h2>
                   <div className="w-24 h-1.5 bg-white/50 mx-auto rounded-full"></div>
@@ -271,6 +279,17 @@ export default function Home() {
                   <p className="text-lg md:text-2xl text-primary-foreground/90 font-medium leading-relaxed">
                     {t('cta.desc')}
                   </p>
+                </ScrollReveal>
+
+                <ScrollReveal animation="fade-up" delay={500}>
+                  <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[2rem] border-2 border-white/20 shadow-xl bg-white">
+                    <Image
+                      src="/gallery/Admission.png"
+                      alt="Student admission"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </ScrollReveal>
                 
                 <ScrollReveal animation="fade-up" delay={600} className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-6">
