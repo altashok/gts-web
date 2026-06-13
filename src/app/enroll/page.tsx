@@ -4,6 +4,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -139,6 +140,17 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
           {/* Info Column */}
           <div className="lg:col-span-1 space-y-8">
             <ScrollReveal animation="slide-in-left">
+              <div className="overflow-hidden rounded-[2rem] border mb-6 border-primary/10 shadow-xl bg-white">
+                <div className="relative aspect-[16/7] w-full overflow-hidden">
+                  <Image
+                    src="/gallery/GTSBanner.png"
+                    alt="GTS Banner"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
               <div className="bg-gradient-to-br from-muted via-muted to-primary/10 p-7 rounded-3xl space-y-4 border border-primary/10 shadow-sm">
                 <div className="flex items-center space-x-3 text-secondary">
                   <div className="bg-secondary/15 p-3 rounded-2xl border border-secondary/20">
@@ -173,7 +185,7 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-amber-500 to-primary"></div>
                 <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl"></div>
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 text-base md:text-lg">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2 text-base md:text-lg">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}

@@ -186,8 +186,23 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mb-16">
+          <ScrollReveal animation="fade-up">
+            <div className="mx-auto w-full max-w-[40rem] overflow-hidden rounded-[2rem] border border-primary/10 shadow-xl bg-white">
+              <div className="relative aspect-[16/6] w-full overflow-hidden">
+                <Image
+                  src="/gallery/GTSBanner.png"
+                  alt="GTS Banner"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
+        </section>
+        
         {/* Reviews Section */}
-        <section className="pt-16 relative">
+        <section className="pt-8 relative">
           <ScrollReveal animation="fade-up" className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border shadow-sm">
               <div className="flex -space-x-1">

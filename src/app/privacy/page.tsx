@@ -5,121 +5,121 @@ import { useLanguage } from "@/context/LanguageContext";
 const content = {
   ta: {
     title: "தனியுரிமைக் கொள்கை",
-    updated: "கடைசியாக புதுப்பிக்கப்பட்டது: 26 பிப்ரவரி 2026",
+    updated: "கடைசியாக புதுப்பிக்கப்பட்டது: 13 ஜூன் 2026",
     intro:
-      "Global Tamil School ஒரு ஆன்லைன் தமிழ் பள்ளி. மாணவர்கள், பெற்றோர் மற்றும் பார்வையாளர்களின் தனியுரிமையை நாங்கள் மிகுந்த முக்கியத்துவத்துடன் கையாள்கிறோம். இந்தக் கொள்கை, எங்கள் இணையதளம், சேர்க்கைப் படிவங்கள், ஆன்லைன் வகுப்புகள் மற்றும் தொடர்புடைய டிஜிட்டல் சேவைகள் வழியாக சேகரிக்கப்படும் தரவை எவ்வாறு பயன்படுத்துகிறோம் என்பதை விளக்குகிறது.",
+      "Global Tamil School (எங்களுக்கு, நாங்கள்) இணையதளம், சேர்க்கை படிவங்கள், தளத்தில் உள்ள வகுப்புகள் மற்றும் சார்ந்த வழிமுறைகளால் சேகரிக்கப்படும் தனிமீது தகவல்களை எவ்வாறு கையாளும் என்பதை இந்த தனியுரிமைக் கொள்கை விளக்குகிறது. மாணவர்கள், பெற்றோர் மற்றும் பயனாளர்களின் தனியான தரவை பாதுகாக்க நாங்கள் கடமைப்பட்டுள்ளோம்.",
     sections: [
       {
-        heading: "1. நாங்கள் சேகரிக்கும் தகவல்கள்",
-        text: "நாங்கள் சேகரிக்கும் தகவல்களில்: மாணவர் மற்றும் பெற்றோர் பெயர், மின்னஞ்சல், தொலைபேசி எண், நாடு/நேர மண்டலம், சேர்க்கைத் தகவல்கள், கல்வி முன்னேற்றம், வருகைப் பதிவுகள் மற்றும் ஆதரவு தொடர்புகள் அடங்கும்.",
+        heading: "1. நாம் சேகரிக்கும் தரவு",
+        text: "நாம் நேரடியாக பெறும் தகவல்களில் மாணவர் மற்றும் பெற்றோர் பெயர்கள், மின்னஞ்சல் முகவரிகள், தொலைபேசி எண்கள், நேர மண்டலம், நிபந்தனை விவரங்கள், வகுப்பு நிலை, மாணவர் வருகை மற்றும் பாடத்திட்ட முன்னேற்றம் அடங்கும்.",
       },
       {
-        heading: "2. ஆன்லைன் வகுப்புகள் மற்றும் பதிவுகள்",
-        text: "லைவ் வகுப்புகள் போது கற்றல் தரத்தை மேம்படுத்த மற்றும் தவறவிட்ட பாடங்களை மீண்டும் பார்க்க உதவ சில அமர்வுகள் பதிவு செய்யப்படலாம். பதிவு செய்யப்பட்ட உள்ளடக்கம் கல்வி நோக்கத்திற்காக மட்டுமே பயன்படுத்தப்படும்.",
+        heading: "2. தானாக சேகரிக்கப்படும் தரவு",
+        text: "வலைத்தளத்திற்கு உலாவி மூலம் அணுகும் போது IP முகவரி, உலாவிக் கொள்கைகள், சாதன தகவல்கள் மற்றும் பயன்பாட்டு தரவு போன்ற தகவல்கள் தானாகப் பதிவு செய்யப்படலாம். இது செயல்திறன், பாதுகாப்பு மற்றும் பயனர் தரவினைச் சரிபார்க்க உதவுகிறது.",
       },
       {
-        heading: "3. தகவல் பயன்படுத்தப்படும் நோக்கங்கள்",
-        text: "சேர்க்கை செயல்முறை, வகுப்பு ஒதுக்கீடு, பாடத்திட்ட தகவல் பகிர்வு, முன்னேற்ற கண்காணிப்பு, பெற்றோர் தொடர்பு, அட்டவணை/அறிவிப்புகள் அனுப்புதல் மற்றும் சேவை மேம்பாடு ஆகியவற்றிற்காக இந்தத் தரவை பயன்படுத்துகிறோம்.",
+        heading: "3. தரவு உபயோக நோக்கங்கள்",
+        text: "நாம் சேகரிக்கும் தரவை சேர்க்கை செயல்முறை, வகுப்பு ஒதுக்கீடு, வகுப்புப் பட்டியல், முன்னேற்ற கண்காணிப்பு, பெற்றோர்/மாணவர் தொடர்பு, ஆதரவு சேவைகள், புகாருகள் மற்றும் சேவை மேம்பாட்டிற்காக பயன்படுத்துகிறோம்.",
       },
       {
-        heading: "4. சிறார் தரவு பாதுகாப்பு",
-        text: "எங்கள் சேவைகள் பெரும்பாலும் சிறார்களை உள்ளடக்குவதால், பெற்றோர்/பாதுகாவலர் மூலம் வழங்கப்படும் தகவல்களுக்கு முன்னுரிமை அளிக்கிறோம். தேவையான இடங்களில் பெற்றோர் ஒப்புதல் நடைமுறைகள் பின்பற்றப்படுகின்றன.",
+        heading: "4. சிறார்களின் தனியுரிமை",
+        text: "எங்கள் சேவைகள் சிறார்களையள்ளடக்கியதால், பெற்றோர் அல்லது பாதுகாவலர் ஆதாரம் கொண்ட தகவல்களுக்கு அதிக முக்கியத்துவம் அளிக்கிறோம். தேவையான பகுதிகளில் பெற்றோர் ஒப்புதல் மற்றும் கண்காணிப்பு நடைமுறைகள் பின்பற்றப்படும்.",
       },
       {
-        heading: "5. கட்டணம் மற்றும் பரிவர்த்தனை தகவல்",
-        text: "கட்டண செயலாக்கத்திற்கு நம்பகமான மூன்றாம் தரப்பு பணப்பரிவர்த்தனை தளங்களைப் பயன்படுத்தலாம். முழு கார்டு விவரங்கள் போன்ற அதிவிசேஷ கட்டணத் தகவல்களை நாங்கள் நேரடியாக சேமிக்கமாட்டோம்.",
+        heading: "5. பணப்பரிவர்த்தனைகள்",
+        text: "கட்டணங்கள் நம்பகமான மூன்றாம் தரப்பு ப்ரோசஸர்களின் மூலம் செயலாக்கப்படலாம். நாங்கள் அத்தகைய சேவைகளின் தனித்துவமான பாதுகாப்பு ஒழுங்குகளுக்கு உட்பட்டிருக்கின்றோம் மற்றும் முழு கார்ட் விவரங்களை நேரடியாக சேமிப்பது எங்கள் நடைமுறையில் இல்லை.",
       },
       {
-        heading: "6. Cookies மற்றும் பயன்பாட்டு தரவு",
-        text: "இணையதள செயல்திறன், பாதுகாப்பு, மொழித் தேர்வு மற்றும் பயனர் அனுபவத்தை மேம்படுத்த Cookies அல்லது ஒத்த தொழில்நுட்பங்களை பயன்படுத்தலாம். உங்கள் உலாவியில் இவற்றை நிர்வகிக்க முடியும்.",
+        heading: "6. குக்கீஸ் மற்றும் தொடர்புடைய தொழில்நுட்பங்கள்",
+        text: "இணையதள செயல்பாடு, மொழி விருப்பம், பாதுகாப்பு மற்றும் பகுப்பாய்வு தேவைகளுக்காக குக்கீஸ் அல்லது ஒத்த தொழில்நுட்பங்களை நாம் பயன்படுத்தலாம். உங்களுக்கு தேவையானால் உலாவி அமைப்புகளில் இதையும் கட்டுப்படுத்தலாம்.",
       },
       {
         heading: "7. தரவு பகிர்வு",
-        text: "சட்டப்பூர்வ தேவைகள் அல்லது சேவை வழங்கல் அவசியம் இல்லாவிட்டால் உங்கள் தனிப்பட்ட தரவை விற்பனை செய்யமாட்டோம். சேவை வழங்குநர்களுடன் பகிரப்படும் போது, தேவையான பாதுகாப்பு ஒப்பந்தங்கள் பின்பற்றப்படும்.",
+        text: "நாங்கள் உங்கள் தனிப்பட்ட தகவலை விற்பனை செய்யமாட்டோம். சேவை வழங்குநர்கள், சட்ட பராமரிப்பு தேவைகள் அல்லது உங்கள் நேரடி கோரிக்கைகள் இன்றி தரவை பகிரவில்லை. பகிரப்படும்போது தேவையான இரகசிய அமைப்புகள் மற்றும் பாதுகாப்பு ஒப்பந்தங்கள் நடைமுறைப்படுத்தப்படும்.",
       },
       {
-        heading: "8. சர்வதேச தரவு பரிமாற்றம்",
-        text: "நாங்கள் உலகளாவிய மாணவர்களுக்கு சேவை செய்வதால், தரவு பல நாடுகளிலுள்ள சேவையகங்கள் அல்லது வழங்குநர்களின் மூலம் செயலாக்கப்படலாம். எப்போதும் நியாயமான பாதுகாப்பு கட்டுப்பாடுகள் நடைமுறையில் இருக்கும்.",
+        heading: "8. சர்வதேச தரவுப் பரிமாற்றம்",
+        text: "உலகளாவிய மாணவர்களுக்கு சேவை தரும் காரணத்தால், தரவு வெவ்வேறு பகுதிகளிலுள்ள சேவையகங்கள் அல்லது மூன்றாம் தரப்பு வழங்குநர்களின் வழியாக செயலாக்கப்படலாம். தரவுக்கான பாதுகாப்பு கட்டுப்பாடுகள் எப்போதும் நிலைநாட்டப்படும்.",
       },
       {
-        heading: "9. தரவு பாதுகாப்பு நடவடிக்கைகள்",
-        text: "அங்கீகரிக்கப்பட்ட அணுகல் கட்டுப்பாடு, கடவுச்சொல் பாதுகாப்பு, சேவை வழங்குநர் பாதுகாப்பு மதிப்பீடு போன்ற நிர்வாக மற்றும் தொழில்நுட்ப கட்டுப்பாடுகள் மூலம் தரவு பாதுகாக்கப்படுகிறது.",
+        heading: "9. பாதுகாப்பு நடைமுறைகள்",
+        text: "மின்னணு மற்றும் நிர்வாக பாதுகாப்பு முறைமைகள், அணுகல் கட்டுப்பாடு, கடவுச்சொல் நெறிமுறைகள் மற்றும் சேவை வழங்குநர் பாதுகாப்பு மதிப்பீடுகள் மூலம் தரவை பாதுகாத்துக் கொள்கிறோம்.",
       },
       {
         heading: "10. தரவு சேமிப்பு காலம்",
-        text: "சேவை வழங்க அவசியமான காலத்திலும், சட்ட/கணக்குப் பொறுப்புகள் நிறைவேறும் அளவிலும் தரவு சேமிக்கப்படும். தேவையற்ற பிறகு தரவு நீக்கம் அல்லது அடையாளமற்றதாக்கல் நடைமுறைகள் பின்பற்றப்படும்.",
+        text: "நாம் சேவையை வழங்குவதற்கு தேவையான காலத்திற்கு மட்டுமே தரவை வைத்திருக்கின்றோம். சட்ட தேவைகள் நிறைவேறும் அல்லது சேவை தேவைகள் குறையும் போது தரவை நீக்குதல் அல்லது அடையாளமற்றதாக்கல் நடைமுறைகள் இடம்பெறும்.",
       },
       {
         heading: "11. உங்கள் உரிமைகள்",
-        text: "உங்கள் தனிப்பட்ட தகவலை அணுகுதல், திருத்துதல், சில சூழல்களில் நீக்கம் கோருதல் மற்றும் தொடர்பு விருப்பங்களை மாற்றுதல் போன்ற உரிமைகள் உங்களுக்கு உண்டு. கோரிக்கைகளை மின்னஞ்சல் மூலம் அனுப்பலாம்.",
+        text: "உங்கள் தனிப்பட்ட தகவலைப் பார்க்க, திருத்த, நீக்க, அல்லது தொடர்பு விருப்பங்களை மாற்றுவதற்கு நீங்கள் கோரலாம். இந்த கோரிக்கைகளை எங்களுக்கு மின்னஞ்சல் மூலம் அனுப்பவும்.",
       },
       {
         heading: "12. கொள்கை மாற்றங்கள்",
-        text: "இந்த தனியுரிமைக் கொள்கை காலந்தோறும் புதுப்பிக்கப்படலாம். புதுப்பிக்கப்பட்ட பதிப்பு இந்தப் பக்கத்தில் வெளியிடப்பட்டதும் அமலுக்கு வரும்.",
+        text: "இந்த தனியுரிமைக் கொள்கை அவ்வப்போது புதுப்பிக்கப்படலாம். புதுப்பிக்கப்பட்ட பதிப்பு இங்கு வெளியிடப்பட்டவுடன் அமலில் இருக்கும்.",
       },
       {
-        heading: "13. தொடர்புக்கு",
-        text: "தனியுரிமை தொடர்பான கேள்விகள்: globaltamilschool@gmail.com",
+        heading: "13. தொடர்பு",
+        text: "தனியுரிமை தொடர்பான கேள்விகள் மற்றும் கோரிக்கைகள்: globaltamilschool@gmail.com",
       },
     ],
   },
   en: {
     title: "Privacy Policy",
-    updated: "Last updated: February 26, 2026",
+    updated: "Last updated: June 13, 2026",
     intro:
-      "Global Tamil School is an online Tamil school. We take the privacy of students, parents, and visitors seriously. This policy explains how we collect, use, store, and protect data when you use our website, enrollment forms, live classes, and related digital services.",
+      "Global Tamil School (\"we\", \"us\", \"our\") operates this website and online learning services. We are committed to protecting the privacy of students, parents, guardians, and visitors. This privacy policy explains how we collect, use, disclose, and safeguard your personal information.",
     sections: [
       {
         heading: "1. Information We Collect",
-        text: "We may collect student and parent details such as names, email addresses, phone numbers, country/time zone, enrollment records, attendance, academic progress, and communication history.",
+        text: "We collect information you provide directly, such as student and parent names, email addresses, phone numbers, country/time zone, enrollment information, class level, attendance, and academic progress.",
       },
       {
-        heading: "2. Online Classes and Recordings",
-        text: "To support learning quality and revision, some live sessions may be recorded. Recorded content is used for educational continuity, teacher quality review, and student learning support.",
+        heading: "2. Information Collected Automatically",
+        text: "We may also automatically collect device information, browser details, IP addresses, usage data, and cookies when you use our site. This helps us improve performance, security, and user experience.",
       },
       {
-        heading: "3. How We Use Information",
-        text: "We use information for admissions, class allocation, timetable communication, academic support, progress tracking, parent updates, safety monitoring, and service improvement.",
+        heading: "3. How We Use Your Information",
+        text: "We use collected information to manage enrollment, assign classes, send schedules and announcements, support student learning, communicate with parents or guardians, and improve our educational services.",
       },
       {
         heading: "4. Children’s Privacy",
-        text: "Because our services involve minors, we prioritize parent/guardian-provided data and apply age-appropriate safeguards. Where required, we rely on parental consent and supervision controls.",
+        text: "Our services are used by minors, so we prioritize information provided by parents or guardians and maintain appropriate safeguards. Parental consent is obtained when required for minors to participate.",
       },
       {
         heading: "5. Payments and Billing",
-        text: "Payments may be processed through trusted third-party providers. We do not intentionally store full card details on our own systems when secure payment processors are used.",
+        text: "Payment processing may be handled by trusted third-party providers. We do not intentionally store complete payment card details on our own systems when secure processors are used.",
       },
       {
-        heading: "6. Cookies and Website Usage Data",
-        text: "We may use cookies or similar technologies to improve functionality, language preference, security, and analytics. You can manage cookie settings through your browser.",
+        heading: "6. Cookies and Tracking Technologies",
+        text: "We use cookies and similar technologies to support website functionality, remember language preferences, provide security, and collect analytics. You can manage your cookie settings through your browser.",
       },
       {
-        heading: "7. Sharing of Data",
-        text: "We do not sell personal information. We only share data when needed for legitimate service operations, legal compliance, or with authorized vendors under appropriate confidentiality obligations.",
+        heading: "7. Sharing and Disclosure",
+        text: "We do not sell your personal information. We only share data when necessary for service delivery, legal compliance, or with authorized vendors under confidentiality agreements.",
       },
       {
         heading: "8. International Data Transfers",
-        text: "As we serve learners globally, data may be processed across different regions. We apply reasonable safeguards and vendor controls for cross-border data handling.",
+        text: "Because we serve learners globally, your information may be processed in other countries. We implement reasonable safeguards for cross-border data transfers.",
       },
       {
         heading: "9. Security Measures",
-        text: "We use practical administrative and technical controls including access restrictions, account protections, and provider-level security practices to reduce unauthorized access risks.",
+        text: "We maintain administrative and technical controls such as access restrictions, password protections, and vendor security evaluations to reduce the risk of unauthorized access.",
       },
       {
         heading: "10. Data Retention",
-        text: "We keep data for as long as necessary to deliver services, maintain academic/admin records, and meet legal obligations. Data is deleted or anonymized when no longer needed.",
+        text: "We retain information only as long as necessary to provide services, maintain academic records, and comply with legal obligations. When information is no longer needed, we may delete or anonymize it.",
       },
       {
         heading: "11. Your Rights",
-        text: "You may request access, correction, or deletion of personal data in applicable situations, and may update communication preferences by contacting us.",
+        text: "You may request access to, correction of, or deletion of your personal information where applicable. You may also update your communication preferences by contacting us.",
       },
       {
         heading: "12. Policy Updates",
-        text: "This policy may be updated from time to time. The latest version posted on this page will apply from the update date.",
+        text: "We may update this policy from time to time. The latest version posted on this page will apply after it is published.",
       },
       {
         heading: "13. Contact",
-        text: "For privacy-related queries: globaltamilschool@gmail.com",
+        text: "For privacy-related questions or requests, contact us at globaltamilschool@gmail.com",
       },
     ],
   },
@@ -132,7 +132,7 @@ export default function PrivacyPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
       <div className="space-y-2">
-        <h1 className="font-headline text-3xl md:text-5xl font-black">{c.title}</h1>
+        <h1 className="font-headline text-3xl md:text-4xl font-black">{c.title}</h1>
         <p className="text-sm text-muted-foreground">{c.updated}</p>
       </div>
       <p className="text-muted-foreground leading-relaxed">{c.intro}</p>

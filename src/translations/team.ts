@@ -8,8 +8,9 @@
     ],
     group2: [
       { name: "திருமதி. சங்கரேஸ்வரி நாகேந்திரா", role: "பள்ளி செயலாளர் & ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மூத்த மாணவர்களுக்கும் தமிழ் மொழியின் மீதான ஆர்வத்தை உண்டாக்கும் திறமைகொண்ட ஆசிரியர்.", photo: '/people/Sankareswari.jpg' },
-      { name: "திருமதி. சந்தியா திரு", role: "செயலாளர் - சுகாட்டுலாந்து", location: "ஐக்கிய இராச்சியம்", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட தமிழ் ஆர்வலர்.", photo: '/people/Sandhiya.jpg' },
+      { name: "திருமதி. சந்தியா திரு", role: "செயலாளர் - சுகாட்டுலாந்து", location: "சுகாட்டுலாந்து", bio: "அயலக மாணவர்களுக்குத் தமிழ் மொழியின் மீதான ஆர்வத்தை உருவாக்கும் திறமைகொண்ட தமிழ் ஆர்வலர்.", photo: '/people/Sandhiya.jpg' },
       { name: "திருமதி. பிருந்தா அருண்", role: "செயலாளர் UAE - தமிழ் ஆசிரியர்", location: "ஐக்கிய அரபு அமீரகம்", bio: "குழந்தைகளுக்கு முதல் தமிழ் கற்றல் அனுபவத்தை ஆர்வமூட்டும் வகையில் அளிப்பவர்.", photo: '/people/BrinthaArun.png' },
+      { name: "திருமதி. அடலின் ஜூடு", role: "செயலாளர் & ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மனோதத்துவ முறையில் மாணவர்களை அணுகுவதில் அனுபவம் கொண்டவர். சிறப்பு குழந்தைகளுக்கு ஏற்றவாறு கற்பிப்பதில் பயிற்சி பெற்ற ஆசிரியர்.", photo: '/people/AdelineJude.png' },
     ],
     group3: [
       { name: "Christeta Rani", role: "மூத்த தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "இணையவழியில் மாணவர்களிடம் தமிழ் கற்கும் ஆர்வத்தை உருவாக்கும் தகுதியான ஆசிரியர். பாடத்திட்ட வடிவமைப்பு மற்றும் சர்வதேச கல்வி தரநிலைகளில் நிபுணர்.", photo: '/people/ChristetaRani.jpg' },
@@ -17,8 +18,7 @@
       { name: "திருமதி. லிண்டா ஜான்சன்", role: "தமிழ் ஆர்வலர் & ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மொழிக் கற்றலை தமிழ் வரலாறு மற்றும் மரபுடன் இணைத்து கற்பிப்பவர்.", photo: '/people/LindaJohnson.jpeg' },
       { name: "திருமதி. சுரேகா வன்னியராஜா", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "மாணவர்களின் வாசிப்பு புரிதல் திறனை மேம்படுத்த அர்ப்பணிப்புடன் செயல்படுபவர். பேச்சுப் போட்டி மற்றும் விவாத திறன்களுக்கு மாணவர்களை வழிகாட்டுபவர்", photo: '/people/Sureka.jpg' },
       { name: "திருமதி. தேவிகா பாலன்", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "கதை சொல்லல் மற்றும் செயல்முறை கற்றல் மூலம் மாணவர்களை ஈர்ப்பவர்.", photo: '/people/Devika.jpg' },
-      { name: "திருமதி. நர்மதா குமரன்", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "அனைத்து வயதினருக்கும் இருமொழி வாயிலாக தமிழைக் கற்பிக்கும் திறமை கொண்டவர்.", photo: '/people/Narmadha.jpg' },
-      { name: "திருமதி. அடலின் ஜூடு", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மனோதத்துவ முறையில் மாணவர்களை அணுகுவதில் அனுபவம் கொண்டவர். சிறப்பு குழந்தைகளுக்கு ஏற்றவாறு கற்பிப்பதில் பயிற்சி பெற்ற ஆசிரியர்.", photo: '/people/AdelineJude.jpg' },
+      { name: "திருமதி. நர்மதா குமரன்", role: "தமிழ் ஆசிரியர்", location: "இந்தியா", bio: "அனைத்து வயதினருக்கும் இருமொழி வாயிலாக தமிழைக் கற்பிக்கும் திறமை கொண்டவர்.", photo: '/people/Narmadha.png' },
       { name: "திருமதி. கலாதேவி", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "நேர்வழியில் மாணவர்களைக் கையாளும் திறமை பெற்றவர்.", photo: '/people/Kaladevi.jpg' },
       { name: "திருமதி. விஜயலட்சுமி சுந்தர்ராஜன்", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "மாணவர்களின் பேச்சுத் தமிழ் தன்னம்பிக்கையை வளர்க்க உதவுபவர்.", image: 'team-member-3', photo: '/people/Vijayalakshmi.jpg' },
       { name: "திருமதி. அபிலா பிரபு", role: "தமிழ் ஆசிரியர்", location: "ஐக்கிய இராச்சியம்", bio: "கதை சொல்லல் மற்றும் செயல்முறை கற்றல் மூலம் மாணவர்களை ஈர்ப்பவர்.", photo: '/people/Placeholder.jpg' },
@@ -50,6 +50,7 @@
       { name: "Mrs. Sankareswari Nagendra", role: "Secretary & Teacher", location: "United Kingdom", bio: "A teacher with the ability to inspire senior students' interest in the Tamil language.", photo: '/people/Sankareswari.jpg' },
       { name: "Mrs. Sandhya Thiru", role: "Secretary - Scotland", location: "United Kingdom", bio: "A Tamil enthusiast skilled at fostering interest in Tamil among diaspora students.", photo: '/people/Sandhiya.jpg' },
       { name: "Mrs. Brintha Arun", role: "Secretary - UAE & Tamil Teacher", location: "United Arab Emirates", bio: "Provides an engaging first Tamil learning experience for children.", photo: '/people/BrinthaArun.png' },
+      { name: "Mrs. Adeline Jude", role: "Secretary & Teacher", location: "United Kingdom", bio: "Has experience in approaching children with special needs. A trained teacher with expertise in child psychology.", photo: '/people/AdelineJude.png' },
       ],
     group3: [
       { name: "Mrs. Christeta Sagaya Rani", role: "Senior Tamil Teacher", location: "India", bio: "A capable instructor who builds students' enthusiasm for learning Tamil online. Expert in curriculum design and international education standards.", photo: '/people/ChristetaRani.jpg' },
@@ -57,8 +58,7 @@
       { name: "Mrs. Linda Johnson", role: "Tamil Enthusiast & Teacher", location: "United Kingdom", bio: "Teaches language learning by connecting Tamil history and tradition.", photo: '/people/LindaJohnson.jpeg' },
       { name: "Mrs. Sureka Vanniyaraja", role: "Tamil Teacher", location: "India", bio: "Dedicated to improving students' reading comprehension and guides them in speech contests and debate skills.", photo: '/people/Sureka.jpg' },
       { name: "Mrs. Devika Balan", role: "Tamil Teacher", location: "India", bio: "Engages students through storytelling and experiential learning.", photo: '/people/Devika.jpg' },
-      { name: "Mrs. Narmadha Kumaran", role: "Tamil Teacher", location: "India", bio: "A teacher skilled in teaching Tamil bilingually for learners of all ages.", photo: '/people/Narmadha.jpg' },
-      { name: "Mrs. Adeline Jude", role: "Tamil Teacher", location: "United Kingdom", bio: "Has experience in approaching children with special needs. A trained teacher with expertise in child psychology.", photo: '/people/AdelineJude.jpg' },
+      { name: "Mrs. Narmadha Kumaran", role: "Tamil Teacher", location: "India", bio: "A teacher skilled in teaching Tamil bilingually for learners of all ages.", photo: '/people/Narmadha.png' },
       { name: "Mrs. Kaladevi", role: "Tamil Teacher", location: "United Kingdom", bio: "A teacher skilled at instructing students in person.", photo: '/people/Kaladevi.jpg' },
       { name: "Mrs. Vijayalakshmi Sundarrajan", role: "Tamil Teacher", location: "United Kingdom", bio: "Helps students build confidence in spoken Tamil.", image: 'team-member-3', photo: '/people/Vijayalakshmi.jpg' },
       { name: "Mrs. Abila Prabhu", role: "Tamil Teacher", location: "United Kingdom", bio: "Engages students through storytelling and experiential learning.", photo: '/people/Placeholder.jpg' },
