@@ -178,7 +178,7 @@ export default function Home() {
                 key={image.id} 
                 animation="scale-in" 
                 delay={idx * 100}
-                className={`relative overflow-hidden rounded-3xl group border-4 border-transparent hover:border-primary transition-all duration-500 ${idx === 0 ? 'col-span-2 row-span-2' : 'aspect-square shadow-lg'}`}
+                className={`relative overflow-hidden rounded-3xl group border-4 border-transparent hover:border-primary transition-all duration-500 ${idx === 0 ? 'col-span-2 row-span-2 aspect-[4/3] md:aspect-auto shadow-lg' : 'aspect-square shadow-lg'}`}
               >
                 <Image 
                   src={image.imageUrl} 
