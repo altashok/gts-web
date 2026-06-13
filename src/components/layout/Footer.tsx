@@ -27,7 +27,7 @@ export default function Footer() {
                 className="object-contain"
                 data-ai-hint="school logo"
               />
-              <h3 className="font-headline text-2xl font-bold text-primary">{t('footer.brand')}</h3>
+              <h3 className="font-headline text-2xl font-bold text-primary">{t('footer.brand')}<sup className="align-super text-[0.55em]">®</sup></h3>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('footer.aboutDesc')}

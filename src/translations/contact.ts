@@ -10,7 +10,7 @@ const buildFaqTranslations = (items: FaqItem[]) =>
 
 const taFaq: FaqItem[] = [
   {
-    q: 'சேர்க்கை எப்போது திறக்கப்படும்?',
+    q: 'மாணவர் சேர்க்கை எப்போது நடைபெறும்?',
     a: 'வருடத்தில் பல கட்டங்களாக சேர்க்கை நடைபெறும். சமீபத்திய சேர்க்கை தேதிகளுக்கு எங்களைத் தொடர்புகொள்ளவும்.',
   },
   {
@@ -18,7 +18,7 @@ const taFaq: FaqItem[] = [
     a: 'எங்கள் முக்கிய வகுப்புகள் ஆன்லைன் முறையில் நடைபெறுகின்றன. சில நிகழ்வுகள் நேரடி முறையிலும் ஏற்பாடு செய்யப்படுகின்றன.',
   },
   {
-    q: 'மாணவர்களுக்கு எந்த வயது முதல் சேர்க்கை?',
+    q: 'மாணவர்களுக்கு எந்த வயது முதல் சேர்க்கை நடைபெறுகிறது?',
     a: 'பொதுவாக 5 வயதிற்கு மேற்பட்ட மாணவர்கள் சேரலாம். தகுந்த நிலைக்கு ஏற்ப வகுப்புகள் ஒதுக்கப்படும்.',
   },
   {
@@ -27,19 +27,23 @@ const taFaq: FaqItem[] = [
   },
   {
     q: 'ஆன்லைன் தமிழ் வகுப்புகள் எப்படி நடைபெறுகின்றன?',
-    a: 'நேரடி ஆசிரியர் வழிகாட்டலுடன் இணையவழி வகுப்புகள் நடைபெறும். ஒவ்வொரு நிலைக்கும் பொருத்தமான பாடத்திட்டம் மற்றும் பயிற்சிகள் வழங்கப்படும்.',
+    a: 'நேரடி ஆசிரியர் வழிகாட்டலுடன் இணையவழி வகுப்புகள் நடைபெறும். ஒவ்வொரு நிலைக்கும் பொருத்தமான பாடத்திட்டம் மற்றும் பயிற்சிகள் வழங்கப்படும். மாணவர்களின் தேவைக்கேற்ப குழு வகுப்புகள் மற்றும் தனி வகுப்புகள் நடத்தப்படும். மாணவர்கள் வாழும் நேர மண்டலத்தைப் பொருத்தி வகுப்புகள் ஒதுக்கப்படும்.',
   },
   {
     q: 'கலை (Arts) வகுப்புகளில் என்ன கற்பிக்கப்படுகிறது?',
-    a: 'வரைவியல், கைவினை மற்றும் தமிழ் கலாச்சார கலைச்சார்ந்த செயற்பாடுகள் வயதுக்கேற்ற முறையில் கற்பிக்கப்படுகின்றன.',
+    a: 'வரைவியல், கைவினை மற்றும் தமிழ் கலாச்சாரம் மற்றும் கலைசார்ந்த செயற்பாடுகள் வயதுக்கேற்ற முறையில் கற்பிக்கப்படுகின்றன.',
+  },
+  {
+    q: 'நுண்கலை (Fine Arts) வகுப்புகளில் என்ன கற்பிக்கப்படுகிறது?',
+    a: 'இந்தியா நிகழ்த்தும் நுண்கலை வகுப்புகளில் பரதநாட்டியம், கர்நாடக சங்கீதம் மற்றும் இசைக்கருவிகளுக்கான வகுப்புகள் தகுந்த பாடத்திட்டத்தோடு பல்வேறு நிலைகளில் கற்பிக்கப்படுகின்றன. உலகளாவிய தேர்வு வாரியங்கள் மூலம் தேர்வுகள் நடத்தப்பட்டது சான்றிதழ்கள் வழங்கப்படுகின்றன.',
   },
   {
     q: 'சதுரங்க (Chess) வகுப்புகள் தொடக்கநிலைக்கு உண்டா?',
     a: 'ஆம். தொடக்கநிலை மாணவர்களுக்கும் மேம்பட்ட மாணவர்களுக்கும் தனித்த பயிற்சி பாதை உள்ளது. தந்திரம், நடைமுறை போட்டி பயிற்சியும் வழங்கப்படும்.',
   },
   {
-    q: 'மார்ஷியல் ஆர்ட்ஸ் (Martial Arts) ஆன்லைனில் பாதுகாப்பாக கற்றுக்கொள்ள முடியுமா?',
-    a: 'ஆம். பாதுகாப்பு வழிமுறைகளுடன் ஆசிரியர் கண்காணிப்பில் அடிப்படை உடற்பயிற்சி, ஒழுக்கம் மற்றும் தற்காப்புத் திறன்கள் கற்பிக்கப்படுகின்றன.',
+    q: 'தற்காப்புக்கலை (Martial Arts) வகுப்புகள் ஆன்லைனில் பாதுகாப்பாக கற்றுக்கொள்ள முடியுமா?',
+    a: 'ஆம். பாதுகாப்பு வழிமுறைகளுடன் பயிற்சிபெற்ற ஆசிரியர் கண்காணிப்பில் அடிப்படை உடற்பயிற்சி, ஒழுக்கம் மற்றும் தற்காப்புத் திறன்கள் கற்பிக்கப்படுகின்றன.',
   },
 ];
 
@@ -50,7 +54,7 @@ const enFaq: FaqItem[] = [
   },
   {
     q: 'Are classes online or in-person?',
-    a: 'Our core classes are conducted online. Selected events and programs may be held in person.',
+    a: 'Online classes are conducted with direct guidance from qualified teachers. A suitable curriculum and learning activities are provided for each level. Group classes as well as one-to-one lessons are offered according to the needs of the students. Classes are scheduled based on the time zones in which the students reside, ensuring convenient and effective learning opportunities for all.',
   },
   {
     q: 'What is the minimum age to enroll?',
@@ -67,6 +71,10 @@ const enFaq: FaqItem[] = [
   {
     q: 'What is covered in the Arts classes?',
     a: 'Students learn age-appropriate drawing, craft, and Tamil culture-based creative activities through guided sessions.',
+  },
+  {
+    q: 'What is covered in the Fine Arts classes?',
+    a: 'Fine Arts classes conducted in India cover Bharatanatyam, Carnatic music, and musical instruments at multiple levels with structured curriculum. Examinations are conducted by global examination boards, and certificates are awarded upon successful completion.',
   },
   {
     q: 'Do you offer Chess training for beginners?',

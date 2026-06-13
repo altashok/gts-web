@@ -19,10 +19,10 @@ export const activitiesTranslations = {
     'activities.highlights.awards': 'விருதுகள் & அங்கீகாரம்',
     'activities.highlights.community': 'சமூக ஈடுபாடு',
     'activities.highlights.engagement': 'ஈடுபாடு',
-    'activities.youtube.title': 'எங்கள் வீடியோக்கள்',
+    'activities.youtube.title': 'எங்கள் காணொளிகள்',
     'activities.youtube.subtitle': 'மாணவர்களின் திறமைகள் மற்றும் பள்ளி நிகழ்வுகளின் ஒரு பார்வை.',
     'activities.facebook.title': 'சமூக ஊடக ஈடுபாடு',
-    'activities.facebook.subtitle': 'எங்கள் சமூகத்துடன் இணைந்திருங்கள்.',
+    'activities.facebook.subtitle': 'சமூக வலைத்தளங்கள் மூலமாக எங்களுடன் இணைந்திருங்கள்.',
   },
   en: {
     'activities.title': 'Our Activities',
@@ -46,6 +46,6 @@ export const activitiesTranslations = {
     'activities.youtube.title': 'Our YouTube Gallery',
     'activities.youtube.subtitle': 'A glimpse of student talents and school events.',
     'activities.facebook.title': 'Social Media Engagement',
-    'activities.facebook.subtitle': 'Stay connected with our community.',
+    'activities.facebook.subtitle': 'Stay connected with our community using social media.',
   }
 };

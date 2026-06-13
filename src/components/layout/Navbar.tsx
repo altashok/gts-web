@@ -53,7 +53,7 @@ export default function Navbar() {
                     "font-headline font-black block leading-none text-foreground tracking-tight uppercase transition-all",
                     language === 'ta' ? "text-[15px] sm:text-xl md:text-2xl" : "text-lg sm:text-2xl md:text-3xl"
                   )}>
-                    {t('nav.brand')}
+                    {t('nav.brand')}<sup className="align-super text-[0.55em]">®</sup>
                   </span>
                   <span className="block text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.08em] mt-0.5 sm:mt-1 leading-tight max-w-[160px] sm:max-w-none whitespace-nowrap truncate">
                     {t('nav.tagline')}
