@@ -42,6 +42,8 @@ const logos = [
   },
 ];
 
+const marqueeLogos = [...logos, ...logos];
+
 export default function PartnerLogoStrip() {
   const { t } = useLanguage();
 
@@ -53,31 +55,52 @@ export default function PartnerLogoStrip() {
           <h3 className="font-headline text-3xl md:text-5xl font-black text-foreground">{t('partnerStrip.title')}</h3>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
-          {logos.map((logo) => (
-            <div
-              key={logo.name}
-              className="flex h-32 items-center justify-center rounded-2xl border border-primary/10 bg-background/80 p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
-            >
-              {logo.isImage ? (
-                <div className="relative h-20 w-full">
-                  <Image
-                    src={logo.src!}
-                    alt={logo.alt}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 768px) 50vw, 16vw"
-                  />
-                </div>
-              ) : (
-                <div className="text-center">
-                  <p className="text-base font-black uppercase tracking-[0.2em] text-foreground">{logo.label}</p>
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="logo-marquee overflow-hidden">
+          <div className="logo-marquee-track flex w-max items-center gap-4 py-2">
+            {marqueeLogos.map((logo, index) => (
+              <div
+                key={`${logo.name}-${index}`}
+                className="flex h-32 min-w-[180px] items-center justify-center rounded-2xl border border-primary/10 bg-background/80 p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
+              >
+                {logo.isImage ? (
+                  <div className="relative h-20 w-full">
+                    <Image
+                      src={logo.src!}
+                      alt={logo.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 50vw, 16vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-center">
+                    <p className="text-base font-black uppercase tracking-[0.2em] text-foreground">{logo.label}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style jsx global>{`
+        .logo-marquee-track {
+          animation: marquee 22s linear infinite;
+        }
+
+        .logo-marquee:hover .logo-marquee-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }
