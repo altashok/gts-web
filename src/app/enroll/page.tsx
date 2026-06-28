@@ -32,13 +32,24 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
 import { ReCaptchaProvider } from "@/components/providers/ReCaptchaProvider";
 
+const skillOptions = [
+  { value: "Tamil", labelKey: "enroll.form.skill.tamil" },
+  { value: "Barathanatyam", labelKey: "enroll.form.skill.barathanatyam" },
+  { value: "Vocal", labelKey: "enroll.form.skill.vocal" },
+  { value: "Martial Arts", labelKey: "enroll.form.skill.martialArts" },
+  { value: "Drawing", labelKey: "enroll.form.skill.drawing" },
+  { value: "Chess", labelKey: "enroll.form.skill.chess" },
+  { value: "Something else", labelKey: "enroll.form.skill.somethingElse" },
+];
+
 const formSchema = z.object({
   studentName: z.string().min(2, "Name must be at least 2 characters"),
   age: z.string().min(1, "Age is required"),
   parentName: z.string().min(2, "Parent name is required"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Valid phone number is required"),
-  level: z.string(),
+  level: z.string().min(1, "Current proficiency level is required"),
+  skill: z.string().min(1, "Skill enrolled is required"),
   notes: z.string().optional(),
 });
 
@@ -58,6 +69,7 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
       email: "",
       phone: "",
       level: "beginner",
+      skill: "",
       notes: "",
     },
   });
@@ -258,31 +270,58 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                       />
                     </div>
 
-                    <FormField
-                      control={form.control}
-                      name="level"
-                      render={({ field }) => (
-                        <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
-                          <FormLabel className="text-base font-black">{t('enroll.form.level')}</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
-                            <FormControl>
-                              <SelectTrigger className="h-12 text-base focus:ring-primary">
-                                <SelectValue placeholder="Select a level" />
-                              </SelectTrigger>
-                            </FormControl>
-                            <SelectContent className="text-base">
-                              <SelectItem className="text-base" value="beginner">{t('enroll.form.level.beginner')}</SelectItem>
-                              <SelectItem className="text-base" value="intermediate">{t('enroll.form.level.intermediate')}</SelectItem>
-                              <SelectItem className="text-base" value="advanced">{t('enroll.form.level.advanced')}</SelectItem>
-                            </SelectContent>
-                          </Select>
-                          <FormDescription className="text-sm md:text-base">
-                            {t('enroll.form.level.desc')}
-                          </FormDescription>
-                          <FormMessage className="text-sm md:text-base" />
-                        </FormItem>
-                      )}
-                    />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <FormField
+                        control={form.control}
+                        name="skill"
+                        render={({ field }) => (
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.skill')}</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger className="h-12 text-base focus:ring-primary">
+                                  <SelectValue placeholder={t('enroll.form.skill.placeholder')} />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent className="text-base">
+                                {skillOptions.map((option) => (
+                                  <SelectItem key={option.value} className="text-base" value={option.value}>
+                                    {t(option.labelKey)}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage className="text-sm md:text-base" />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="level"
+                        render={({ field }) => (
+                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                            <FormLabel className="text-base font-black">{t('enroll.form.level')}</FormLabel>
+                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                              <FormControl>
+                                <SelectTrigger className="h-12 text-base focus:ring-primary">
+                                  <SelectValue placeholder="Select a level" />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent className="text-base">
+                                <SelectItem className="text-base" value="beginner">{t('enroll.form.level.beginner')}</SelectItem>
+                                <SelectItem className="text-base" value="intermediate">{t('enroll.form.level.intermediate')}</SelectItem>
+                                <SelectItem className="text-base" value="advanced">{t('enroll.form.level.advanced')}</SelectItem>
+                              </SelectContent>
+                            </Select>
+                            <FormDescription className="text-sm md:text-base">
+                              {t('enroll.form.level.desc')}
+                            </FormDescription>
+                            <FormMessage className="text-sm md:text-base" />
+                          </FormItem>
+                        )}
+                      />
+                    </div>
 
                     <FormField
                       control={form.control}

@@ -7,6 +7,7 @@ type EnrollmentValues = {
   studentName: string;
   age: string;
   level: string;
+  skill?: string;
   parentName: string;
   email: string;
   phone: string;
@@ -76,6 +77,7 @@ Student Details:
 - Name: ${values.studentName}
 - Age: ${values.age}
 - Level: ${values.level}
+- Skill enrolled: ${values.skill || "Not provided"}
 
 Parent Details:
 - Name: ${values.parentName}

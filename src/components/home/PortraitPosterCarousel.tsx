@@ -46,9 +46,9 @@ export default function PortraitPosterCarousel() {
         </p>
       </ScrollReveal>
 
-      <div className="overflow-hidden rounded-[2rem] border border-primary/10 bg-white/5 shadow-xl">
+      <div className="overflow-hidden rounded-[2rem] border border-primary/10 bg-white/5 shadow-xl group">
         <div
-          className="flex gap-2 py-6 px-6 min-w-max animate-marquee will-change-transform"
+          className="flex gap-2 py-6 px-6 min-w-max animate-marquee will-change-transform group-hover:[animation-play-state:paused]"
           style={{ touchAction: 'none', pointerEvents: 'none' }}
         >
           {postersImages.concat(postersImages).map((image, idx) => (

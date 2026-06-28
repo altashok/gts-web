@@ -60,10 +60,10 @@ export default function PartnerLogoStrip() {
             {marqueeLogos.map((logo, index) => (
               <div
                 key={`${logo.name}-${index}`}
-                className="flex h-32 min-w-[180px] items-center justify-center rounded-2xl border border-primary/10 bg-background/80 p-5 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
+                className="flex h-64 min-w-[260px] items-center justify-center rounded-2xl border border-primary/10 bg-background/80 p-8 shadow-sm transition-transform duration-200 hover:-translate-y-1 hover:shadow-md"
               >
                 {logo.isImage ? (
-                  <div className="relative h-20 w-full">
+                  <div className="relative h-36 w-full">
                     <Image
                       src={logo.src!}
                       alt={logo.alt}
