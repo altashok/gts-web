@@ -16,7 +16,7 @@ const logos = [
   },
   {
     name: 'Cambridge',
-    src: '/logo/cambridge.png',
+    src: '/logo/cambridge-univ.png',
     alt: 'Cambridge logo',
     isImage: true,
     label: 'Cambridge',

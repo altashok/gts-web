@@ -32,16 +32,6 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
 import { ReCaptchaProvider } from "@/components/providers/ReCaptchaProvider";
 
-const skillOptions = [
-  { value: "Tamil", labelKey: "enroll.form.skill.tamil" },
-  { value: "Barathanatyam", labelKey: "enroll.form.skill.barathanatyam" },
-  { value: "Vocal", labelKey: "enroll.form.skill.vocal" },
-  { value: "Martial Arts", labelKey: "enroll.form.skill.martialArts" },
-  { value: "Drawing", labelKey: "enroll.form.skill.drawing" },
-  { value: "Chess", labelKey: "enroll.form.skill.chess" },
-  { value: "Something else", labelKey: "enroll.form.skill.somethingElse" },
-];
-
 const formSchema = z.object({
   studentName: z.string().min(2, "Name must be at least 2 characters"),
   age: z.string().min(1, "Age is required"),
@@ -274,26 +264,29 @@ function EnrollPageContent({ executeRecaptcha, recaptchaEnabled }: { executeReca
                       <FormField
                         control={form.control}
                         name="skill"
-                        render={({ field }) => (
-                          <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
-                            <FormLabel className="text-base font-black">{t('enroll.form.skill')}</FormLabel>
-                            <Select onValueChange={field.onChange} defaultValue={field.value}>
-                              <FormControl>
-                                <SelectTrigger className="h-12 text-base focus:ring-primary">
-                                  <SelectValue placeholder={t('enroll.form.skill.placeholder')} />
-                                </SelectTrigger>
-                              </FormControl>
-                              <SelectContent className="text-base">
-                                {skillOptions.map((option) => (
-                                  <SelectItem key={option.value} className="text-base" value={option.value}>
-                                    {t(option.labelKey)}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                            <FormMessage className="text-sm md:text-base" />
-                          </FormItem>
-                        )}
+                        render={({ field }) => {
+                          const skillOptions = t('enroll.form.skill.options') as string[];
+                          return (
+                            <FormItem className="rounded-2xl border border-primary/10 bg-muted/20 p-4 transition-colors focus-within:bg-white focus-within:border-primary/30">
+                              <FormLabel className="text-base font-black">{t('enroll.form.skill')}</FormLabel>
+                              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                <FormControl>
+                                  <SelectTrigger className="h-12 text-base focus:ring-primary">
+                                    <SelectValue placeholder={t('enroll.form.skill.placeholder')} />
+                                  </SelectTrigger>
+                                </FormControl>
+                                <SelectContent className="text-base">
+                                  {skillOptions.map((option) => (
+                                    <SelectItem key={option} className="text-base" value={option}>
+                                      {option}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                              <FormMessage className="text-sm md:text-base" />
+                            </FormItem>
+                          );
+                        }}
                       />
 
                       <FormField
