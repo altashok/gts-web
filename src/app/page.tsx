@@ -11,6 +11,7 @@ import BlinkingBanner from '@/components/ui/blinking-banner';
 import PortraitPosterCarousel from '@/components/home/PortraitPosterCarousel';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import { CountUpText } from '@/components/ui/count-up';
+import PartnerLogoStrip from '@/components/home/PartnerLogoStrip';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -85,7 +86,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroCarousel />
 
-      <div className="space-y-32 mt-24">
+      <div className="space-y-12 mt-10">
         {/* Welcome Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -142,8 +143,10 @@ export default function Home() {
           </div>
         </section>
 
+        <PartnerLogoStrip />
+
         {/* Stats Section with Theme Color */}
-        <section className="bg-primary py-24 relative overflow-hidden">
+        <section className="bg-primary py-10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
@@ -172,7 +175,7 @@ export default function Home() {
 
         {/* Gallery Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="text-center space-y-4 mb-16">
+          <ScrollReveal className="text-center space-y-4 mb-10">
             <div className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary font-black text-xs uppercase tracking-widest mb-2">{t('gallery.tag')}</div>
             <h2 className="font-headline text-3xl md:text-5xl font-black">{t('gallery.title')}</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
@@ -206,7 +209,7 @@ export default function Home() {
 
         {/* Engaging Activities Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="text-center space-y-4 mb-16">
+          <ScrollReveal className="text-center space-y-4 mb-8">
             <h2 className="font-headline text-3xl md:text-5xl font-black">{t('activities.title')}</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full mb-4"></div>
             <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('activities.desc')}</p>
