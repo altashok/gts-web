@@ -93,7 +93,7 @@ export default function Home() {
             <ScrollReveal animation="slide-in-left" className="space-y-8">
               <div className="space-y-4">
                 <span className="text-primary font-black uppercase tracking-widest text-sm bg-primary/10 px-4 py-1.5 rounded-full">{t('welcome.tag')}</span>
-                <h2 className="font-headline text-4xl md:text-5xl font-black leading-tight">
+                <h2 className="font-headline text-3xl md:text-4xl font-black leading-tight">
                   {t('welcome.title')}
                 </h2>
                 <div className="w-24 h-2 bg-primary rounded-full"></div>

@@ -50,7 +50,7 @@ export default function PartnerLogoStrip() {
       <div className="rounded-[2rem] border border-primary/10 bg-white/80 p-4 shadow-sm backdrop-blur-sm sm:p-6">
         <div className="mb-4 flex flex-col items-center gap-2 text-center">
           <p className="text-sm font-black uppercase tracking-[0.3em] text-primary">{t('partnerStrip.tag')}</p>
-          <h3 className="text-2xl font-black text-foreground sm:text-3xl">{t('partnerStrip.title')}</h3>
+          <h3 className="font-headline text-3xl md:text-5xl font-black text-foreground">{t('partnerStrip.title')}</h3>
         </div>
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
