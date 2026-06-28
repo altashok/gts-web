@@ -12,6 +12,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { QualificationCard } from "@/components/affiliations/QualificationCard";
 
 export default function AffiliationsPage() {
   const { t } = useLanguage();
@@ -190,6 +191,53 @@ export default function AffiliationsPage() {
                 </AccordionItem>
               ))}
             </Accordion>
+          </ScrollReveal>
+        </section>
+
+        <section className="mt-24 space-y-8">
+          <ScrollReveal animation="fade-up">
+            <QualificationCard
+              tag={t('affil.qualification.uk.tag')}
+              title={t('affil.qualification.uk.title')}
+              description={t('affil.qualification.uk.desc')}
+              points={[
+                t('affil.qualification.uk.point1'),
+                t('affil.qualification.uk.point2'),
+                t('affil.qualification.uk.point3'),
+                t('affil.qualification.uk.point4'),
+                t('affil.qualification.uk.point5'),
+              ]}
+              ctaLabel={t('affil.qualification.cta')}
+              highlights={[
+                { label: t('affil.qualification.uk.highlight1.label'), value: t('affil.qualification.uk.highlight1.value') },
+                { label: t('affil.qualification.uk.highlight2.label'), value: t('affil.qualification.uk.highlight2.value') },
+                { label: t('affil.qualification.uk.highlight3.label'), value: t('affil.qualification.uk.highlight3.value') },
+              ]}
+              logoSrc="/logo/bteb-logo.png"
+              logoAlt="British Tamil Examination Board"
+            />
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up">
+            <QualificationCard
+              tag={t('affil.qualification.tag')}
+              title={t('affil.qualification.title')}
+              description={t('affil.qualification.desc')}
+              points={[
+                t('affil.qualification.point1'),
+                t('affil.qualification.point2'),
+                t('affil.qualification.point3'),
+                t('affil.qualification.point4'),
+              ]}
+              ctaLabel={t('affil.qualification.cta')}
+              highlights={[
+                { label: t('affil.qualification.highlight1.label'), value: t('affil.qualification.highlight1.value') },
+                { label: t('affil.qualification.highlight2.label'), value: t('affil.qualification.highlight2.value') },
+                { label: t('affil.qualification.highlight3.label'), value: t('affil.qualification.highlight3.value') },
+              ]}
+              logoSrc="/logo/cambridge-univ.png"
+              logoAlt="University of Cambridge"
+            />
           </ScrollReveal>
         </section>
 
