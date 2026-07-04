@@ -91,7 +91,7 @@ export default function AboutPage() {
                 <p>{t('about.message.p3')}</p>
                 
                 <div className="pt-8">
-                  <p className="font-headline text-2xl font-black text-primary italic">
+                  <p className="font-headline text-2xl font-black text-seconday italic">
                     {t('about.message.closing')}
                   </p>
                 </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
             <div className="relative z-10 space-y-16">
               <div className="text-center max-w-4xl mx-auto space-y-6">
-                 <p className="font-headline text-2xl md:text-4xl font-black text-primary italic leading-snug">
+                 <p className="font-back font-headline text-2xl md:text-4xl font-black text-secondary italic leading-snug">
                    {t('about.pioneer.quote')}
                  </p>
                  <div className="w-24 h-2 bg-primary mx-auto rounded-full"></div>

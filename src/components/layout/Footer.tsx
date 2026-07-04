@@ -5,12 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Facebook, Instagram, Youtube, Twitter } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Footer() {
   const { t } = useLanguage();
 
-  const logoImage = PlaceHolderImages.find(img => img.id === 'school-logo')?.imageUrl || "/logo.png";
+  const logoImage = t('footer.logo') as string;
 
   return (
     <footer className="bg-foreground text-background pt-16 pb-8">
@@ -21,13 +20,12 @@ export default function Footer() {
             <Link href="/" className="flex items-center space-x-4">
               <Image 
                 src={logoImage} 
-                alt="Global Tamil School Logo" 
-                width={60}
+                alt={t('nav.logoAlt') as string}
+                width={200}
                 height={60}
                 className="object-contain"
                 data-ai-hint="school logo"
               />
-              <h3 className="font-headline text-2xl font-bold text-primary">{t('footer.brand')}<sup className="align-super text-[0.55em]">®</sup></h3>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('footer.aboutDesc')}

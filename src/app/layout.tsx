@@ -9,16 +9,16 @@ import { LanguageProvider } from '@/context/LanguageContext';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Global Tamil School | Online Tamil School & Tamil Language Classes',
+    default: 'Global Tamil School | Best Online Tamil School & Tamil Language Classes',
     template: '%s | Global Tamil School',
   },
   description:
-    'Global Tamil School is an online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+    'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
   metadataBase: new URL('https://globaltamilschool.co.uk'),
   openGraph: {
     title: 'Global Tamil School | Online Tamil School & Tamil Classes',
     description:
-      'Global Tamil School is an online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+      'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
     url: 'https://globaltamilschool.co.uk',
     siteName: 'Global Tamil School',
     type: 'website',
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Global Tamil School | Online Tamil School & Tamil Classes',
+    title: 'Global Tamil School | Best Online Tamil School & Tamil Classes',
     description:
-      'Global Tamil School is an online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+      'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
     images: ['/logo.png'],
   },
   keywords: [
@@ -81,7 +81,7 @@ export default function RootLayout({
               url: 'https://globaltamilschool.co.uk',
               logo: 'https://globaltamilschool.co.uk/logo.png',
               description:
-                'Global Tamil School is an online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+                'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'London',

@@ -2,7 +2,7 @@
 export const homeTranslations = {
   ta: {
     'banner2.messages': [
-      '2025-2026 கல்வியாண்டுக்கான BTEB இணையவழி தகுதித் தேர்வுகள் 27-ஜூன்-2026 அன்று நடைபெறும்',
+      'அடுத்த கல்வியாண்டிற்கான வகுப்புகள் 1-செப்டம்பர்-2026 முதல் தொடங்கும். இப்போதே இணையவும் !',
     ],
     'hero.welcome': 'உலகளாவிய தமிழ்ப் பள்ளிக்கு உங்களை வரவேற்கிறோம்',
     'hero.title': 'தமிழ் மொழி காப்போம் ',
@@ -121,7 +121,7 @@ export const homeTranslations = {
   },
   en: {
     'banner2.messages': [
-      'BTEB Online Tamil Language Exams for 2025-2026 academic year will be held on 27-June-2026',
+      'Classes for next academic year will be starting from 1st September 2026. Enroll Now!',
     ],
     'hero.welcome': 'Welcome to Global Tamil School',
     'hero.title': 'Preserving Tamil ',

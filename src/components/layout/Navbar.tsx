@@ -7,14 +7,13 @@ import { Menu, X, Globe, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/context/LanguageContext';
 import { cn } from '@/lib/utils';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Navbar() {
   const SHOP_DISABLED = true;
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
-  const logoImage = PlaceHolderImages.find(img => img.id === 'school-logo')?.imageUrl || "/logo.png";
+  const logoImage = t('nav.logo') as string;
 
   const navLinks = [
     { name: t('nav.home'), href: '/' },
@@ -34,42 +33,28 @@ export default function Navbar() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="relative h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 shrink-0 flex items-center justify-center p-1">
+                <div className="relative h-16 w-40 sm:h-20 sm:w-52 md:h-20 md:w-46 shrink-0 flex items-center justify-center p-1">
                   <Image 
                     src={logoImage} 
-                    alt="Global Tamil School Logo" 
-                    width={80}
+                    alt={t('nav.logoAlt') as string}
+                    width={230}
                     height={80}
                     className="object-contain w-full h-full"
                     priority
                     data-ai-hint="school logo"
                   />
                 </div>
-                <div className={cn(
-                  "transition-all ml-1 sm:ml-2",
-                  "block min-w-[88px] sm:min-w-[150px] md:min-w-[220px]"
-                )}>
-                  <span className={cn(
-                    "font-headline font-black block leading-none text-foreground tracking-tight uppercase transition-all",
-                    language === 'ta' ? "text-[15px] sm:text-xl md:text-2xl" : "text-lg sm:text-2xl md:text-3xl"
-                  )}>
-                    {t('nav.brand')}<sup className="align-super text-[0.55em]">®</sup>
-                  </span>
-                  <span className="block text-[9px] sm:text-[10px] md:text-xs font-bold text-muted-foreground uppercase tracking-[0.08em] mt-0.5 sm:mt-1 leading-tight max-w-[160px] sm:max-w-none whitespace-nowrap truncate">
-                    {t('nav.tagline')}
-                  </span>
-                </div>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
+            <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "font-bold text-muted-foreground hover:text-primary transition-colors whitespace-nowrap",
+                    "font-normal hover:text-primary transition-colors whitespace-nowrap",
                     language === 'ta' ? 'text-[12px] tracking-tight' : 'text-[13px]'
                   )}
                 >
@@ -77,7 +62,7 @@ export default function Navbar() {
                 </Link>
               ))}
               
-              <div className="flex items-center border-l pl-2 lg:pl-3 space-x-1">
+              <div className="flex items-center border-l pl-2 lg:pl-5 space-x-1">
                 {SHOP_DISABLED ? (
                   <Button
                     variant="ghost"
