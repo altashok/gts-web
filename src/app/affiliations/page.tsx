@@ -12,104 +12,24 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { QualificationCard } from "@/components/affiliations/QualificationCard";
 
 export default function AffiliationsPage() {
   const { t } = useLanguage();
 
-  const partners = [
-    {
-      name: t('affil.partner1.name'),
-      role: t('affil.partner1.role'),
-      image: "/logo/bteb-logo.png",
-      hint: "educational foundation logo",
-      desc: t('affil.partner1.desc'),
-      url: "https://www.bteb.org.uk/"
-    },
-    {
-      name: t('affil.partner2.name'),
-      role: t('affil.partner2.role'),
-      image: "/logo/tvu.png",
-      hint: "cultural council logo",
-      desc: t('affil.partner2.desc'),
-      url: "https://www.tamilvu.org/"
-    },
-    {
-      name: t('affil.partner3.name'),
-      role: t('affil.partner3.role'),
-      image: "/logo/tala-logo.jpg",
-      hint: "language academy logo",
-      desc: t('affil.partner3.desc'),
-      url: "/"
-    },
-    {
-      name: t('affil.partner4.name'),
-      role: t('affil.partner4.role'),
-      image: "/logo/wfka.png",
-      hint: "martial arts federation logo",
-      desc: t('affil.partner4.desc'),
-      url: "https://www.wfka.net/"
-    },
-    {
-      name: t('affil.partner5.name'),
-      role: t('affil.partner5.role'),
-      image: "/logo/gca.png",
-      hint: "arts center logo",
-      desc: t('affil.partner5.desc'),
-      url: "https://www.globalcenterofarts.in/"
-    },
-    {
-      name: t('affil.partner6.name'),
-      role: t('affil.partner6.role'),
-      image: "/logo/bitr.png",
-      hint: "radio station logo",
-      desc: t('affil.partner6.desc'),
-      url: "https://www.bitronline.com/"
-    },
-    {
-      name: t('affil.partner7.name'),
-      role: t('affil.partner7.role'),
-      image: "/logo/gifa-uk.png",
-      hint: "fine arts exam board logo",
-      desc: t('affil.partner7.desc'),
-      url: "https://griffininternational.org/"
-    },
-    {
-      name: t('affil.partner8.name'),
-      role: t('affil.partner8.role'),
-      image: "/logo/lts.png",
-      hint: "Thiruvalluvar sangam logo",
-      desc: t('affil.partner8.desc'),
-      url: "/"
-    }
-  ];
+  const partners = (t('affil.partners') as Array<{
+    name: string;
+    role: string;
+    desc: string;
+    linkText: string;
+    link: string;
+    image?: string;
+    hint?: string;
+  }>) || [];
 
-    const syllabi = [
-    {
-      title: t('affil.syllabus.1.title'),
-      desc: t('affil.syllabus.1.desc'),
-      levels: t('affil.syllabus.1.levels'),
-      icon: BookOpen,
-    },
-    {
-      title: t('affil.syllabus.2.title'),
-      desc: t('affil.syllabus.2.desc'),
-      levels: t('affil.syllabus.2.levels'),
-      icon: FileText,
-    },
-    {
-      title: t('affil.syllabus.3.title'),
-      desc: t('affil.syllabus.3.desc'),
-      levels: t('affil.syllabus.3.levels'),
-      icon: GraduationCap,
-    },
-    {
-      title: t('affil.syllabus.4.title'),
-      desc: t('affil.syllabus.4.desc'),
-      levels: t('affil.syllabus.4.levels'),
-      icon: BookOpen,
-    },
-  ];
+  const syllabi = ((t('affil.syllabus.items') as Array<{ title: string; desc: string; levels: string }>) || []).map((item, index) => ({
+    ...item,
+    icon: [BookOpen, FileText, GraduationCap, BookOpen][index] ?? BookOpen,
+  }));
 
   return (
     <div className="pb-24">
@@ -135,15 +55,15 @@ export default function AffiliationsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {partners.map((p, i) => (
             <ScrollReveal key={i} delay={i * 200} animation="fade-up">
-              <a href={p.url} target="_blank" rel="noopener noreferrer" className="block h-full">
+              <a href={p.link} target="_blank" rel="noopener noreferrer" className="block h-full">
                 <div className="bg-card border-2 border-primary/10 rounded-3xl p-8 hover:border-primary transition-colors flex flex-col h-full shadow-sm hover:shadow-xl group text-center items-center">
                   <div className="relative h-32 w-32 mb-8 bg-white p-4 rounded-2xl shadow-sm border border-primary/5 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Image 
-                      src={p.image} 
+                      src={p.image || "/Logo.png"} 
                       alt={p.name} 
                       fill 
                       className="object-contain p-4"
-                      data-ai-hint={p.hint}
+                      data-ai-hint={p.hint || "partner logo"}
                     />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">{p.name}</h3>
@@ -152,7 +72,7 @@ export default function AffiliationsPage() {
                     {p.desc}
                   </p>
                   <Button variant="outline" className="w-full group pointer-events-none">
-                    {t('affil.visit')} <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    {p.linkText} <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Button>
                 </div>
               </a>
@@ -194,55 +114,8 @@ export default function AffiliationsPage() {
           </ScrollReveal>
         </section>
 
-        <section className="mt-24 space-y-8">
-          <ScrollReveal animation="fade-up">
-            <QualificationCard
-              tag={t('affil.qualification.uk.tag')}
-              title={t('affil.qualification.uk.title')}
-              description={t('affil.qualification.uk.desc')}
-              points={[
-                t('affil.qualification.uk.point1'),
-                t('affil.qualification.uk.point2'),
-                t('affil.qualification.uk.point3'),
-                t('affil.qualification.uk.point4'),
-                t('affil.qualification.uk.point5'),
-              ]}
-              ctaLabel={t('affil.qualification.cta')}
-              highlights={[
-                { label: t('affil.qualification.uk.highlight1.label'), value: t('affil.qualification.uk.highlight1.value') },
-                { label: t('affil.qualification.uk.highlight2.label'), value: t('affil.qualification.uk.highlight2.value') },
-                { label: t('affil.qualification.uk.highlight3.label'), value: t('affil.qualification.uk.highlight3.value') },
-              ]}
-              logoSrc="/logo/bteb-logo.png"
-              logoAlt="British Tamil Examination Board"
-            />
-          </ScrollReveal>
-
-          <ScrollReveal animation="fade-up">
-            <QualificationCard
-              tag={t('affil.qualification.tag')}
-              title={t('affil.qualification.title')}
-              description={t('affil.qualification.desc')}
-              points={[
-                t('affil.qualification.point1'),
-                t('affil.qualification.point2'),
-                t('affil.qualification.point3'),
-                t('affil.qualification.point4'),
-              ]}
-              ctaLabel={t('affil.qualification.cta')}
-              highlights={[
-                { label: t('affil.qualification.highlight1.label'), value: t('affil.qualification.highlight1.value') },
-                { label: t('affil.qualification.highlight2.label'), value: t('affil.qualification.highlight2.value') },
-                { label: t('affil.qualification.highlight3.label'), value: t('affil.qualification.highlight3.value') },
-              ]}
-              logoSrc="/logo/cambridge-univ.png"
-              logoAlt="University of Cambridge"
-            />
-          </ScrollReveal>
-        </section>
-
         {/* Accreditation Section */}
-        <section className="mt-32 border-t pt-24">
+        {/* <section className="mt-32 border-t pt-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal animation="slide-in-left">
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl border bg-muted group">
@@ -270,7 +143,7 @@ export default function AffiliationsPage() {
               </div>
             </ScrollReveal>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

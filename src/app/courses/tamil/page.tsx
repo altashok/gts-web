@@ -8,6 +8,9 @@ import { QualificationCard } from "@/components/affiliations/QualificationCard";
 
 export default function AffiliationsPage() {
   const { t } = useLanguage();
+  const syllabusCards = t('syllabus.cards');
+  const cards = Array.isArray(syllabusCards) ? syllabusCards : [];
+  const cardColorVariants = ["sky", "emerald", "amber", "rose"] as const;
 
   return (
     <div className="pb-24">
@@ -30,54 +33,36 @@ export default function AffiliationsPage() {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Image src="/content/tamil-learning-roadmap.png" alt="Tamil Roadmap" width={612} height={100} className="mx-auto mb-8" />
-        <section className="mt-12 space-y-8 md:space-y-12">
-          <ScrollReveal animation="fade-up">
-            <QualificationCard
-              tag={t('qualification.uk.tag')}
-              title={t('qualification.uk.title')}
-              description={t('qualification.uk.desc')}
-              points={[
-                t('qualification.uk.point1'),
-                t('qualification.uk.point2'),
-                t('qualification.uk.point3'),
-                t('qualification.uk.point4'),
-                t('qualification.uk.point5'),
-              ]}
-              ctaLabel={t('qualification.cta')}
-              highlights={[
-                { label: t('qualification.uk.highlight1.label'), value: t('qualification.uk.highlight1.value') },
-                { label: t('qualification.uk.highlight2.label'), value: t('qualification.uk.highlight2.value') },
-                { label: t('qualification.uk.highlight3.label'), value: t('qualification.uk.highlight3.value') },
-              ]}
-              logoSrc="/logo/bteb-logo.png"
-              logoAlt="British Tamil Examination Board"
-            />
-          </ScrollReveal>
-
-          <ScrollReveal animation="fade-up">
-            <QualificationCard
-              tag={t('qualification.tag')}
-              title={t('qualification.title')}
-              description={t('qualification.desc')}
-              points={[
-                t('qualification.point1'),
-                t('qualification.point2'),
-                t('qualification.point3'),
-                t('qualification.point4'),
-              ]}
-              ctaLabel={t('qualification.cta')}
-              highlights={[
-                { label: t('qualification.highlight1.label'), value: t('qualification.highlight1.value') },
-                { label: t('qualification.highlight2.label'), value: t('qualification.highlight2.value') },
-                { label: t('qualification.highlight3.label'), value: t('qualification.highlight3.value') },
-              ]}
-              logoSrc="/logo/cambridge-univ.png"
-              logoAlt="University of Cambridge"
-            />
-          </ScrollReveal>
-        </section>        
+        <Image src="/content/tamil-learning-roadmap.png" alt="Tamil Roadmap" width={786} height={100} className="mx-auto mb-8" />   
       </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="mt-24 space-y-8">
+            {(cards as Array<{
+              tag: string;
+              title: string;
+              description: string;
+              points: string[];
+              ctaLabel: string;
+              highlights: Array<{ label: string; value: string }>;
+              logoSrc: string;
+              logoAlt: string;
+            }>).map((card, index) => (
+              <ScrollReveal key={`${card.title}-${index}`} animation="fade-up">
+                <QualificationCard
+                  tag={card.tag}
+                  title={card.title}
+                  description={card.description}
+                  points={card.points}
+                  ctaLabel={card.ctaLabel}
+                  highlights={card.highlights}
+                  logoSrc={card.logoSrc}
+                  logoAlt={card.logoAlt}
+                  colorVariant={cardColorVariants[index % cardColorVariants.length]}
+                />
+              </ScrollReveal>
+            ))}
+          </section>
+        </div>
     </div>
   );
 }

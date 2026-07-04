@@ -2,93 +2,125 @@
   ta: {
     'title': 'தமிழ்மொழி பாடத்திட்டங்கள்',
     'subtitle': 'ஒழுங்கமைக்கப்பட்ட பாடத்திட்டங்கள் மூலம் மாணவர்களுக்கு சிறந்த கற்றல் அனுபவத்தை வழங்குகிறோம்.',
-    'syllabus.title': 'பின்பற்றும் பாடத்திட்டங்கள்',
-    'syllabus.subtitle': 'ஆரம்ப நிலை முதல் மேம்பட்ட நிலை வரை மாணவர்கள் முன்னேற உதவும் வகையில், நம்பகமான கல்வி அமைப்புகளின் பாடத்திட்டங்களை பின்பற்றுகிறோம்.',
-    'syllabus.1.title': 'பிரித்தானிய தமிழ் மொழிப் பரீட்சைச் சபை பாடத்திட்டம்',
-    'syllabus.1.desc': 'வாசிப்பு, எழுதுதல், கேட்பு மற்றும் பேச்சுத் திறன்களை மேம்படுத்தும் தேர்வு மையப்படுத்தப்பட்ட பாடத்திட்டம்.',
-    'syllabus.1.levels': 'அடிப்படை முதல் மேம்பட்ட நிலை',
-    'syllabus.2.title': 'தமிழ் இணையக் கல்விக்கழக பாடத்திட்டம்',
-    'syllabus.2.desc': 'உலகு தழுவிய நிலையில் வாழும் தமிழ் மக்களும் தமிழில் ஈடுபாடு கொண்டுள்ள பிற மொழியினரும் தமிழ் மொழியையும், அறிவியல், தொழில் நுட்பம், கணினித் தமிழ் மற்றும் தமிழ்ப் பயன்பாட்டு மென்பொருள்களைக் கற்கவும், தமிழர் வரலாறு, இலக்கியம், கலை, பண்பாடு ஆகியவை பற்றி அறிந்து கொள்ளவும் வேண்டிய வாய்ப்புகளை இணையம் வழியாக ஏற்படுத்துவதும், அரசு, கல்வி, ஊடகம், வணிகம் போன்ற பல்துறைகளுக்கும் வேண்டிய கணினித் தேவைகளுக்கான தீர்வுகளைக் கண்டறிந்து, நிறுவி, பராமரித்து, பயிற்சியளித்துப் பயன்பாட்டை பெருக்குதலும் இணையவழி அளிப்பதும் இதன் நோக்கமாகும்.',
-    'syllabus.2.levels': 'சான்றிதழ் நிலைகள்',
-    'syllabus.3.title': 'கேம்பிரிட்ஜ் தமிழ் பாடத்திட்டம்',
-    'syllabus.3.desc': 'கேம்பிரிட்ஜ் O நிலை அல்லது GCSE தமிழ், மொழியின் வேலைநிறுத்தமான அறிவு உள்ள கற்றவர்களுக்கு வடிவமைக்கப்பட்டுள்ளது. இது எழுதப்பட்ட மற்றும் பேசப்பட்ட தமிழில் துல்லியம், நம்பிக்கையை மேம்படுத்தும் நோக்கத்துடன் வடிவமைக்கப்பட்டுள்ளது. பாடத்திட்டம் நடைமுறை தொடர்பு, புரிதல் மற்றும் இலக்கிய அறிவை வலுப்படுத்துகிறது, இது உயர் கல்வி சூழல்களில் பயனுள்ள பகுப்பாய்வு மற்றும் மொழித் திறன்களை வலுப்படுத்த முடியும்.',
-    'syllabus.3.levels': 'தமிழ்மொழிக்கு  பல்கலைக்கழக அங்கீகாரம் ',
-    'syllabus.4.title': 'Edexcel International GCSE தமிழ் பாடத்திட்டம்',
-    'syllabus.4.desc': 'இந்த தகுதி மேலதிக படிப்புக்கு முன்னேற ஆதரவாக உள்ளது, பாடத்தின் சமீபத்திய சிந்தனைகளை பிரதிபலிக்கும் புதிய உள்ளடக்கத்துடன் வருகிறது. பியர்ஸன் எடெக்ஸல் இன்டர்நேஷனல் GCSE (9–1) தகுதிக்கான கோரிக்கைகள் மற்றும் மதிப்பீட்டு தரங்களின் அளவிற்கு ஐக்கிய இராச்சியத்தில் புதுப்பிக்கப்பட்ட GCSEஇல் ஒத்ததாகும்.',
-    'syllabus.4.levels': 'GCSE நிலைகள்',
-    'qualification.tag': 'சர்வதேச அங்கீகாரம்',
-    'qualification.title': 'GCSE O/A-Level தமிழ் தகுதி',
-    'qualification.desc': 'GCSE O/A-Level தமிழ் தகுதி கேம்பிரிட்ஜ் பல்கலைக்கழக தேர்வு வாரியத்தால் வழங்கப்படுகிறது. இது தமிழ்மொழி திறனுக்கான சர்வதேச அங்கீகாரம் மற்றும் உயர்ந்த மதிப்பீட்டுத் தரங்களை உறுதி செய்கிறது.',
-    'qualification.point1': 'உலகளவில் அங்கீகரிக்கப்பட்ட தகுதி',
-    'qualification.point2': 'உலகெங்கிலும் உள்ள பல்கலைக்கழகங்களால் ஏற்றுக்கொள்ளப்படுகிறது',
-    'qualification.point3': 'கடுமையான கல்வி தரநிலைகள்',
-    'qualification.point4': 'கல்வி மற்றும் தொழில் வாய்ப்புகளை வலுப்படுத்துகிறது',
-    'qualification.cta': 'இப்போதே பதிவு செய்யுங்கள்',
-    'qualification.highlight1.label': 'தேர்வுக் காலம்',
-    'qualification.highlight1.value': 'ஏப்ரல்/மே அமர்வுகள்',
-    'qualification.highlight2.label': 'O-Level / A-Level',
-    'qualification.highlight2.value': 'தகுதி',
-    'qualification.highlight3.label': 'GCSE',
-    'qualification.highlight3.value': 'தரம்',
-    'qualification.uk.tag': 'UK அங்கீகாரம்',
-    'qualification.uk.title': 'GCSE தமிழ் தகுதி',
-    'qualification.uk.desc': 'வகைபடுத்தப்பட்ட தமிழ் தகுதி பிரித்தானிய தமிழ் பரீட்சை வாரியத்தால் (UK) வழங்கப்படுகிறது. இது தமிழ்மொழி திறனுக்கான அங்கீகாரம் மற்றும் நர்சரி முதல் முதன்மை நிலை வரையிலான நோக்கத்தை உறுதி செய்கிறது.',
-    'qualification.uk.point1': 'UK-வில் அங்கீகரிக்கப்பட்ட தகுதி',
-    'qualification.uk.point2': 'செயல்பாட்டு செயல்பாடாக ஏற்றுக்கொள்ளப்படுகிறது',
-    'qualification.uk.point3': 'கடுமையான கல்வி தரநிலைகள்',
-    'qualification.uk.point4': 'ஆன்லைன் பரீட்சைகள்',
-    'qualification.uk.point5': 'மொழியில் வாசித்தல் - எழுதுதல் - கேட்டல் - பேசுதல் திறன்களை மையமாகக் கொண்டது',
-    'qualification.uk.highlight1.label': 'பரீட்சை காலம்',
-    'qualification.uk.highlight1.value': 'ஜூன் மாதம்',
-    'qualification.uk.highlight2.label': 'Nursery to Grade 8',
-    'qualification.uk.highlight2.value': 'தகுதி',
-    'qualification.uk.highlight3.label': 'GCSE',
-    'qualification.uk.highlight3.value': 'தரம்',
+    'syllabus.cards': [
+        {
+          tag: 'UK அங்கீகாரம்',
+          title: 'BTEB தமிழ் தகுதி',
+          description: 'வகைபடுத்தப்பட்ட தமிழ் தகுதி பிரித்தானிய தமிழ் பரீட்சை வாரியத்தால் (UK) வழங்கப்படுகிறது. இது தமிழ்மொழி திறனுக்கான அங்கீகாரம் மற்றும் நர்சரி முதல் முதன்மை நிலை வரையிலான நோக்கத்தை உறுதி செய்கிறது. BTEB 5 வயது முதல் முழு பள்ளி பாடத்திட்டத்தை (வாசித்தல், எழுதுதல், பேசுதல் மற்றும் கேட்டல்) வழங்குகிறது. கற்றல் கட்டமைப்பு மற்றும் தேர்வுகள்கள் மாணவர்கள் மொழியை வேறுபட்ட சூழல்களில் திறம்படப் பயன்படுத்துவதற்கான அனுபவத்தைப் பெறுவதற்காக வடிவமைக்கப்பட்டுள்ளன.',
+          points: ['ஐக்கிய இராச்சியத்தில் அங்கீகரிக்கப்பட்ட தகுதி', 'செயல்பாட்டு செயல்பாடாக ஏற்றுக்கொள்ளப்படுகிறது', 'கடுமையான கல்வி தரநிலைகள்', 'ஆன்லைன் பரீட்சைகள்', 'மொழியில் வாசித்தல் - எழுதுதல் - கேட்டல் - பேசுதல் திறன்களை மையமாகக் கொண்டது'],
+          ctaLabel: 'இப்போதே பதிவு செய்யுங்கள்',
+          highlights: [
+            { label: 'பரீட்சை காலம்', value: 'ஜூன் மாதம்' },
+            { label: 'தகுதி', value: 'பாலர் முதல் நிலை 8' },
+            { label: 'தரம்', value: 'Primary' }
+          ],
+          logoSrc: '/logo/bteb-logo.png',
+          logoAlt: 'British Tamil Examination Board'
+        },
+        {
+          tag: 'சர்வதேச அங்கீகாரம்',
+          title: 'கேம்பிரிட்ஜ் O-Level தமிழ்த் தகுதி',
+          description: 'கேம்பிரிட்ஜ் O-Level தமிழ்த் தகுதி, கேம்பிரிட்ஜ் பல்கலைக்கழகத் தேர்வாணையத்தால் வழங்கப்படுகிறது. இது தமிழ் மொழித் திறனை மதிப்பிடுவதில் சர்வதேச அங்கீகாரத்தையும் உயர்ந்த தரநிலைகளையும் உறுதிப்படுத்துகிறது. பாடத்திட்டம் வாசித்தல், எழுதுதல் மற்றும் புரிதல் திறன்கள் உள்ளிட்ட தமிழ் மொழியின் பல்வேறு அம்சங்களை உள்ளடக்கியது. மாணவர்கள் அன்றாட வாழ்க்கைச் சூழல்களில் மொழியை திறம்படப் பயன்படுத்தும் வகையில் இது வடிவமைக்கப்பட்டுள்ளது.',
+          points: [
+            'GCSE மற்றும் IGCSE-க்கு இணையான தகுதியாகக் கருதப்படுகிறது',
+            'பொதுவாக 14 முதல் 16 வயதுடைய மாணவர்களுக்காக வடிவமைக்கப்பட்டுள்ளது',
+            'கண்டிப்பான கல்வித் தரநிலைகள்',
+            'தாள் 1: வாசித்தல் மற்றும் எழுதுதல் & தாள் 2: இலக்கியம் அல்லது விரிவான எழுத்து',
+            'சுமார் 130 வழிகாட்டப்பட்ட கற்றல் மணிநேரங்கள் தேவைப்படும்'
+          ],
+          ctaLabel: 'இப்போதே சேருங்கள்',
+          highlights: [
+            { label: 'தேர்வு காலம்', value: 'ஏப்ரல்/மே தொடர்' },
+            { label: 'தகுதி', value: 'O-Level' },
+            { label: 'தரநிலை', value: 'GCSE இணை' }
+          ],
+          logoSrc: '/logo/cambridge-univ.png',
+          logoAlt: 'கேம்பிரிட்ஜ் பல்கலைக்கழகம்'
+        },
+        {
+          tag: 'சர்வதேச அங்கீகாரம்',
+          title: 'கேம்பிரிட்ஜ் A-Level தமிழ்த் தகுதி',
+          description: 'கேம்பிரிட்ஜ் சர்வதேச A-Level தமிழ், கேம்பிரிட்ஜ் IGCSE, கேம்பிரிட்ஜ் O-Level அல்லது கேம்பிரிட்ஜ் சர்வதேச AS-Level மூலம் பெற்ற மொழித் திறன்களின் தொடர்ச்சியாக அமைகிறது. இது பல்கலைக்கழக மட்டப் படிப்பிற்கான சிறந்த அடித்தளமாகவும், தொழில் வாய்ப்புகளை மேம்படுத்துவதற்கும் உதவுகிறது. பாடத்திட்டம் நடைமுறைத் தொடர்பாடல், புரிதல் மற்றும் இலக்கிய ரசனையை வலியுறுத்துகிறது. இவை உயர்கல்விக்குத் தேவையான பகுப்பாய்வு மற்றும் மொழித் திறன்களை வலுப்படுத்துகின்றன.',
+          points: [
+            'கேம்பிரிட்ஜ் O-Level-ல் பெற்ற மொழித் திறன்களை மேலும் மேம்படுத்துகிறது',
+            'மொழியில் அதிக சரளத்தையும் துல்லியத்தையும் தன்னம்பிக்கையையும் பெறலாம்',
+            'ஆங்கிலத்திலிருந்து தமிழுக்கு மொழிபெயர்க்கும் திறனை கற்றுக்கொள்ளலாம்',
+            'பல்கலைக்கழக சேர்க்கைக்கான தகுதி',
+            'தொழில் வாய்ப்புகளை மேம்படுத்துகிறது'
+          ],
+          ctaLabel: 'இப்போதே சேருங்கள்',
+          highlights: [
+            { label: 'தேர்வு காலம்', value: 'நவம்பர் தொடர்' },
+            { label: 'தகுதி', value: 'A-Level' },
+            { label: 'பயன்', value: 'தொழில் வாய்ப்புகள்' }
+          ],
+          logoSrc: '/logo/cambridge-univ.png',
+          logoAlt: 'கேம்பிரிட்ஜ் பல்கலைக்கழகம்'
+        }
+      ],
   },
-  en: {
+    en: {
     'title': 'Tamil Courses & Qualifications',
     'subtitle': 'We partner with global educational bodies to provide the best learning opportunities for our students.',
-    'syllabus.title': 'Syllabus We Follow',
-    'syllabus.subtitle': 'Our curriculum is aligned with trusted boards and structured pathways to support progression from beginner to advanced levels.',
-    'syllabus.1.title': 'British Tamil Examination Board Syllabus',
-    'syllabus.1.desc': 'Exam-oriented syllabus with progressive language skills in reading, writing, listening, and speaking.',
-    'syllabus.1.levels': 'Foundation to Advanced',
-    'syllabus.2.title': 'Tamil Virtual Academy Syllabus',
-    'syllabus.2.desc': 'To develop and deliver customised programmes to meet the cultural needs of the Tamil Communities in different parts of the world and help them retain contact with their heritage.',
-    'syllabus.2.levels': 'Certificate Levels',
-    'syllabus.3.title': 'Cambridge Tamil Syllabus',
-    'syllabus.3.desc': 'Cambridge O Level or GCSE Tamil is designed for learners who already have a working knowledge of the language and want to develop fluency, accuracy, and confidence in both written and spoken Tamil. The syllabus emphasizes practical communication, comprehension, and literary appreciation, which can strengthen analytical and language skills useful in higher education contexts.',
-    'syllabus.3.levels': 'University recognition',
-    'syllabus.4.title': 'Edexcel International GCSE Tamil Syllabus',
-    'syllabus.4.desc': 'The qualification supports progression to further study, with up-to-date content reflecting the latest thinking in the subject. Pearson Edexcel International GCSE (9–1) is comparable to the UK reformed GCSEs in terms of the level of demand and assessment standards.',
-    'syllabus.4.levels': 'IGCSE Levels',
-    'qualification.tag': 'International Recognition',
-    'qualification.title': 'GCSE O/A-Level Tamil Qualification',
-    'qualification.desc': 'The GCSE O/A-Level Tamil qualification is provided by the University of Cambridge Examination, ensuring international recognition and the highest standards of assessment for Tamil language proficiency.',
-    'qualification.point1': 'Globally recognized qualification',
-    'qualification.point2': 'Accepted by universities worldwide',
-    'qualification.point3': 'Rigorous academic standards',
-    'qualification.point4': 'Enhances academic and career prospects',
-    'qualification.cta': 'Enroll now',
-    'qualification.highlight1.label': 'Examination Period',
-    'qualification.highlight1.value': 'April/May Sessions',
-    'qualification.highlight2.label': 'O-Level / A-Level',
-    'qualification.highlight2.value': 'Qualification',
-    'qualification.highlight3.label': 'GCSE',
-    'qualification.highlight3.value': 'Standard',
-    'qualification.uk.tag': 'UK Recognition',
-    'qualification.uk.title': 'GCSE Tamil Qualification',
-    'qualification.uk.desc': 'The Graded Tamil qualification is provided by the British Tamil Examination Board (UK), ensuring recognition and the nursery to primary level for Tamil language proficiency.',
-    'qualification.uk.point1': 'Recognized qualification in the UK',
-    'qualification.uk.point2': 'Accepted as extracurricular',
-    'qualification.uk.point3': 'Rigorous academic standards',
-    'qualification.uk.point4': 'Online examinations',
-    'qualification.uk.point5': 'Focus on Reading - Writing - Listening - Speaking skills in the language.',
-    'qualification.uk.highlight1.label': 'Examination Period',
-    'qualification.uk.highlight1.value': 'June Month',
-    'qualification.uk.highlight2.label': 'Nursery to Grade 8',
-    'qualification.uk.highlight2.value': 'Qualification',
-    'qualification.uk.highlight3.label': 'GCSE',
-    'qualification.uk.highlight3.value': 'Standard',
+    'syllabus.cards': [
+      {
+        tag: 'UK Recognition',
+        title: 'BTEB Tamil Qualification',
+        description: 'Leading examination body for the Tamil Language in many Western countries, where the Tamil language is studied as a second Language. The Graded Tamil qualification is provided by the British Tamil Examination Board (UK), ensuring recognition and the nursery to primary level for Tamil language proficiency. BTEB offers a whole-school curriculum(Reading, writing, speaking and Listening) from the age of 5. The learning framework and examinations are designed for the learners to gain working knowledge of the Language and the experience on how to use the Tamil Language effectively in different situations.',
+        points: [
+          'Recognized qualification in the UK', 
+          'Accepted as extracurricular', 
+          'Rigorous academic standards', 
+          'Online examinations', 
+          'Focus on Reading - Writing - Listening - Speaking skills'],
+        ctaLabel: 'Enroll now',
+        highlights: [
+          { label: 'Examination Period', value: 'June Month' },
+          { label: 'Qualification', value: 'Nursery to Grade 8' },
+          { label: 'Standard', value: 'Primary' }
+        ],
+        logoSrc: '/logo/bteb-logo.png',
+        logoAlt: 'British Tamil Examination Board'
+      },
+      {
+        tag: 'International Recognition',
+        title: 'Cambridge O-Level Tamil Qualification',
+        description: 'The Cambridge O-Level Tamil qualification is provided by the University of Cambridge Examination, ensuring international recognition and the highest standards of assessment for Tamil language proficiency. The syllabus covers various aspects of the Tamil language, including reading, writing, and comprehension skills. It is structured to help students engage with the language effectively in real-life situations',
+        points: [
+          'Considered equivalent to GCSEs and IGCSEs', 
+          'Designed for students typically aged 14 to 16', 
+          'Rigorous academic standards', 
+          'Paper 1: Reading and Writing & Paper 2: Literature or Extended Writing',
+          'Assumes approximately 130 guided learning hours'
+        ],
+        ctaLabel: 'Enroll now',
+        highlights: [
+          { label: 'Examination Period', value: 'April/May Series' },
+          { label: 'Qualification', value: 'O-Level' },
+          { label: 'Standard', value: '' }
+        ],
+        logoSrc: '/logo/cambridge-univ.png',
+        logoAlt: 'University of Cambridge'
+      },
+      {
+        tag: 'International Recognition',
+        title: 'Cambridge A-Level Tamil Qualification',
+        description: 'Cambridge International A Level Tamil builds on the language skills gained at Cambridge IGCSE, Cambridge O Level or Cambridge International AS Level, and is the ideal foundation for university-level study, or to improve career prospects. The syllabus emphasizes practical communication, comprehension, and literary appreciation, which can strengthen analytical and language skills useful in higher education contexts.',
+        points: [
+          'Builds on the language skills gained Cambridge O Level ',
+          'Achieve greater fluency, accuracy and confidence in the language',
+          'Learn how to translate material from English into Tamil',
+          'University entry qualification',
+          'Improve career prospects'],
+        ctaLabel: 'Enroll now',
+        highlights: [
+          { label: 'Examination Period', value: 'November Series' },
+          { label: 'Qualification', value: 'A-Level' },
+          { label: 'Benefit', value: 'Career Prospects' }
+        ],
+        logoSrc: '/logo/cambridge-univ.png',
+        logoAlt: 'University of Cambridge'
+      }
+    ],
   }
 };
