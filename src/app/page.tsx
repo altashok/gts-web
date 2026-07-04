@@ -116,7 +116,7 @@ export default function Home() {
 
               <div className="pt-4">
                 <Button asChild size="lg" className="bg-primary text-primary-foreground font-black px-8 py-6 text-lg hover:shadow-xl hover:shadow-primary/20 transition-all hover:-translate-y-1">
-                  <Link href="/about">{t('welcome.discover')}</Link>
+                  <Link href="/whoweare/about">{t('welcome.discover')}</Link>
                 </Button>
               </div>
             </ScrollReveal>
@@ -247,7 +247,7 @@ export default function Home() {
                       <div className="p-8 flex flex-col h-full">
                         <h3 className="text-2xl font-black mb-4 text-foreground">{item.title}</h3>
                         <p className="text-muted-foreground mb-10 leading-relaxed flex-grow">{item.desc}</p>
-                        <Link href="/activities" className="text-primary font-black inline-flex items-center hover:text-primary/90 transition-colors mt-auto">
+                        <Link href="/whoweare/activities" className="text-primary font-black inline-flex items-center hover:text-primary/90 transition-colors mt-auto">
                           {item.readMore} <span className="ml-2">→</span>
                         </Link>
                       </div>

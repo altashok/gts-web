@@ -10,6 +10,12 @@ export default function Footer() {
   const { t } = useLanguage();
 
   const logoImage = t('footer.logo') as string;
+  const navMenuItems = (t('nav.menuItems') as Array<{
+    id: string;
+    label: string;
+    href: string;
+    children?: Array<{ id: string; label: string; href: string }>;
+  }>) || [];
 
   return (
     <footer className="bg-foreground text-background pt-16 pb-8">
@@ -74,11 +80,14 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 border-b border-muted w-fit pb-1">{t('footer.quickLinks')}</h4>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-sm hover:text-primary transition-colors">{t('nav.about')}</Link></li>
-              <li><Link href="/activities" className="text-sm hover:text-primary transition-colors">{t('nav.activities')}</Link></li>
-              <li><Link href="/team" className="text-sm hover:text-primary transition-colors">{t('nav.team')}</Link></li>
-              <li><Link href="/affiliations" className="text-sm hover:text-primary transition-colors">{t('nav.affiliations')}</Link></li>
-              <li><Link href="/enroll" className="text-sm hover:text-primary transition-colors">{t('nav.enrollment')}</Link></li>
+              <li><Link href="/whoweare/about" className="text-sm hover:text-primary transition-colors">{(navMenuItems[1].children[0].label)}</Link></li>
+              <li><Link href="/whoweare/activities" className="text-sm hover:text-primary transition-colors">{(navMenuItems[1].children[1].label)}</Link></li>
+              <li><Link href="/whoweare/team" className="text-sm hover:text-primary transition-colors">{(navMenuItems[1].children[2].label)}</Link></li>
+              <li><Link href="/affiliations" className="text-sm hover:text-primary transition-colors">{(navMenuItems[4].label)}</Link></li>
+              <li><Link href="/enroll" className="text-sm hover:text-primary transition-colors">{(navMenuItems[5].label)}</Link></li>
+              <li><Link href="/summerclassuk" className="text-sm hover:text-primary transition-colors">Summer Classes in UK</Link></li>
+              <li><Link href="/summerclassscotland" className="text-sm hover:text-primary transition-colors">Summer Classes in Scotland</Link></li>
+
             </ul>
           </div>
 

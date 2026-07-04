@@ -8,15 +8,15 @@ const staticPages: MetadataRoute.Sitemap = [
     lastModified: new Date(),
   },
   {
-    url: `${baseUrl}/about`,
+    url: `${baseUrl}/whoweare/about`,
     lastModified: new Date(),
   },
   {
-    url: `${baseUrl}/activities`,
+    url: `${baseUrl}/whoweare/activities`,
     lastModified: new Date(),
   },
   {
-    url: `${baseUrl}/team`,
+    url: `${baseUrl}/whoweare/team`,
     lastModified: new Date(),
   },
   {

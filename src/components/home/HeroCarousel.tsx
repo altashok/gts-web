@@ -135,7 +135,7 @@ export default function HeroCarousel() {
                           {/* Optional Learn More Button */}
                           {hasLearnMoreSpecific && (
                             <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-md text-white border-2 border-white hover:bg-white hover:text-foreground font-black text-lg md:text-xl px-10 md:px-12 py-6 md:py-8 rounded-2xl transition-all w-full sm:w-auto">
-                              <Link href="/about">{learnMoreText}</Link>
+                              <Link href="/whoweare/about">{learnMoreText}</Link>
                             </Button>
                           )}
                         </div>

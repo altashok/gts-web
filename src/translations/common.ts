@@ -1,13 +1,31 @@
 
 export const commonTranslations = {
   ta: {
-    'nav.home': 'முகப்பு',
-    'nav.about': 'எங்களைப் பற்றி',
-    'nav.team': 'குழு',
-    'nav.activities': 'செயல்பாடுகள்',
-    'nav.affiliations': 'இணைப்புகள்',
-    'nav.enrollment': 'சேர்க்கை',
-    'nav.contact': 'தொடர்பு',
+    'nav.menuItems': [
+      { "id": "home", "label": "முகப்பு", "href": "/" },
+      {
+        "id": "who-we-are",
+        "label": "நாங்கள் யார்?",
+        "href": "#",
+        "children": [
+          { "id": "about", "label": "எங்களைப் பற்றி", "href": "/whoweare/about" },
+          { "id": "team", "label": "குழு", "href": "/whoweare/team" },
+          { "id": "activities", "label": "செயல்பாடுகள்", "href": "/whoweare/activities" }
+        ]
+      },
+      {
+        "id": "courses",
+        "label": "வகுப்புகள்",
+        "href": "#",
+        "children": [
+          { "id": "about", "label": "தமிழ்", "href": "/courses/tamil" },
+          // { "id": "team", "label": "Arts", "href": "/courses/arts" },
+        ]
+      },
+      { "id": "affiliations", "label": "இணைப்புகள்", "href": "/affiliations" },
+      { "id": "enrollment", "label": "சேர்க்கை", "href": "/enroll" },
+      { "id": "contact", "label": "தொடர்பு", "href": "/contact" }
+    ],
     'nav.login': 'உள்நுழைக',
     'nav.brand': 'உலகளாவிய தமிழ்ப் பள்ளி',
     'nav.tagline': 'தமிழ்மொழி நமது அடையாளம்',
@@ -32,13 +50,31 @@ export const commonTranslations = {
     'footer.terms': 'விதிமுறைகள்',
   },
   en: {
-    'nav.home': 'Home',
-    'nav.about': 'About Us',
-    'nav.team': 'Team',
-    'nav.activities': 'Activities',
-    'nav.affiliations': 'Affiliations',
-    'nav.enrollment': 'Enrollment',
-    'nav.contact': 'Contact',
+    'nav.menuItems': [
+      { "id": "home", "label": "Home", "href": "/" },
+      {
+        "id": "who-we-are",
+        "label": "Who we are?",
+        "href": "#",
+        "children": [
+          { "id": "about", "label": "About Us", "href": "/whoweare/about" },
+          { "id": "team", "label": "Team", "href": "/whoweare/team" },
+          { "id": "activities", "label": "Activities", "href": "/whoweare/activities" }
+        ]
+      },
+      {
+        "id": "courses",
+        "label": "Courses",
+        "href": "#",
+        "children": [
+          { "id": "about", "label": "Tamil", "href": "/courses/tamil" },
+          // { "id": "team", "label": "Arts", "href": "/courses/arts" },
+        ]
+      },
+      { "id": "affiliations", "label": "Affiliations", "href": "/affiliations" },
+      { "id": "enrollment", "label": "Enrollment", "href": "/enroll" },
+      { "id": "contact", "label": "Contact", "href": "/contact" }
+    ],
     'nav.login': 'Login',
     'nav.brand': 'Global Tamil School',
     'nav.tagline': 'Tamil is our identity',

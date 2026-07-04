@@ -5,6 +5,7 @@ import { aboutTranslations } from './about';
 import { teamTranslations } from './team';
 import { activitiesTranslations } from './activities';
 import { affiliationsTranslations } from './affiliations';
+import { tamilCourseTranslations } from './tamilcourse';
 import { enrollTranslations } from './enroll';
 import { contactTranslations } from './contact';
 
@@ -16,6 +17,7 @@ export const translations = {
     ...teamTranslations.ta,
     ...activitiesTranslations.ta,
     ...affiliationsTranslations.ta,
+    ...tamilCourseTranslations.ta,
     ...enrollTranslations.ta,
     ...contactTranslations.ta,
   },
@@ -26,6 +28,7 @@ export const translations = {
     ...teamTranslations.en,
     ...activitiesTranslations.en,
     ...affiliationsTranslations.en,
+    ...tamilCourseTranslations.en,
     ...enrollTranslations.en,
     ...contactTranslations.en,
   }
