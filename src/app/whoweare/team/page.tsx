@@ -124,9 +124,14 @@ export default function TeamPage() {
                           <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"></div>
                         </div>
                       </CardHeader>
-                      <CardContent className="p-6 text-center space-y-3">
+                      <CardContent className="p-4 text-center space-y-3">
                         <div>
-                          <h3 className="font-headline text-[15px] md:text-xl font-bold text-foreground leading-tight break-words">{member.name}</h3>
+                          <h3 className="font-headline text-[15px] md:text-lg font-bold text-foreground leading-tight break-words">{member.name}</h3>
+                          {member.qual && (
+                            <p className="mt-1 text-xs font-bold leading-snug font-bold text-foreground">
+                              {member.qual}
+                            </p>
+                          )}
                           <p className="inline-block bg-primary/15 text-foreground font-bold text-[10px] uppercase tracking-widest mt-2 px-3 py-1 rounded-full line-clamp-1">
                             {member.role}
                           </p>

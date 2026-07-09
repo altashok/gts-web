@@ -36,7 +36,7 @@ export function QualificationCard({
   const variantStyles = {
     sky: {
       card: "border-sky-200 outline-sky-100",
-      panel: "from-sky-50 via-background to-background",
+      panel: "from-sky-300 via-background to-sky-300",
       tag: "border-sky-200 bg-sky-50 text-sky-700",
       logo: "border-sky-100",
       icon: "text-sky-600",
@@ -45,7 +45,7 @@ export function QualificationCard({
     },
     emerald: {
       card: "border-emerald-200 outline-emerald-100",
-      panel: "from-emerald-50 via-background to-background",
+      panel: "from-emerald-300 via-background to-emerald-300",
       tag: "border-emerald-200 bg-emerald-50 text-emerald-700",
       logo: "border-emerald-100",
       icon: "text-emerald-600",
@@ -54,7 +54,7 @@ export function QualificationCard({
     },
     amber: {
       card: "border-amber-200 outline-amber-100",
-      panel: "from-amber-50 via-background to-background",
+      panel: "from-amber-300 via-background to-amber-300",
       tag: "border-amber-200 bg-amber-50 text-amber-700",
       logo: "border-amber-100",
       icon: "text-amber-600",
@@ -63,7 +63,7 @@ export function QualificationCard({
     },
     rose: {
       card: "border-rose-200 outline-rose-100",
-      panel: "from-rose-50 via-background to-background",
+      panel: "from-rose-300 via-background to-rose-300",
       tag: "border-rose-200 bg-rose-50 text-rose-700",
       logo: "border-rose-100",
       icon: "text-rose-600",

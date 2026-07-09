@@ -81,8 +81,8 @@ export default function AffiliationsPage() {
         </div>
 
         {/* Syllabus Information Section */}
-        <section className="mt-24">
-                    <ScrollReveal animation="fade-up" className="text-center mb-12 space-y-4">
+        <section className="mt-24 p-24 bg-primary">
+          <ScrollReveal animation="fade-up" className="text-center mb-12 space-y-4">
             <h2 className="font-headline text-3xl md:text-4xl font-black">{t('affil.syllabus.title')}</h2>
             <div className="w-16 h-1 bg-primary rounded-full mx-auto"></div>
             <p className="text-muted-foreground max-w-3xl mx-auto font-medium">{t('affil.syllabus.subtitle')}</p>

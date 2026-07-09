@@ -8,6 +8,7 @@ import { affiliationsTranslations } from './affiliations';
 import { tamilCourseTranslations } from './tamilcourse';
 import { enrollTranslations } from './enroll';
 import { contactTranslations } from './contact';
+import { termsTranslations } from './terms';
 
 export const translations = {
   ta: {
@@ -20,6 +21,7 @@ export const translations = {
     ...tamilCourseTranslations.ta,
     ...enrollTranslations.ta,
     ...contactTranslations.ta,
+    ...termsTranslations.ta,
   },
   en: {
     ...commonTranslations.en,
@@ -31,5 +33,6 @@ export const translations = {
     ...tamilCourseTranslations.en,
     ...enrollTranslations.en,
     ...contactTranslations.en,
+    ...termsTranslations.en,
   }
 };

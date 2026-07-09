@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, History, Target, Heart, Quote, Globe, BookOpen, Award, Star, Eye } from "lucide-react";
+import { GraduationCap, History, Target, Heart, Quote, Globe, BookOpen, Award, Star, Eye, MapPin, Calendar, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -58,11 +58,15 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
         {/* Founder's Message Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <section className="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-white shadow-xl">
+          <div className="absolute inset-x-0 top-0 h-2 bg-primary" />
+          <div className="absolute right-0 top-0 h-64 w-64 bg-primary/10 blur-3xl" />
+          <div className="absolute bottom-0 left-0 h-56 w-56 bg-secondary/15 blur-3xl" />
+          <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-5 sm:p-8 lg:p-10">
           <div className="lg:col-span-5 relative">
             <ScrollReveal animation="slide-in-left">
-              <div className="absolute -inset-4 bg-primary/20 rounded-[2rem] blur-2xl"></div>
-              <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
+              <div className="relative overflow-hidden rounded-2xl bg-foreground p-2 shadow-2xl">
+                <div className="relative aspect-[3/5] overflow-hidden rounded-xl">
                 <Image 
                   src={founderImage} 
                   alt={t('about.founder.name')} 
@@ -70,33 +74,69 @@ export default function AboutPage() {
                   className="object-cover"
                   data-ai-hint="founder London"
                 />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/90 via-foreground/35 to-transparent p-5 pt-24">
+                    <div className="max-w-sm">
+                      <h3 className="font-headline text-2xl font-black leading-tight text-white">{t('about.founder.name')}</h3>
+                      <p className="mt-2 inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-black uppercase tracking-widest text-primary-foreground">
+                        {t('about.founder.role')}
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border-l-4 border-primary max-w-[280px]">
-                <h3 className="font-black text-lg leading-tight">{t('about.founder.name')}</h3>
-                <p className="text-primary font-bold text-xs uppercase tracking-widest mt-1">{t('about.founder.role')}</p>
+
+              <div className="mt-4 grid grid-cols-3 gap-3">
+                {[
+                  { icon: Calendar, label: "2020" },
+                  { icon: MapPin, label: "London" },
+                  { icon: Globe, label: "Global" }
+                ].map((item) => (
+                  <div key={item.label} className="flex min-h-20 flex-col items-center justify-center rounded-xl border border-primary/20 bg-primary/5 px-2 text-center">
+                    <item.icon className="mb-2 h-5 w-5 text-primary" />
+                    <span className="text-sm font-black text-foreground">{item.label}</span>
+                  </div>
+                ))}
               </div>
             </ScrollReveal>
           </div>
           
-          <div className="lg:col-span-7 space-y-8 pt-4">
+          <div className="lg:col-span-7">
             <ScrollReveal animation="slide-in-right">
-              <div className="inline-flex items-center space-x-3 bg-primary px-6 py-3 rounded-[2rem] shadow-xl border-2 border-white/20">
-                <Quote className="h-6 w-6 text-primary-foreground fill-primary-foreground/20" />
-                <h2 className="font-headline text-2xl md:text-3xl font-black text-primary-foreground tracking-tight">{t('about.message.title')}</h2>
-              </div>
-              
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mt-6">
-                <p className="font-medium text-foreground">{t('about.message.p1')}</p>
-                <p>{t('about.message.p2')}</p>
-                <p>{t('about.message.p3')}</p>
+              <div className="flex h-full flex-col justify-center rounded-2xl bg-background/80 p-6 sm:p-8 lg:p-10">
+                <div className="mb-8 flex flex-wrap items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-md">
+                    <Quote className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-muted-foreground">
+                      <Sparkles className="h-4 w-4 text-primary" />
+                      Global Tamil School
+                    </p>
+                    <h2 className="font-headline text-3xl font-black tracking-tight text-foreground md:text-5xl">{t('about.message.title')}</h2>
+                  </div>
+                </div>
                 
-                <div className="pt-8">
-                  <p className="font-headline text-2xl font-black text-seconday italic">
-                    {t('about.message.closing')}
+                <div className="space-y-6 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  <p className="border-l-4 border-primary pl-5 text-xl font-black leading-relaxed text-foreground sm:text-2xl">
+                    {t('about.message.p1')}
                   </p>
+                  <p>{t('about.message.p2')}</p>
+                  <p>{t('about.message.p3')}</p>
+                </div>
+                
+                <div className="mt-8 flex flex-col gap-4 border-t border-border pt-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p className="font-headline text-2xl font-black italic text-secondary">
+                      {t('about.message.closing')}
+                    </p>
+                  </div>
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/15">
+                    <Heart className="h-7 w-7 fill-primary text-primary" />
+                  </div>
                 </div>
               </div>
             </ScrollReveal>
+          </div>
           </div>
         </section>
 
@@ -202,70 +242,76 @@ export default function AboutPage() {
         </section>
         
         {/* Reviews Section */}
-        <section className="pt-8 relative">
-          <ScrollReveal animation="fade-up" className="text-center mb-16 space-y-4">
-            <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border shadow-sm">
-              <div className="flex -space-x-1">
-                {[1, 2, 3, 4, 5].map(i => (
-                  <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                ))}
-              </div>
-              <span className="text-sm font-black text-foreground">{t('reviews.rating')}</span>
-              <span className="h-4 w-px bg-border"></span>
-              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{t('reviews.total')}</span>
-            </div>
-            <h2 className="font-headline text-3xl md:text-5xl font-black">{t('reviews.title')}</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('reviews.subtitle')}</p>
-          </ScrollReveal>
+        <section className="relative overflow-hidden rounded-[2rem] border border-primary/20 bg-primary/10 px-4 py-14 shadow-inner sm:px-8 lg:px-12">
+          <div className="absolute inset-x-0 top-0 h-2 bg-primary" />
+          <div className="absolute -right-20 top-12 h-64 w-64 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-secondary/20 blur-3xl" />
 
-          <ScrollReveal animation="fade-up" delay={200}>
-            <div className="relative px-12">
-              <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
-                plugins={[
-                  Autoplay({
-                    delay: 4000,
-                  }),
-                ]}
-                className="w-full max-w-5xl mx-auto"
-              >
-                <CarouselContent>
-                  {reviews.map((rev, i) => (
-                    <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 p-4">
-                      <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border relative h-full flex flex-col group hover:border-primary transition-colors">
-                        <div className="flex items-center space-x-1 mb-6">
-                          {[1, 2, 3, 4, 5].map(j => (
-                            <Star key={j} className="h-5 w-5 fill-primary text-primary" />
-                          ))}
-                        </div>
-                        <div className="mb-8 flex-grow max-h-36 overflow-y-auto pr-2">
-                          <p className="text-muted-foreground leading-relaxed italic text-sm">
-                            "{rev.text}"
-                          </p>
-                        </div>
-                        <div className="flex items-center space-x-4 border-t pt-6 mt-auto">
-                          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-sm shrink-0">
-                            {rev.name.charAt(0)}
-                          </div>
-                          <div className="min-w-0">
-                            <h4 className="font-black text-foreground text-sm truncate">{rev.name}</h4>
-                            <p className="text-[8px] text-muted-foreground uppercase tracking-widest font-bold">Verified Reviewer</p>
-                          </div>
-                        </div>
-                      </div>
-                    </CarouselItem>
+          <div className="relative">
+            <ScrollReveal animation="fade-up" className="text-center mb-16 space-y-4">
+              <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-primary/20 shadow-sm">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map(i => (
+                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                   ))}
-                </CarouselContent>
-                <div className="hidden md:block">
-                  <CarouselPrevious className="-left-12 h-10 w-10" />
-                  <CarouselNext className="-right-12 h-10 w-10" />
                 </div>
-              </Carousel>
-            </div>
-          </ScrollReveal>
+                <span className="text-sm font-black text-foreground">{t('reviews.rating')}</span>
+                <span className="h-4 w-px bg-border"></span>
+                <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{t('reviews.total')}</span>
+              </div>
+              <h2 className="font-headline text-3xl md:text-5xl font-black">{t('reviews.title')}</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto font-medium">{t('reviews.subtitle')}</p>
+            </ScrollReveal>
+
+            <ScrollReveal animation="fade-up" delay={200}>
+              <div className="relative px-0 sm:px-12">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  plugins={[
+                    Autoplay({
+                      delay: 4000,
+                    }),
+                  ]}
+                  className="w-full max-w-5xl mx-auto"
+                >
+                  <CarouselContent>
+                    {reviews.map((rev, i) => (
+                      <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 p-4">
+                        <div className="bg-white p-8 rounded-[2.5rem] shadow-xl border relative h-full flex flex-col group hover:border-primary transition-colors">
+                          <div className="flex items-center space-x-1 mb-6">
+                            {[1, 2, 3, 4, 5].map(j => (
+                              <Star key={j} className="h-5 w-5 fill-primary text-primary" />
+                            ))}
+                          </div>
+                          <div className="mb-8 flex-grow max-h-36 overflow-y-auto pr-2">
+                            <p className="text-muted-foreground leading-relaxed italic text-sm">
+                              "{rev.text}"
+                            </p>
+                          </div>
+                          <div className="flex items-center space-x-4 border-t pt-6 mt-auto">
+                            <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center font-black text-primary text-sm shrink-0">
+                              {rev.name.charAt(0)}
+                            </div>
+                            <div className="min-w-0">
+                              <h4 className="font-black text-foreground text-sm truncate">{rev.name}</h4>
+                              <p className="text-[8px] text-muted-foreground uppercase tracking-widest font-bold">Verified Reviewer</p>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="hidden md:block">
+                    <CarouselPrevious className="-left-12 h-10 w-10" />
+                    <CarouselNext className="-right-12 h-10 w-10" />
+                  </div>
+                </Carousel>
+              </div>
+            </ScrollReveal>
+          </div>
         </section>
       </div>
     </div>
