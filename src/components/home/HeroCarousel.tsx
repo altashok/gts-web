@@ -100,12 +100,12 @@ export default function HeroCarousel() {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="max-w-4xl px-4 text-center text-white">
                       {/* Optional Welcome Tag */}
-                      <div className="inline-block px-6 py-2 bg-primary text-primary-foreground font-black rounded-full text-[10px] md:text-xs uppercase tracking-[0.3em] mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                      <div className="inline-block px-6 py-2 bg-primary text-primary-foreground font-black rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] mb-6 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                         {hasWelcomeSpecific ? welcomeText : t('hero.welcome')}
                       </div>
 
                       {/* Title */}
-                      <h1 className="font-headline text-[29px] md:text-5xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+                      <h1 className="font-headline text-[29px] md:text-4xl font-black mb-6 drop-shadow-2xl leading-[1.1] animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
                         <span className="inline-block rounded-2xl bg-black/45 px-4 py-3 md:px-6 md:py-4 backdrop-blur-[1px]">
                           {hasTitleSpecific ? (
                             slideTitle

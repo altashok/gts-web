@@ -136,7 +136,7 @@ export const homeTranslations = {
     'hero.desc.hero-1': ' ',
 
     // Slide Specifics - Hero 2 (Culture)
-    'hero.welcome.hero-2': 'Our Worldwide Services',
+    'hero.welcome.hero-2': 'Our services across the globe',
     'hero.title.hero-2': 'Let us unite with Tamil',
     'hero.desc.hero-2': ' ',
     'hero.enroll.hero-2': 'Admissions',
@@ -144,7 +144,7 @@ export const homeTranslations = {
 
     // Slide Specifics - Hero 3 (Academic)
     'hero.welcome.hero-3': 'Online Competitions',
-    'hero.title.hero-3': 'Our students living all over the world',
+    'hero.title.hero-3': 'Our students from all over the world',
     'hero.desc.hero-3': ' ',
 
     // Slide Specifics - Hero 4 (Heritage)
@@ -154,7 +154,7 @@ export const homeTranslations = {
 
     // Slide Specifics - Hero 5 (Community)
     'hero.welcome.hero-5': 'Non-Resident Tamils Day 2025',
-    'hero.title.hero-5': 'A Stall by Global Tamil School',
+    'hero.title.hero-5': 'A showcase by Global Tamil School',
     'hero.desc.hero-5': ' ',
 
     // Slide Specifics - Hero 6 (Class of 2022)

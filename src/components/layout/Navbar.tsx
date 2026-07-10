@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
-                <div className="relative h-16 w-40 sm:h-20 sm:w-52 md:h-20 md:w-46 shrink-0 pr-3 flex items-center justify-center p-1">
+                <div className="relative h-16 w-30 sm:h-20 sm:w-52 md:h-20 md:w-46 shrink-0 pr-3 flex items-center justify-center p-1">
                   <Image 
                     src={logoImage} 
                     alt={t('nav.logoAlt') as string}
