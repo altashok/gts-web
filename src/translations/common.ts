@@ -36,7 +36,7 @@ export const commonTranslations = {
     'footer.logo': '/logo/GTS-Logo-Tam-Yellow.png',
     'footer.logoAlt': 'உலகளாவிய தமிழ்ப் பள்ளி லோகோ',
     'footer.brand': 'உலகளாவிய தமிழ்ப் பள்ளி',
-    'footer.aboutDesc': 'அடுத்த தலைமுறைக்கு தரமான கல்வியை வழங்குவதோடு, தமிழ் பாரம்பரியத்தைப் பாதுகாப்போம்.',
+    'footer.aboutDesc': 'அடுத்த தலைமுறைக்குத் தரமான கல்வியை வழங்குவதோடு, தமிழ்ப் பண்பாட்டைப் பாதுகாப்போம்.',
     'footer.quickLinks': 'விரைவான இணைப்புகள்',
     'footer.importantLinks': 'முக்கிய இணைப்புகள்',
     'footer.contactUs': 'எங்களைத் தொடர்பு கொள்ள',

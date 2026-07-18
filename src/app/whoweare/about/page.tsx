@@ -67,13 +67,13 @@ export default function AboutPage() {
             <ScrollReveal animation="slide-in-left">
               <div className="relative overflow-hidden rounded-2xl bg-foreground p-2 shadow-2xl">
                 <div className="relative aspect-[3/5] overflow-hidden rounded-xl">
-                <Image 
-                  src={founderImage} 
-                  alt={t('about.founder.name')} 
-                  fill 
-                  className="object-cover"
-                  data-ai-hint="founder London"
-                />
+                  <Image 
+                    src={founderImage} 
+                    alt={t('about.founder.name')} 
+                    fill
+                    className="object-cover"
+                    data-ai-hint="founder London"
+                  />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/90 via-foreground/35 to-transparent p-5 pt-24">
                     <div className="max-w-sm">
                       <h3 className="font-headline text-2xl font-black leading-tight text-white">{t('about.founder.name')}</h3>

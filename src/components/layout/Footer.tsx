@@ -48,7 +48,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t('footer.aboutDesc')}
             </p>
-            <div className="flex space-x-4 pt-4">
+            <div className="flex text-primary space-x-4 pt-4">
               <a 
                 href="https://www.facebook.com/globaltamilschool" 
                 target="_blank" 
