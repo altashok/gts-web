@@ -39,6 +39,111 @@ const siteNavigationItems = [
     description: 'Contact Global Tamil School for Tamil classes, admissions, and course enquiries.',
     url: `${siteUrl}/contact`,
   },
+  {
+    name: 'Shop',
+    description: 'Browse Tamil learning resources, books, and school merchandise.',
+    url: `${siteUrl}/shop`,
+  },
+  {
+    name: 'Summer Class UK',
+    description: 'Join our UK summer Tamil classes for learners across the world.',
+    url: `${siteUrl}/summerclassuk`,
+  },
+  {
+    name: 'Summer Class Scotland',
+    description: 'Find Tamil summer programs in Scotland for language and cultural learning.',
+    url: `${siteUrl}/summerclassscotland`,
+  },
+  {
+    name: 'Terms & Conditions',
+    description: 'Read the terms and conditions for Global Tamil School services.',
+    url: `${siteUrl}/terms`,
+  },
+  {
+    name: 'Privacy Policy',
+    description: 'Review our privacy policy and data protection practices.',
+    url: `${siteUrl}/privacy`,
+  },
+];
+
+const pageStructuredData = [
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/courses/tamil`,
+    url: `${siteUrl}/courses/tamil`,
+    name: 'Tamil Courses & Qualifications',
+    description: 'Explore online Tamil courses, GCSE Tamil preparation, and Cambridge Tamil qualifications with Global Tamil School.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/enroll`,
+    url: `${siteUrl}/enroll`,
+    name: 'Enroll in Tamil Classes',
+    description: 'Start your Tamil journey with our online classes, group lessons, and international language qualifications.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/affiliations`,
+    url: `${siteUrl}/affiliations`,
+    name: 'Global Tamil School Affiliations',
+    description: 'Learn about our education partners, exam boards, and Tamil curriculum accreditations.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/whoweare/about`,
+    url: `${siteUrl}/whoweare/about`,
+    name: 'About Global Tamil School',
+    description: 'Discover our mission, team, and international Tamil education story.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/whoweare/activities`,
+    url: `${siteUrl}/whoweare/activities`,
+    name: 'Tamil Culture & Activities',
+    description: 'Explore our Tamil culture, music, dance, arts, and community learning programs.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/contact`,
+    url: `${siteUrl}/contact`,
+    name: 'Contact Global Tamil School',
+    description: 'Get in touch with Global Tamil School for admissions, courses, and enquiries.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/shop`,
+    url: `${siteUrl}/shop`,
+    name: 'Global Tamil School Shop',
+    description: 'Shop Tamil learning materials, resources, and school merchandise.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/summerclassuk`,
+    url: `${siteUrl}/summerclassuk`,
+    name: 'UK Summer Tamil Classes',
+    description: 'Join our summer Tamil classes in the UK for students looking to improve their language skills.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/summerclassscotland`,
+    url: `${siteUrl}/summerclassscotland`,
+    name: 'Scotland Summer Tamil Classes',
+    description: 'Discover our Scotland summer Tamil programs for language learning and cultural experiences.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/terms`,
+    url: `${siteUrl}/terms`,
+    name: 'Terms & Conditions',
+    description: 'Read the terms and conditions for Global Tamil School services and website usage.',
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${siteUrl}/privacy`,
+    url: `${siteUrl}/privacy`,
+    name: 'Privacy Policy',
+    description: 'Review Global Tamil School privacy practices and data handling policies.',
+  },
 ];
 
 export const metadata: Metadata = {
@@ -162,6 +267,7 @@ export default function RootLayout({
                     url: item.url,
                   })),
                 },
+                ...pageStructuredData,
               ],
             }),
           }}
