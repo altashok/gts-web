@@ -206,7 +206,7 @@ export const homeTranslations = {
     'gallery.title': 'Learning Resources',
     'gallery.desc': 'Resources that make our learning journey a unique one effective and special.',
     'posterSection.tag': 'Posters',
-    'posterSection.title': 'Out School Events',
+    'posterSection.title': 'Our School Events',
     'posterSection.desc': 'Global Tamil School engages our students in various Tamil related extracurricular activities. Browse our recent event details.',
     'activities.title': 'Engaging Activities',
     'activities.desc': 'Beyond Tamil Language, we nurture diverse talents.',

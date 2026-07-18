@@ -7,7 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Button } from "@/components/ui/button";
 
-export default function AffiliationsPage() {
+export default function SummerClassScotlandPage() {
   const { t } = useLanguage();
 
   return (

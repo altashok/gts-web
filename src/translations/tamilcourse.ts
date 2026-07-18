@@ -1,7 +1,7 @@
 ﻿export const tamilCourseTranslations = {
   ta: {
-    'title': 'தமிழ்மொழி பாடத்திட்டங்கள்',
-    'subtitle': 'ஒழுங்கமைக்கப்பட்ட பாடத்திட்டங்கள் மூலம் மாணவர்களுக்கு சிறந்த கற்றல் அனுபவத்தை வழங்குகிறோம்.',
+    'tamilCourse.title': 'தமிழ்மொழி பாடத்திட்டங்கள்',
+    'tamilCourse.subtitle': 'ஒழுங்கமைக்கப்பட்ட பாடத்திட்டங்கள் மூலம் மாணவர்களுக்கு சிறந்த கற்றல் அனுபவத்தை வழங்குகிறோம்.',
     'syllabus.cards': [
         {
           tag: 'UK அங்கீகாரம்',
@@ -60,8 +60,8 @@
       ],
   },
     en: {
-    'title': 'Tamil Courses & Qualifications',
-    'subtitle': 'We partner with global educational bodies to provide the best learning opportunities for our students.',
+    'tamilCourse.title': 'Tamil Courses & Qualifications',
+    'tamilCourse.subtitle': 'We partner with global educational bodies to provide the best learning opportunities for our students.',
     'syllabus.cards': [
       {
         tag: 'UK Recognition',
