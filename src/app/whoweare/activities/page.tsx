@@ -7,33 +7,20 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import FacebookFeed from "@/components/ui/facebook-feed";
 import YouTubeGallery from "@/components/ui/youtube-gallery";
+import LearningProgramsCarousel from '@/components/home/LearningProgramsCarousel';
 
 export default function ActivitiesPage() {
   const { t } = useLanguage();
 
-  const activities = [
-    {
-      title: t('activities.lang.title'),
-      icon: Book,
-      desc: t('activities.lang.desc'),
-      img: "/gallery/MonitorWorksheet.png",
-      hint: "tamil language learning materials"
-    },
-    {
-      title: t('activities.arts.title'),
-      icon: Palette,
-      desc: t('activities.arts.desc'),
-      img: "/gallery/artcraft.jpg",
-      hint: "tamil student art work"
-    },
-    {
-      title: t('activities.music.title'),
-      icon: Music,
-      desc: t('activities.music.desc'),
-      img: "/gallery/dance.jpg",
-      hint: "tamil cultural music performance"
-    }
-  ];
+  const translatedItems = (t('activities.items') as any) || [];
+  const iconMap: Record<string, any> = { lang: Book, arts: Palette, music: Music };
+  const activities = translatedItems.map((it: any) => ({
+    title: it.title,
+    icon: iconMap[it.id] || Book,
+    desc: it.desc,
+    img: it.img || it.image || "/gallery/MonitorWorksheet.png",
+    hint: it.hint || "",
+  }));
 
   return (
     <div className="pb-0">
@@ -54,9 +41,15 @@ export default function ActivitiesPage() {
           </ScrollReveal>
         </div>
       </section>
+      {/* Learning Programs carousel inserted as first component */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal animation="fade-up">
+          <LearningProgramsCarousel />
+        </ScrollReveal>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 mb-24">
-        {activities.map((act, i) => (
+        {activities.map((act: any, i: number) => (
           <ScrollReveal key={i} animation={i % 2 === 0 ? "slide-in-left" : "slide-in-right"}>
             <section className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 items-center`}>
               <div className="flex-1 space-y-6">
@@ -68,11 +61,7 @@ export default function ActivitiesPage() {
                 <ul className="space-y-3 pt-4">
                   <li className="flex items-center space-x-3 text-sm font-bold text-muted-foreground">
                     <Star className="h-5 w-5 text-primary fill-primary" />
-                    <span>{t('activities.feature.instructors')}</span>
-                  </li>
-                  <li className="flex items-center space-x-3 text-sm font-bold text-muted-foreground">
-                    <Star className="h-5 w-5 text-primary fill-primary" />
-                    <span>{t('activities.feature.allages')}</span>
+                    <span>{t(act.hint)}</span>
                   </li>
                 </ul>
               </div>

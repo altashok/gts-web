@@ -112,7 +112,7 @@ export default function AboutPage() {
                       <Sparkles className="h-4 w-4 text-primary" />
                       Global Tamil School
                     </p>
-                    <h2 className="font-headline text-3xl font-black tracking-tight text-foreground md:text-5xl">{t('about.message.title')}</h2>
+                    <h2 className="font-headline text-3xl font-black tracking-tight text-foreground md:text-4xl">{t('about.message.title')}</h2>
                   </div>
                 </div>
                 
