@@ -56,6 +56,26 @@
           ],
           logoSrc: '/logo/cambridge-univ.png',
           logoAlt: 'கேம்பிரிட்ஜ் பல்கலைக்கழகம்'
+        },
+        {
+          tag: 'சர்வதேச தகுதி',
+          title: 'பியர்சன் Edexcel International GCSE(9-1) தமிழ்',
+          description: 'Edexcel கல்வி தகுதிகள் பியர்சன் நிறுவனத்திலிருந்து வருகின்றன, இது ஐக்கிய இராச்சியத்தின் மிகப்பெரிய அங்கீகார அமைப்பாகும். உலகளாவிய 3.4 மில்லியன் மாணவர்கள் எங்கள் கல்வி மற்றும் தொழில்முறை தகுதிகளைப் படிக்கின்றனர், மேலும் பள்ளிகள், கல்லூரிகள் மற்றும் வேலைவாய்ப்பாளர்களுக்கு சர்வதேச அங்கீகாரம் பெற்ற தகுதிகளை வழங்குகிறது. இந்த தகுதி வாசித்தல், எழுதுதல் மற்றும் மொழிபெயர்ப்பு திறன்களை மையமாகக் கொண்டுள்ளது. இது தமிழ் மொழி பேசும் மாணவர்களுக்கு மற்ற ஒப்பிடக்கூடிய பாடங்களை மேலும் படிப்பதற்கான ஒரு பொருத்தமான அடித்தளமாகும்.',
+          points: [
+            'ஒரு வெளிப்புற மதிப்பீடு, பியர்சன் நிறுவனம் அமைத்தது மற்றும் மதிப்பீடு செய்தது.',
+            'தமிழ் மொழி பேசும் மாணவர்களுக்கு பொருத்தமான அடித்தளம்',
+            'அவர்களையும் சுற்றியுள்ள உலகையும் புரிந்துகொள்ளும் திறனை மேம்படுத்துகிறது',
+            'தமிழ் மொழியின் செழுமை, அழகு மற்றும் பல்வகைமையை மதிக்கிறது',
+            'தாள் 1: வாசித்தல், எழுதுதல் மற்றும் மொழிபெயர்ப்பு'
+          ],
+          ctaLabel: 'இப்போதே சேருங்கள்',
+          highlights: [
+            { label: 'தேர்வு காலம்', value: 'ஜூன் தொடர்' },
+            { label: 'தகுதி', value: 'GCSE' },
+            { label: 'பயன்', value: 'தொழில் வாய்ப்புகள்' }
+          ],
+          logoSrc: '/logo/edexcel.png',
+          logoAlt: 'Edexcel'
         }
       ],
   },
@@ -120,6 +140,25 @@
         ],
         logoSrc: '/logo/cambridge-univ.png',
         logoAlt: 'University of Cambridge'
+      },
+      {
+        tag: 'International Qualification',
+        title: 'Pearson Edexcel International GCSE(9-1) Tamil',
+        description: 'Edexcel academic qualifications are from Pearson, the UK’s largest awarding organisation. With over 3.4 million students studying our academic and vocational qualifications worldwide, we offer internationally recognised qualifications to schools, colleges and employers globally. The qualification focuses on reading, writing and translation skills. It is a suitable foundation for language speakers of Tamil who wish to progress to further study of other comparable subjects at schools and colleges. ',
+        points: [
+          'One external assessment, set and marked by Pearson.',
+          'Suitable foundation for language speakers of Tamil ',
+          'Improves understanding of themselves and the world around them',
+          'Appreciates the richness, beauty and diversity of the Tamil language',
+          'Paper 1: Reading, Writing and Translation'],
+        ctaLabel: 'Enroll now',
+        highlights: [
+          { label: 'Examination Period', value: 'June Series' },
+          { label: 'Qualification', value: 'GCSE' },
+          { label: 'Benefit', value: 'Career Prospects' }
+        ],
+        logoSrc: '/logo/edexcel.png',
+        logoAlt: 'Edexcel'
       }
     ],
   }
