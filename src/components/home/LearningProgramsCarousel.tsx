@@ -33,20 +33,25 @@ export default function LearningProgramsCarousel({ items }: { items?: Program[] 
   );
 
   return (
-    <div className="py-8">
+    <div className="py-8 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Carousel plugins={[autoplay.current]} opts={{ loop: true }} className="relative">
-          <CarouselContent className="items-stretch">
+          <CarouselContent className="items-stretch pb-10">
             {programs.map((p: any) => (
               <CarouselItem key={p.id} className="md:basis-1/3 lg:basis-1/4">
                 <div className="mx-2 rounded-2xl overflow-hidden border border-primary/10 bg-white shadow-xl hover:shadow-2xl transition-shadow">
-                  <div className="relative h-48 md:h-44 lg:h-52 w-full">
-                    <Image src={p.image} alt={p.title} fill className="object-cover" />
+                  <div className="relative h-60 md:h-60 lg:h-60 w-full">
+                      <Image
+                       src={p.image}
+                       alt={String(p.title ?? '')?.replace(/\s+/g, ' ').trim()}
+                       fill
+                       className="object-cover"
+                      />
                   </div>
                   <div className="p-6">
-                    <div className="text-sm font-bold text-primary mb-2">{p.category}</div>
+                    <div className="text-sm font-bold text-orange-600 mb-2">{p.category}</div>
                     <h3 className="font-headline text-lg font-black text-foreground mb-4">{p.title}</h3>
-                    <Link href={p.link} className="inline-flex items-center text-primary font-black">
+                    <Link href={p.link} className="inline-flex items-center text-yellow-600  font-black">
                       {t('activities.readMore') || 'Read more'}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
