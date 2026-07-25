@@ -51,7 +51,7 @@ export default function LearningProgramsCarousel({ items }: { items?: Program[] 
                   <div className="p-6">
                     <div className="text-sm font-bold text-orange-600 mb-2">{p.category}</div>
                     <h3 className="font-headline text-lg font-black text-foreground mb-4">{p.title}</h3>
-                    <Link href={p.link} className="inline-flex items-center text-yellow-600  font-black">
+                    <Link href={p.link} className="inline-flex items-center text-yellow-600 font-black">
                       {t('activities.readMore') || 'Read more'}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

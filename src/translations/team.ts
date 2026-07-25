@@ -38,7 +38,7 @@
       { name: "திருமதி. மெர்சி", role: "மொழி & கலை ஆசிரியர்", location: "இந்தியா", bio: "மொழி & கலை ஆசிரியர்", photo: '/people/Placeholder.png' },
       { name: "திருமதி. தீபா BS", role: "நடன ஆசிரியர்", location: "இந்தியா", bio: "நடன ஆசிரியர்", photo: '/people/DheepaBS.jpg' },
       { name: "திரு. ஜெரால்டு ஜேம்ஸ்", role: "இசைப்பலகை & கிட்டார் ஆசிரியர்", location: "இந்தியா", bio: "இசைப்பலகை & கிட்டார் ஆசிரியர்", photo: '/people/GeraldJames.jpg' },
-      { name: "திருமதி. சுவாதி", role: "நடன ஆசிரியர்", location: "இந்தியா", bio: "நடன ஆசிரியர்", photo: '/people/Placeholder.png' },
+      { name: "திருமதி. சுவாதி", role: "நடன ஆசிரியர்", location: "இந்தியா", bio: "நடன ஆசிரியர்", photo: '/people/swathi.png' },
       { name: "திருமதி. பரணி", role: "சதுரங்கம் & அபாகஸ் ஆசிரியர்", location: "இந்தியா", bio: "சதுரங்கம் & அபாகஸ் ஆசிரியர்", photo: '/people/Placeholder.png' },
     ],
   },
@@ -81,7 +81,7 @@
       { name: "Mrs. Mercy", role: "Language & Fine Arts Teacher", location: "India", bio: "Language & fine arts teacher", photo: '/people/Placeholder.png' },
       { name: "Mrs. Deepa BS", role: "Classical Dance Teacher", location: "India", bio: "Dance teacher", photo: '/people/DheepaBS.jpg' },
       { name: "Mr. Gerald James", role: "Keyboard & Guitar Teacher", location: "India", bio: "Keyboard & Guitar Teacher", photo: '/people/GeraldJames.jpg' },
-      { name: "Mrs. Swathy", role: "Classical Dance Teacher", location: "India", bio: "Dance teacher", photo: '/people/Placeholder.png' },
+      { name: "Mrs. Swathy", role: "Classical Dance Teacher", location: "India", bio: "Dance teacher", photo: '/people/swathi.png' },
       { name: "Mrs. Bharani", role: "Chess & Abacus Teacher", location: "India", bio: "Chess & Abacus teacher", photo: '/people/Placeholder.png' },
     ],
   }
