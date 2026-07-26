@@ -3,6 +3,27 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Student Registration",
   description: "Register for the Global Tamil School's Tamil Classes.",
+  openGraph: {
+    title: "Student Registration | Global Tamil School",
+    description: "Register for the Global Tamil School's Tamil Classes.",
+    url: "https://globaltamilschool.co.uk/register",
+    type: "website",
+    siteName: "Global Tamil School",
+    images: [
+      {
+        url: "/logo/GTS-Logo-Tam-black2.png",
+        width: 1200,
+        height: 630,
+        alt: "Global Tamil School Student Registration",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Student Registration | Global Tamil School",
+    description: "Register for the Global Tamil School's Tamil Classes.",
+    images: ["/logo/GTS-Logo-Tam-black2.png"],
+  },
 };
 
 export default function RegisterPage() {
