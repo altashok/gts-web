@@ -4,6 +4,9 @@ import EnrollPageClient from "./EnrollPageClient";
 export const metadata: Metadata = {
   title: "Course Enrollment",
   description: "Enroll for the Global Tamil School's Tamil Classes.",
+  alternates: {
+    canonical: 'https://globaltamilschool.co.uk/enroll',
+  },
   openGraph: {
     title: "Course Enrollment | Global Tamil School",
     description: "Enroll for the Global Tamil School's Tamil Classes.",
@@ -28,5 +31,22 @@ export const metadata: Metadata = {
 };
 
 export default function EnrollPage() {
-  return <EnrollPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://globaltamilschool.co.uk/' },
+              { '@type': 'ListItem', position: 2, name: 'Enroll', item: 'https://globaltamilschool.co.uk/enroll' },
+            ],
+          }),
+        }}
+      />
+      <EnrollPageClient />
+    </>
+  );
 }

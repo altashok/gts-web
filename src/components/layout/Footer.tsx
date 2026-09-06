@@ -99,8 +99,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li><Link href="/summerclassuk" className="text-sm hover:text-primary transition-colors">Summer Classes in UK</Link></li>
-              <li><Link href="/summerclassscotland" className="text-sm hover:text-primary transition-colors">Summer Classes in Scotland</Link></li>
             </ul>
           </div>
 

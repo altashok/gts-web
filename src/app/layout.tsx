@@ -254,6 +254,21 @@ export default function RootLayout({
                   publisher: {
                     '@id': `${siteUrl}/#organization`,
                   },
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: `${siteUrl}/?q={search_term_string}`,
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+                {
+                  '@type': 'BreadcrumbList',
+                  '@id': `${siteUrl}/#breadcrumb`,
+                  itemListElement: siteNavigationItems.map((item, index) => ({
+                    '@type': 'ListItem',
+                    position: index + 1,
+                    name: item.name,
+                    item: item.url,
+                  })),
                 },
                 {
                   '@type': 'ItemList',

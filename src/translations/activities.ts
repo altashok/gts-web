@@ -75,21 +75,24 @@ export const activitiesTranslations = {
         title: 'மொழித் திறன்', 
         desc: 'மொழியைத் தாண்டி கலை, கலாச்சாரம் மற்றும் சமூக நிகழ்வுகள் மூலம் மாணவர்கள் தங்களை வளர்த்துக் கொள்கிறார்கள். மொழி திறனை மேம்படுத்துவதற்கான படைப்பாற்றல் முறைகள் மூலம் பேசும், எழுதும் மற்றும் வாசிக்கும் திறன்களை மேம்படுத்துதல்.', 
         img: '/gallery/MonitorWorksheet.png',
-        hint: '' 
+        hint: '',
+        icon: 'Award',
       },
       { 
         id: 'arts', 
         title: 'கலை & கைவினை', 
         desc: 'பாரம்பரிய ஓவியங்கள் மற்றும் கைவினைப் பொருட்கள் மூலம் கற்பனைத் திறனை வளர்த்தல். ஆரம்பரிய ஓவியங்கள் மற்றும் கைவினைப் பொருட்கள் மூலம் கற்பனைத் திறனை வளர்த்தல்.', 
         img: '/gallery/artcraft.jpg', 
-        hint: 'tamil student art work' 
+        hint: 'tamil student art work',
+        icon: 'GraduationCap',
       },
       { 
         id: 'music', 
         title: 'இசை & நடனம்', 
         desc: 'கர்நாடக இசை மற்றும் பரதநாட்டியம் போன்ற கலைகளைக் கற்றுத் தருதல். இசை மற்றும் நடனத்தின் மூலம் மாணவர்களின் கலை திறனை மேம்படுத்துதல்.', 
         img: '/gallery/dance.jpg', 
-        hint: 'tamil cultural music performance' 
+        hint: 'tamil cultural music performance',
+        icon: 'Calendar',
       }
     ],
     'activities.events.title': 'கலாச்சார நிகழ்வுகள்',
@@ -176,9 +179,28 @@ export const activitiesTranslations = {
     'activities.title': 'Our Activities',
     'activities.subtitle': 'Beyond language, students grow through arts, culture, and community events.',
     'activities.items': [
-      { id: 'lang', title: 'Language Skills', desc: 'Enhancing speaking, writing, and reading skills through creative methods.', img: '/gallery/MonitorWorksheet.png', hint: 'tamil language learning materials' },
-      { id: 'arts', title: 'Arts & Crafts', desc: 'Fostering imagination through traditional paintings and handicrafts.', img: '/gallery/artcraft.jpg', hint: 'tamil student art work' },
-      { id: 'music', title: 'Music & Dance', desc: 'Teaching classical music and traditional dance forms like Bharatanatyam.', img: '/gallery/dance.jpg', hint: 'tamil cultural music performance' }
+      { 
+        id: 'lang', 
+        title: 'Language Skills', 
+        desc: 'Enhancing speaking, writing, and reading skills through creative methods.', 
+        img: '/gallery/MonitorWorksheet.png', 
+        hint: 'tamil language learning materials', 
+        icon: 'Award' 
+      },
+      { id: 'arts', 
+        title: 'Arts & Crafts', 
+        desc: 'Fostering imagination through traditional paintings and handicrafts.', 
+        img: '/gallery/artcraft.jpg', 
+        hint: 'tamil student art work', 
+        icon: 'GraduationCap'
+      },
+      { id: 'music', 
+        title: 'Music & Dance', 
+        desc: 'Teaching classical music and traditional dance forms like Bharatanatyam.', 
+        img: '/gallery/dance.jpg', 
+        hint: 'tamil cultural music performance', 
+        icon: 'Calendar'
+      }
     ],
     'activities.events.title': 'Cultural Events',
     'activities.events.desc': 'Annual festivals and competitions are conducted for students to showcase their talents.',

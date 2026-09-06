@@ -76,6 +76,26 @@
           ],
           logoSrc: '/logo/edexcel.png',
           logoAlt: 'Edexcel'
+        },
+        {
+          tag: 'இணையவழி தேர்வு அமைப்பு',
+          title: 'தமிழ் இணையக் கல்விக்கழகம் (TVA) தேர்வு நிலைகள்',
+          description: 'தமிழ் இணையக் கல்விக்கழகம் (முன்னர் தமிழ் இணையப் பல்கலைக்கழகம்) ஆரம்பநிலை முதல் மேம்பட்ட நிலை வரை மாணவர்களுக்குத் தகுந்த வகையில் பல்வேறு தேர்வு நிலைகளை நடத்துகிறது. சான்றிதழ் படிப்புகள், உயர்ப் படிப்புகள், மற்றும் B.A. (தமிழியல்) வரை மாணவர்களை முன்னேற்றுவதற்கான கட்டமைக்கப்பட்ட பாடத்திட்டத்தை வழங்குகிறது.',
+          points: [
+            'அகரம், இகரம், உகரம், லகரம் & சிகரம் - 5 நிலை பாடத்திட்டங்கள்',
+            '1–2 ஆம் வகுப்பு முதல் 11–12 ஆம் வகுப்பு மாணவர்களுக்கு ஏற்றது',
+            'சான்றிதழ், டிப்ளமோ, உயர்ப் டிப்ளமோ, B.A. தமிழியல் வரை தொடரலாம்',
+            'இணையவழி மதிப்பீடு, எழுத்துத் தேர்வு, வாய்மொழி மற்றும் இறுதித் தேர்வுகள்',
+            'கேட்கும், பேசும், வாசிக்கும், எழுதும் திறன்களை படிப்படியாக மேம்படுத்துகிறது'
+          ],
+          ctaLabel: 'விரிவாக அறியுங்கள்',
+          highlights: [
+            { label: 'தேர்வு நிலைகள்', value: '5' },
+            { label: 'தகுதி', value: 'சான்றிதழ் முதல் தமிழியல் இளங்கலை' },
+            { label: 'பயன்', value: 'LSRW Skills' }
+          ],
+          logoSrc: '/logo/tvu.png',
+          logoAlt: 'Tamil Virtual Academy'
         }
       ],
   },
@@ -159,6 +179,26 @@
         ],
         logoSrc: '/logo/edexcel.png',
         logoAlt: 'Edexcel'
+      },
+      {
+        tag: 'Online Examination System',
+        title: 'Tamil Virtual Academy (TVA) Examination Levels',
+        description: 'The Tamil Virtual Academy (formerly Tamil Virtual University) conducts examinations at different levels to suit learners from beginners to advanced students. It offers a structured progression from certificate courses to higher academic programmes and supports the gradual development of Listening, Speaking, Reading, and Writing skills in Tamil.',
+        points: [
+          'Five certificate levels - Akaram, Ikaram, Ukaram, Lakaram & Sigaram',
+          'Suitable for students from Classes 1–2 to 11–12',
+          'Progression from Certificate to Diploma, Higher Diploma, and B.A. Tamilology',
+          'Includes online assessments, written papers, oral tests, and term-end examinations',
+          'Designed to build LSRW skills progressively from beginner to advanced proficiency'
+        ],
+        ctaLabel: 'Learn more',
+        highlights: [
+          { label: 'Levels', value: '5 Stages' },
+          { label: 'Qualification', value: 'Certificate to B.A.' },
+          { label: 'Focus', value: 'LSRW Skills' }
+        ],
+        logoSrc: '/logo/tvu.png',
+        logoAlt: 'Tamil Virtual Academy'
       }
     ],
   }

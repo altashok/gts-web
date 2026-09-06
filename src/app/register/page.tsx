@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Student Registration",
   description: "Register for the Global Tamil School's Tamil Classes.",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Student Registration | Global Tamil School",
     description: "Register for the Global Tamil School's Tamil Classes.",

@@ -4,6 +4,9 @@ import ContactPageClient from "./ContactPageClient";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with the Global Tamil School team.",
+  alternates: {
+    canonical: 'https://globaltamilschool.co.uk/contact',
+  },
   openGraph: {
     title: "Contact | Global Tamil School",
     description: "Get in touch with the Global Tamil School team.",
@@ -28,5 +31,22 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactPageClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://globaltamilschool.co.uk/' },
+              { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://globaltamilschool.co.uk/contact' },
+            ],
+          }),
+        }}
+      />
+      <ContactPageClient />
+    </>
+  );
 }

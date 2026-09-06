@@ -66,7 +66,7 @@ export default function AboutPage() {
           <div className="lg:col-span-5 relative">
             <ScrollReveal animation="slide-in-left">
               <div className="relative overflow-hidden rounded-2xl bg-foreground p-2 shadow-2xl">
-                <div className="relative aspect-[3/5] overflow-hidden rounded-xl">
+                <div className="relative aspect-[6/7] overflow-hidden rounded-xl">
                   <Image 
                     src={founderImage} 
                     alt={t('about.founder.name')} 
@@ -87,8 +87,8 @@ export default function AboutPage() {
 
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {[
-                  { icon: Calendar, label: "2020" },
-                  { icon: MapPin, label: "London" },
+                  { icon: Calendar, label: "Estd. 2020" },
+                  { icon: MapPin, label: "London / Online" },
                   { icon: Globe, label: "Global" }
                 ].map((item) => (
                   <div key={item.label} className="flex min-h-20 flex-col items-center justify-center rounded-xl border border-primary/20 bg-primary/5 px-2 text-center">

@@ -216,23 +216,32 @@ export default function Home() {
           </ScrollReveal>
           
           {(() => {
-            const translations = t('activities.items') as Array<{ title: string; desc: string; readMore: string }>;
-            const cards = translations.map((item, idx) => ({
+            const translations = t('activities.items') as Array<{
+              id?: string;
+              title: string;
+              desc: string;
+              readMore?: string;
+              img?: string;
+              hint?: string;
+              icon?: string;
+            }>;
+
+            const iconMap: Record<string, any> = { Award, GraduationCap, Calendar, Book, Globe, Users };
+
+            const cards = translations.map((item) => ({
               ...item,
-              icon: [Award, GraduationCap, Calendar][idx],
-              img: ['/gallery/artcraft.jpg', '/gallery/Dance.jpg', '/gallery/Kalari.png'][idx],
-              hint: ['art activities', 'music and dance activities', 'cultural festival activities'][idx],
+              iconComponent: iconMap[item.icon as string] ?? Award,
             }));
 
             return (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {cards.map((item, i) => (
-                  <ScrollReveal key={i} animation="fade-up" delay={i * 200}>
+                  <ScrollReveal key={item.id ?? i} animation="fade-up" delay={i * 200}>
                     <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white">
                       <div className="relative h-56 overflow-hidden">
                         <Image
-                          src={item.img}
-                          alt={item.hint}
+                          src={item.img as string}
+                          alt={item.hint as string}
                           fill
                           sizes="(max-width: 768px) 100vw, 33vw"
                           className="object-cover transition-transform duration-1000 hover:scale-105"
@@ -240,7 +249,13 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                         <div className="absolute left-6 bottom-6 text-white space-y-2">
                           <div className="inline-flex items-center justify-center rounded-full bg-primary/90 p-3 shadow-lg">
-                            <item.icon className="h-6 w-6 text-primary-foreground" />
+                            {
+                              // Render mapped icon component
+                              (() => {
+                                const Icon = item.iconComponent as any;
+                                return <Icon className="h-6 w-6 text-primary-foreground" />;
+                              })()
+                            }
                           </div>
                         </div>
                       </div>
