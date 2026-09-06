@@ -26,6 +26,8 @@ const postersImages = [
   '/posters/uk-ad23.jpg',
   '/posters/uk-ad24.jpg',
   '/posters/uk-ad24.png',
+  '/posters/free-summer-classes-scotland-2026.png',
+  '/posters/free-summer-classes-uk-2026.png',
 ];
 
 export default function PortraitPosterCarousel() {
