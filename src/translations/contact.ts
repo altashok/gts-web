@@ -18,16 +18,20 @@ const taFaq: FaqItem[] = [
     a: 'எங்கள் முக்கிய வகுப்புகள் ஆன்லைன் முறையில் நடைபெறுகின்றன. சில நிகழ்வுகள் நேரடி முறையிலும் ஏற்பாடு செய்யப்படுகின்றன.',
   },
   {
+    q: 'உங்களிடம் பாடப்புத்தகங்கள் கிடைக்குமா?',
+    a: 'ஆம். பாடம், பாடத்திட்டம் மற்றும் வகுப்பின் அடிப்படையில் பாடப்புத்தகங்கள் கிடைக்கின்றன. நீங்கள் புத்தகத்தைக் கேட்டு விண்ணப்பித்தவுடன்; உலகில் நீங்கள் எங்கு இருந்தாலும் அவற்றை உங்கள் வீட்டிற்கே அனுப்புகிறோம்.',
+  },
+  {
     q: 'மாணவர்களுக்கு எந்த வயது முதல் சேர்க்கை நடைபெறுகிறது?',
-    a: 'பொதுவாக 5 வயதிற்கு மேற்பட்ட மாணவர்கள் சேரலாம். தகுந்த நிலைக்கு ஏற்ப வகுப்புகள் ஒதுக்கப்படும்.',
+    a: 'பொதுவாக 5 வயதிற்கு மேற்பட்ட மாணவர்கள் சேரலாம். தகுந்த நிலைக்கு தனி வகுப்புகளோ, குழு வகுப்புகளோ ஒதுக்கப்படும்.',
   },
   {
     q: 'சான்றிதழ் தேர்வுகள் உள்ளதா?',
-    a: 'ஆம். எங்கள் இணைப்பு அமைப்புகளின் மூலம் பல நிலைகளில் தமிழ் மொழி சான்றிதழ் தேர்வுகள் வழங்கப்படுகின்றன.',
+    a: 'ஆம். எங்கள் இணைப்பு அமைப்புகளின் மூலம் பல நிலைகளில் தமிழ் மொழி சான்றிதழ் தேர்வுகள் மற்றும் கலைகளுக்கான சான்றிதழ் வகுப்புகள் வழங்கப்படுகின்றன.',
   },
   {
     q: 'ஆன்லைன் தமிழ் வகுப்புகள் எப்படி நடைபெறுகின்றன?',
-    a: 'நேரடி ஆசிரியர் வழிகாட்டலுடன் இணையவழி வகுப்புகள் நடைபெறும். ஒவ்வொரு நிலைக்கும் பொருத்தமான பாடத்திட்டம் மற்றும் பயிற்சிகள் வழங்கப்படும். மாணவர்களின் தேவைக்கேற்ப குழு வகுப்புகள் மற்றும் தனி வகுப்புகள் நடத்தப்படும். மாணவர்கள் வாழும் நேர மண்டலத்தைப் பொருத்தி வகுப்புகள் ஒதுக்கப்படும்.',
+    a: 'நேரடி ஆசிரியர் வழிகாட்டலுடன் இணையவழி வகுப்புகள் நடைபெறும். ஒவ்வொரு நிலைக்கும் பொருத்தமான பாடத்திட்டம் மற்றும் பயிற்சிகள் வழங்கப்படும். மாணவர்களின் தேவைக்கேற்ப குழு வகுப்புகள் மற்றும் தனி வகுப்புகள் நடத்தப்படும். மாணவர்கள் வாழும் நேர மண்டலத்தைப் பொருத்து வகுப்புகள் ஒதுக்கப்படும்.',
   },
   {
     q: 'கலை (Arts) வகுப்புகளில் என்ன கற்பிக்கப்படுகிறது?',
@@ -35,11 +39,11 @@ const taFaq: FaqItem[] = [
   },
   {
     q: 'நுண்கலை (Fine Arts) வகுப்புகளில் என்ன கற்பிக்கப்படுகிறது?',
-    a: 'இந்தியா நிகழ்த்தும் நுண்கலை வகுப்புகளில் பரதநாட்டியம், கர்நாடக சங்கீதம் மற்றும் இசைக்கருவிகளுக்கான வகுப்புகள் தகுந்த பாடத்திட்டத்தோடு பல்வேறு நிலைகளில் கற்பிக்கப்படுகின்றன. உலகளாவிய தேர்வு வாரியங்கள் மூலம் தேர்வுகள் நடத்தப்பட்டது சான்றிதழ்கள் வழங்கப்படுகின்றன.',
+    a: 'இந்தியா நிகழ்த்தும் நுண்கலை வகுப்புகளில் பரதநாட்டியம், கர்நாடக சங்கீதம் மற்றும் இசைக்கருவிகளுக்கான வகுப்புகள் தகுந்த பாடத்திட்டத்தோடு பல்வேறு நிலைகளில் கற்பிக்கப்படுகின்றன. உலகளாவிய தேர்வு வாரியங்கள் மூலம் தேர்வுகள் நடத்தப்பட்டது சான்றிதழ்கள் வழங்கப்படுகின்றன. கர்நாடக சங்கீத வகுப்புகள் இந்தியாவிற்கு வெளியே உள்ள மாணவர்களுக்கு இணையவழியில் நடத்தப்படுகின்றன, மேலும் மாணவர்கள் தங்கள் சொந்த நாட்டிலிருந்து இணைப்பு தேர்வு வாரியங்கள் மூலம் தேர்வுகளை எடுக்கலாம்.',
   },
   {
     q: 'சதுரங்க (Chess) வகுப்புகள் தொடக்கநிலைக்கு உண்டா?',
-    a: 'ஆம். தொடக்கநிலை மாணவர்களுக்கும் மேம்பட்ட மாணவர்களுக்கும் தனித்த பயிற்சி பாதை உள்ளது. தந்திரம், நடைமுறை போட்டி பயிற்சியும் வழங்கப்படும்.',
+    a: 'ஆம். தொடக்கநிலை மாணவர்களுக்கும் மேல்நிலை மாணவர்களுக்கும் தனித்த பயிற்சி பாதை உள்ளது. தந்திரம், நடைமுறை போட்டி பயிற்சியும் வழங்கப்படும்.',
   },
   {
     q: 'தற்காப்புக்கலை (Martial Arts) வகுப்புகள் ஆன்லைனில் பாதுகாப்பாக கற்றுக்கொள்ள முடியுமா?',
@@ -62,19 +66,23 @@ const enFaq: FaqItem[] = [
   },
   {
     q: 'Do you offer certificate examinations?',
-    a: 'Yes. We provide Tamil language certificate examinations at multiple levels through our affiliated boards and organizations.',
+    a: 'Yes. We provide Tamil language certificate examinations & arts certificate examinations at multiple levels through our affiliated boards and organizations.',
   },
   {
     q: 'How are your online Tamil classes conducted?',
-    a: 'Classes are delivered live online with teacher guidance, level-based curriculum, and structured practice activities.',
+    a: 'Classes are delivered live online with teacher guidance, level-based curriculum, and structured practice activities based on students timezones.\nWe use suitable software tools for interactive learning, and students can participate in group classes or one-to-one lessons based on their needs. Our qualified teachers will ensure students progressing in their learning from each class and provide feedback to parents as needed.',
   },
   {
-    q: 'What is covered in the Arts classes?',
+    q: 'Are textbooks available with you?',
+    a: 'Yes.\nTextbooks are available based on the subject, syllabus, and grade. Once you purchase books from us, and we will be able to send them to you wherever you are in the world.',
+  },
+  {
+    q: 'What is covered in the Arts (Drawing) classes?',
     a: 'Students learn age-appropriate drawing, craft, and Tamil culture-based creative activities through guided sessions.',
   },
   {
     q: 'What is covered in the Fine Arts classes?',
-    a: 'Fine Arts classes conducted in India cover Bharatanatyam, Carnatic music, and musical instruments at multiple levels with structured curriculum. Examinations are conducted by global examination boards, and certificates are awarded upon successful completion.',
+    a: 'Physical Fine Arts classes conducted in India cover Bharatanatyam, Carnatic music, and musical instruments at multiple levels with structured curriculum. Examinations are conducted by global examination boards, and certificates are awarded upon successful completion.\nCarnatic Vocal classes are conducted online for students outside India, and students can take examinations through affiliated examination boards from their home country',
   },
   {
     q: 'Do you offer Chess training for beginners?',

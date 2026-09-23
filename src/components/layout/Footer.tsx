@@ -22,8 +22,8 @@ export default function Footer() {
   const quickLinks = [
     { href: '/courses/tamil', label: coursesSection[0]?.label ?? 'Tamil Courses' },
     { href: '/whoweare/about', label: whoWeAreSection[0]?.label ?? 'About Us' },
-    { href: '/whoweare/activities', label: whoWeAreSection[1]?.label ?? 'Activities' },
-    { href: '/whoweare/team', label: whoWeAreSection[2]?.label ?? 'Team' },
+    { href: '/whoweare/team', label: whoWeAreSection[1]?.label ?? 'Team' },
+    { href: '/whoweare/activities', label: whoWeAreSection[2]?.label ?? 'Activities' },
     { href: '/affiliations', label: navMenuItems[3]?.label ?? 'Affiliations' },
     { href: '/enroll', label: navMenuItems[4]?.label ?? 'Enrollment' },
     { href: '/contact', label: navMenuItems[5]?.label ?? 'Contact' },

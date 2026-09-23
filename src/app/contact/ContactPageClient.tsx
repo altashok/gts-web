@@ -288,7 +288,7 @@ function ContactPageContent({ executeRecaptcha, recaptchaEnabled }: { executeRec
                     <AccordionTrigger className="text-left font-bold text-foreground hover:no-underline">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed">
+                    <AccordionContent className="text-muted-foreground leading-relaxed whitespace-pre-line">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
