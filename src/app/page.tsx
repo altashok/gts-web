@@ -84,6 +84,7 @@ export default function Home() {
       <BlinkingBanner />
 
       {/* Hero Section */}
+      <h1 className="sr-only">Tamil School from the UK | Global Tamil School</h1>
       <HeroCarousel />
 
       <div className="space-y-12 mt-10">

@@ -2,7 +2,7 @@
 export const homeTranslations = {
   ta: {
     'banner2.messages': [
-      'அடுத்த கல்வியாண்டிற்கான வகுப்புகள் 1-செப்டம்பர்-2026 முதல் தொடங்கி விட்டன. இப்போதே இணையவும் !',
+      'அடுத்த கல்வியாண்டிற்கான வகுப்புகள் தொடங்குகின்றன. இப்போதே வகுப்புகளில் இணையவும் !',
     ],
     'hero.welcome': 'உலகளாவிய தமிழ்ப் பள்ளிக்கு உங்களை வரவேற்கிறோம்',
     'hero.title': 'தமிழ் மொழி காப்போம் ',
@@ -121,7 +121,7 @@ export const homeTranslations = {
   },
   en: {
     'banner2.messages': [
-      'Classes for next academic year will be starting from 1st September 2026. Enroll Now!',
+      'Current academic year just started. Enroll now for your classes!',
     ],
     'hero.welcome': 'Welcome to Global Tamil School',
     'hero.title': 'Preserving Tamil ',
@@ -133,7 +133,7 @@ export const homeTranslations = {
     // Slide Specifics - Hero 1 (General/Global)
     'hero.welcome.hero-1': 'Welcome to Global Tamil School',
     'hero.title.hero-1': 'The World\'s First Online Tamil School',
-    'hero.desc.hero-1': ' ',
+    'hero.desc.hero-1': 'Live online Tamil classes for students across the UK and around the world, including GCSE and Cambridge exam preparation.',
 
     // Slide Specifics - Hero 2 (Culture)
     'hero.welcome.hero-2': 'Our services across the globe',
@@ -184,7 +184,7 @@ export const homeTranslations = {
 
     'welcome.tag': 'Worlds First Online Tamil School',
     'welcome.title': 'Welcome to Global Tamil School',
-    'welcome.description': 'A place where Tamil language, culture, and values come alive. We are committed to nurturing young minds with a strong foundation in our rich heritage while encouraging confidence, creativity, and lifelong learning. Join us in celebrating the beauty of Tamil and inspiring the next generation to learn, grow, and take pride in their identity.',
+    'welcome.description': 'Global Tamil School teaches Tamil language and culture through live online classes for students across the UK. Students can build their skills through structured lessons, with GCSE and Cambridge Tamil exam preparation available.',
     'partnerStrip.tag': 'Quality Services',
     'partnerStrip.title': 'Syllabus We Offer',
     'welcome.feat1': 'Standardized Global Curriculum',

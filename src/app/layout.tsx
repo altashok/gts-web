@@ -148,16 +148,19 @@ const pageStructuredData = [
 
 export const metadata: Metadata = {
   title: {
-    default: 'Global Tamil School | Best Online Tamil School & Tamil Language Classes',
+    default: 'Global Tamil School | உலகளாவிய தமிழ்ப் பள்ளி | Best Tamil School from the UK',
     template: '%s | Global Tamil School',
   },
   description:
-    'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+    'Global Tamil School offers live online Tamil classes for students across the UK & the world, with structured learning and GCSE and Cambridge Tamil exam preparation.',
   metadataBase: new URL('https://globaltamilschool.co.uk'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Global Tamil School | Online Tamil School & Tamil Classes',
+    title: 'Tamil School from the UK | Global Tamil School',
     description:
-      'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+      'Live online Tamil classes for students across the UK & the world, with structured learning, GCSE and Cambridge Tamil exam preparation.',
     url: 'https://globaltamilschool.co.uk',
     siteName: 'Global Tamil School',
     type: 'website',
@@ -173,9 +176,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Global Tamil School | Best Online Tamil School & Tamil Classes',
+    title: 'Tamil School from the UK | Global Tamil School',
     description:
-      'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+      'Live online Tamil classes for students across the UK and the world, with structured learning and GCSE and Cambridge Tamil exam preparation.',
     images: ['/logo.png'],
   },
   keywords: [
@@ -205,7 +208,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ta">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -223,13 +226,17 @@ export default function RootLayout({
                   url: siteUrl,
                   logo: `${siteUrl}/logo.png`,
                   description:
-                    'Global Tamil School is the best online Tamil school offering live Tamil classes, GCSE Tamil preparation, and international Tamil language education from London.',
+                    'Global Tamil School offers live online Tamil classes for students across the UK and the world, with structured learning and GCSE and Cambridge Tamil exam preparation.',
                   address: {
                     '@type': 'PostalAddress',
                     addressLocality: 'London',
                     addressRegion: 'United Kingdom',
                     postalCode: 'KT3 6QD',
                     addressCountry: 'GB',
+                  },
+                  areaServed: {
+                    '@type': 'Country',
+                    name: 'United Kingdom, USA, Australia, Canada, Europe, UAE, India, Singapore, Malaysia and other countries worldwide',
                   },
                   contactPoint: [
                     {
@@ -259,16 +266,6 @@ export default function RootLayout({
                     target: `${siteUrl}/?q={search_term_string}`,
                     'query-input': 'required name=search_term_string',
                   },
-                },
-                {
-                  '@type': 'BreadcrumbList',
-                  '@id': `${siteUrl}/#breadcrumb`,
-                  itemListElement: siteNavigationItems.map((item, index) => ({
-                    '@type': 'ListItem',
-                    position: index + 1,
-                    name: item.name,
-                    item: item.url,
-                  })),
                 },
                 {
                   '@type': 'ItemList',
